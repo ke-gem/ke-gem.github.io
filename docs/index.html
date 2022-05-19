@@ -14,11 +14,9 @@
     <!-- link to JSON files so we can get a url from the bundler -->
     <!-- Do not use the React Version of this app -->
     <a class="sanddance-app-static-content" id="x_y_z" data-display-name="x_y_z" data-type="csv"
-        href="sample-data/x_y_z.csv"></a>
+        href="sample-data/clean_x_y_z.csv"></a>
     <a class="sanddance-app-static-content" id="titanic" data-display-name="Titanic" data-type="tsv"
         href="sample-data/titanicmaster.tsv"></a>
-    <a class="sanddance-app-static-content" id="demovote" data-display-name="Demo Vote" data-type="tsv"
-        href="sample-data/demovote.tsv"></a>
 
     <script>
         function setTheme(darkTheme) {
@@ -38,20 +36,6 @@
                 "scheme": "dual_redgreen",
                 "chart": "barchart",
                 "view": "2d"
-            },
-            "demovote": {
-                "columns": {
-                    "uid": "Id",
-                    "x": "Longitude",
-                    "y": "Latitude",
-                    "color": "Obama",
-                    "z": "Education",
-                    "sort": "State"
-                },
-                "scheme": "redblue",
-                "chart": "scatterplot",
-                "view": "2d",
-                "colorBin": "quantize"
             }
         };
         var options = {
@@ -78,28 +62,6 @@
                         }
                     }
                 }
-            },
-            "demovote": {
-                "chartPrefs": {
-                    "*": {
-                        "color": {
-                            "Winner": {
-                                "scheme": "dual_bluered"
-                            }
-                        }
-                    },
-                    "stacks": {
-                        "*": {
-                            "*": {
-                                "signalValues": {
-                                    "RoleX_BinsSignal": 30,
-                                    "RoleY_BinsSignal": 30
-                                }
-                            }
-                        }
-                    }
-                },
-                "tooltipExclusions": ["Id", "Latitude", "Longitude"]
             }
         };
     </script>
