@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SandDance</title>
+    <title>3D data visualization Demo</title>
     <link rel="stylesheet" type="text/css" href="css/sanddance-app.css">
     <link rel="stylesheet" type="text/css" href="css/sanddance-app-site.css">
 </head>
 
 <body>
     <!-- link to JSON files so we can get a url from the bundler -->
-    <a class="sanddance-app-static-content" id="demovote" data-display-name="Demo Vote" data-type="tsv"
-        href="sample-data/demovote.tsv"></a>
+    <!-- Do not use the React Version of this app -->
+    <a class="sanddance-app-static-content" id="x_y_z" data-display-name="x_y_z" data-type="csv"
+        href="sample-data/x_y_z.csv"></a>
     <a class="sanddance-app-static-content" id="titanic" data-display-name="Titanic" data-type="tsv"
         href="sample-data/titanicmaster.tsv"></a>
+    <a class="sanddance-app-static-content" id="demovote" data-display-name="Demo Vote" data-type="tsv"
+        href="sample-data/demovote.tsv"></a>
 
     <script>
         function setTheme(darkTheme) {
