@@ -1,6 +1,0 @@
-dist
-node_modules
-.vscode-test/
-*.vsix
-resources/
-!src/ui/*.js
