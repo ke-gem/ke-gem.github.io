@@ -1,6 +1,6 @@
 [
   {
-    "name": "test-job1",
+    "name": "test-job1-r",
     "project": "test-project",
     "app": {
       "cmd": [
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "name": "test-job2",
+    "name": "test-job2-r",
     "project": "test-project",
     "app": {
       "cmd": [
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "name": "job1",
+    "name": "job1-r",
     "project": "test",
     "app": {
       "cmd": [
@@ -170,7 +170,7 @@
     ]
   },
   {
-    "name": "job2",
+    "name": "job2-r",
     "project": "test",
     "app": {
       "cmd": [
@@ -282,7 +282,7 @@
     ]
   },
   {
-    "name": "job2",
+    "name": "job2-rf",
     "project": "test",
     "app": {
       "cmd": [
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "name": "job1",
+    "name": "job1-rf",
     "project": "test",
     "app": {
       "cmd": [
@@ -394,7 +394,7 @@
     ]
   },
   {
-    "name": "job2",
+    "name": "job2-rf",
     "project": "test",
     "app": {
       "cmd": [
