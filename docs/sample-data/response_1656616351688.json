@@ -1,0 +1,5578 @@
+[
+  {
+    "name": "test-job1-r",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "8EFDE51EAD2C",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T18:54:29.889000",
+      "queued_date": "2022-05-27T18:54:29.889000",
+      "start_date": "2022-05-27T18:54:30.115000",
+      "end_date": "2022-05-27T18:54:31.116000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "8EFDE51EAD2C",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T18:54:30.016000",
+        "queued_date": "2022-05-27T18:54:30.015000",
+        "start_date": "2022-05-27T18:54:30.115000",
+        "end_date": "2022-05-27T18:54:31.115000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "8EFDE51EAD2C-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2148538
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test-job2-r",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "8EFDE51EAD2C"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "F09F6592B22F",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T18:54:31.266000",
+      "queued_date": "2022-05-27T18:54:31.266000",
+      "start_date": "2022-05-27T18:54:31.382000",
+      "end_date": "2022-05-27T18:54:32.389000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "F09F6592B22F",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T18:54:31.275000",
+        "queued_date": "2022-05-27T18:54:31.275000",
+        "start_date": "2022-05-27T18:54:31.381000",
+        "end_date": "2022-05-27T18:54:32.388000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "F09F6592B22F-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2148625
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1-r",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "B0B6DFE6CADE",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:00:06.494000",
+      "queued_date": "2022-05-27T19:00:06.493000",
+      "start_date": "2022-05-27T19:00:06.600000",
+      "end_date": "2022-05-28T03:00:07.617000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "B0B6DFE6CADE",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:00:06.500000",
+        "queued_date": "2022-05-27T19:00:06.500000",
+        "start_date": "2022-05-27T19:00:06.599000",
+        "end_date": "2022-05-28T01:00:07.616000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "B0B6DFE6CADE-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2154228
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2-r",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "DFD395DD2E5B",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:00:06.591000",
+      "queued_date": "2022-05-27T19:00:06.591000",
+      "start_date": "2022-05-27T19:00:07.674000",
+      "end_date": "2022-05-27T19:00:08.680000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "DFD395DD2E5B",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:00:06.600000",
+        "queued_date": "2022-05-27T19:00:06.600000",
+        "start_date": "2022-05-27T19:00:07.673000",
+        "end_date": "2022-05-27T19:00:08.679000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "DFD395DD2E5B-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2154254
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "3FABA1ED1ED4",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:01:04.235000",
+      "queued_date": "2022-05-27T19:01:04.235000",
+      "start_date": "2022-05-27T19:01:04.351000",
+      "end_date": "2022-05-27T19:01:05.346000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "3FABA1ED1ED4",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:01:04.242000",
+        "queued_date": "2022-05-27T19:01:04.242000",
+        "start_date": "2022-05-27T19:01:04.350000",
+        "end_date": "2022-05-27T19:01:05.346000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "3FABA1ED1ED4-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2155683
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2-rf",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "A2ABEB9CC2E0",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:01:04.316000",
+      "queued_date": "2022-05-27T19:01:04.316000",
+      "start_date": "2022-05-27T19:01:05.419000",
+      "end_date": "2022-05-27T19:01:06.416000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "A2ABEB9CC2E0",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:01:04.325000",
+        "queued_date": "2022-05-27T19:01:04.325000",
+        "start_date": "2022-05-27T19:01:05.418000",
+        "end_date": "2022-05-27T19:01:06.416000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "A2ABEB9CC2E0-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2155728
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1-rf",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "52AF6CAE1818",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:01:53.219000",
+      "queued_date": "2022-05-27T19:01:53.219000",
+      "start_date": "2022-05-27T19:01:53.332000",
+      "end_date": "2022-05-27T19:01:58.340000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "52AF6CAE1818",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:01:53.226000",
+        "queued_date": "2022-05-27T19:01:53.226000",
+        "start_date": "2022-05-27T19:01:53.331000",
+        "end_date": "2022-05-27T19:01:58.340000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "52AF6CAE1818-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2156615
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2-rf",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "ECA52AED2617",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:01:53.319000",
+      "queued_date": "2022-05-27T19:01:53.319000",
+      "start_date": "2022-05-27T19:01:58.405000",
+      "end_date": "2022-05-27T19:02:03.392000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "ECA52AED2617",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:01:53.326000",
+        "queued_date": "2022-05-27T19:01:53.326000",
+        "start_date": "2022-05-27T19:01:58.404000",
+        "end_date": "2022-05-27T19:02:03.391000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "ECA52AED2617-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2157168
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "A1C6ED1FB559",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:02:37.417000",
+      "queued_date": "2022-05-27T19:02:37.417000",
+      "start_date": "2022-05-27T19:02:37.531000",
+      "end_date": "2022-05-27T19:02:42.538000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "A1C6ED1FB559",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:02:37.425000",
+        "queued_date": "2022-05-27T19:02:37.425000",
+        "start_date": "2022-05-27T19:02:37.530000",
+        "end_date": "2022-05-27T19:02:42.538000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "A1C6ED1FB559-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2157892
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "3E933ED6ADCA",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:02:37.505000",
+      "queued_date": "2022-05-27T19:02:37.505000",
+      "start_date": "2022-05-27T19:02:42.603000",
+      "end_date": "2022-05-27T19:02:47.599000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "3E933ED6ADCA",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:02:37.513000",
+        "queued_date": "2022-05-27T19:02:37.513000",
+        "start_date": "2022-05-27T19:02:42.602000",
+        "end_date": "2022-05-27T19:02:47.598000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "3E933ED6ADCA-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2158071
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "8A5D778E4682",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:03:09.412000",
+      "queued_date": "2022-05-27T19:03:09.412000",
+      "start_date": "2022-05-27T19:03:09.529000",
+      "end_date": "2022-05-27T19:03:14.541000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "8A5D778E4682",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:03:09.420000",
+        "queued_date": "2022-05-27T19:03:09.420000",
+        "start_date": "2022-05-27T19:03:09.528000",
+        "end_date": "2022-05-27T19:03:14.540000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "8A5D778E4682-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2158620
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "ED0CFC1A6A0C",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:03:09.499000",
+      "queued_date": "2022-05-27T19:03:09.499000",
+      "start_date": "2022-05-27T19:03:14.610000",
+      "end_date": "2022-05-27T19:03:19.613000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "ED0CFC1A6A0C",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:03:09.506000",
+        "queued_date": "2022-05-27T19:03:09.506000",
+        "start_date": "2022-05-27T19:03:14.609000",
+        "end_date": "2022-05-27T19:03:19.612000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "ED0CFC1A6A0C-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2158721
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "FDDDCFEEAE39",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:04:18.129000",
+      "queued_date": "2022-05-27T19:04:18.129000",
+      "start_date": "2022-05-27T19:04:18.238000",
+      "end_date": "2022-05-27T19:04:23.247000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "FDDDCFEEAE39",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:04:18.137000",
+        "queued_date": "2022-05-27T19:04:18.137000",
+        "start_date": "2022-05-27T19:04:18.238000",
+        "end_date": "2022-05-27T19:04:23.247000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "FDDDCFEEAE39-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2160032
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "1472C9CC8A20",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:04:18.211000",
+      "queued_date": "2022-05-27T19:04:18.211000",
+      "start_date": "2022-05-27T19:04:23.306000",
+      "end_date": "2022-05-27T19:04:28.305000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "1472C9CC8A20",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:04:18.218000",
+        "queued_date": "2022-05-27T19:04:18.218000",
+        "start_date": "2022-05-27T19:04:23.305000",
+        "end_date": "2022-05-27T19:04:28.305000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "1472C9CC8A20-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2160059
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "0CCBFBA8FDDF",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:05:04.133000",
+      "queued_date": "2022-05-27T19:05:04.133000",
+      "start_date": "2022-05-27T19:05:04.235000",
+      "end_date": "2022-05-27T19:05:29.246000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "0CCBFBA8FDDF",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:05:04.140000",
+        "queued_date": "2022-05-27T19:05:04.140000",
+        "start_date": "2022-05-27T19:05:04.234000",
+        "end_date": "2022-05-27T19:05:29.245000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "0CCBFBA8FDDF-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2160905
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "8DE38EF6A824",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:05:04.222000",
+      "queued_date": "2022-05-27T19:05:04.222000",
+      "start_date": "2022-05-27T19:05:29.305000",
+      "end_date": "2022-05-27T19:05:54.312000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "8DE38EF6A824",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:05:04.230000",
+        "queued_date": "2022-05-27T19:05:04.230000",
+        "start_date": "2022-05-27T19:05:29.304000",
+        "end_date": "2022-05-27T19:05:54.311000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "8DE38EF6A824-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2161406
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "49621DCC1EEF",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:07:02.064000",
+      "queued_date": "2022-05-27T19:07:02.064000",
+      "start_date": "2022-05-27T19:07:02.188000",
+      "end_date": "2022-05-27T19:07:27.197000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "49621DCC1EEF",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:07:02.076000",
+        "queued_date": "2022-05-27T19:07:02.076000",
+        "start_date": "2022-05-27T19:07:02.187000",
+        "end_date": "2022-05-27T19:07:27.196000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "49621DCC1EEF-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2163756
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "BC5592F6755E",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T19:07:02.368000",
+      "queued_date": "2022-05-27T19:07:02.368000",
+      "start_date": null,
+      "end_date": "2022-05-27T19:07:41.484000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": "BC5592F6755E",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T19:07:02.377000",
+        "queued_date": "2022-05-27T19:07:02.377000",
+        "start_date": null,
+        "end_date": "2022-05-27T19:07:45.072000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": "BC5592F6755E-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "6C0F33D7ED53",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:07:50.956000",
+      "queued_date": "2022-05-27T19:07:50.956000",
+      "start_date": "2022-05-27T19:07:51.078000",
+      "end_date": "2022-05-27T19:08:16.093000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "6C0F33D7ED53",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:07:50.967000",
+        "queued_date": "2022-05-27T19:07:50.967000",
+        "start_date": "2022-05-27T19:07:51.076000",
+        "end_date": "2022-05-27T19:08:16.091000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "6C0F33D7ED53-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2164966
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "84C8F5EA40C0",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T19:07:51.272000",
+      "queued_date": "2022-05-27T19:07:51.272000",
+      "start_date": null,
+      "end_date": "2022-05-27T19:07:55.668000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": "84C8F5EA40C0",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T19:07:51.283000",
+        "queued_date": "2022-05-27T19:07:51.283000",
+        "start_date": null,
+        "end_date": "2022-05-27T19:07:55.971000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": "84C8F5EA40C0-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "52CCFEFC7C6D",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:34:13.392000",
+      "queued_date": "2022-05-27T19:34:13.392000",
+      "start_date": "2022-05-27T19:34:13.516000",
+      "end_date": "2022-05-27T19:34:38.514000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "52CCFEFC7C6D",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:34:13.404000",
+        "queued_date": "2022-05-27T19:34:13.404000",
+        "start_date": "2022-05-27T19:34:13.515000",
+        "end_date": "2022-05-27T19:34:38.513000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "52CCFEFC7C6D-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2192454
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "DDAEE1CB6FF3",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:34:13.677000",
+      "queued_date": "2022-05-27T19:34:13.677000",
+      "start_date": "2022-05-27T19:34:38.579000",
+      "end_date": "2022-05-27T19:35:03.582000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "DDAEE1CB6FF3",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:34:13.687000",
+        "queued_date": "2022-05-27T19:34:13.687000",
+        "start_date": "2022-05-27T19:34:38.578000",
+        "end_date": "2022-05-27T19:35:03.581000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "DDAEE1CB6FF3-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2192845
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "7B433A3FDDF1",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:49:26.634000",
+      "queued_date": "2022-05-27T19:49:26.634000",
+      "start_date": "2022-05-27T19:49:26.763000",
+      "end_date": "2022-05-27T19:49:51.764000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "7B433A3FDDF1",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:49:26.644000",
+        "queued_date": "2022-05-27T19:49:26.644000",
+        "start_date": "2022-05-27T19:49:26.762000",
+        "end_date": "2022-05-27T19:49:51.763000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "7B433A3FDDF1-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2206866
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "5B3A146BFAF2",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:49:26.922000",
+      "queued_date": "2022-05-27T19:49:26.922000",
+      "start_date": "2022-05-27T19:49:51.839000",
+      "end_date": "2022-05-27T19:50:16.829000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "5B3A146BFAF2",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:49:26.935000",
+        "queued_date": "2022-05-27T19:49:26.935000",
+        "start_date": "2022-05-27T19:49:51.838000",
+        "end_date": "2022-05-27T19:50:16.827000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "5B3A146BFAF2-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2207293
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "24DFF5FADE01",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:50:31.643000",
+      "queued_date": "2022-05-27T19:50:31.642000",
+      "start_date": "2022-05-27T19:50:31.756000",
+      "end_date": "2022-05-27T19:50:56.771000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "24DFF5FADE01",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:50:31.654000",
+        "queued_date": "2022-05-27T19:50:31.654000",
+        "start_date": "2022-05-27T19:50:31.755000",
+        "end_date": "2022-05-27T19:50:56.770000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "24DFF5FADE01-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2208006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "24DFF5FADE01"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "D4C741ED2FED",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:50:57.372000",
+      "queued_date": "2022-05-27T19:50:57.372000",
+      "start_date": "2022-05-27T19:50:57.486000",
+      "end_date": "2022-05-27T19:51:22.490000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "D4C741ED2FED",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:50:57.383000",
+        "queued_date": "2022-05-27T19:50:57.383000",
+        "start_date": "2022-05-27T19:50:57.484000",
+        "end_date": "2022-05-27T19:51:22.489000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "D4C741ED2FED-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2208457
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "1E1B6CBE6E76",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:51:24.979000",
+      "queued_date": "2022-05-27T19:51:24.979000",
+      "start_date": "2022-05-27T19:51:25.107000",
+      "end_date": "2022-05-27T19:51:50.109000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "1E1B6CBE6E76",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:51:24.993000",
+        "queued_date": "2022-05-27T19:51:24.993000",
+        "start_date": "2022-05-27T19:51:25.106000",
+        "end_date": "2022-05-27T19:51:50.108000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "1E1B6CBE6E76-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2209109
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "1E1B6CBE6E76"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "BBADC2C7BE4D",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T19:51:24.706000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-05-27T19:51:24.719000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T19:51:24.706000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-05-27T19:51:24.714000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "FBBDEB2F068D",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:52:44.949000",
+      "queued_date": "2022-05-27T19:52:44.949000",
+      "start_date": "2022-05-27T19:52:45.075000",
+      "end_date": "2022-05-27T19:53:10.079000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "FBBDEB2F068D",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:52:44.961000",
+        "queued_date": "2022-05-27T19:52:44.961000",
+        "start_date": "2022-05-27T19:52:45.073000",
+        "end_date": "2022-05-27T19:53:10.078000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "FBBDEB2F068D-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2210490
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "FBBDEB2F068D"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "C3A9E08B9FCD",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:53:10.645000",
+      "queued_date": "2022-05-27T19:53:10.645000",
+      "start_date": "2022-05-27T19:53:10.757000",
+      "end_date": "2022-05-27T19:53:35.759000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "C3A9E08B9FCD",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:53:10.658000",
+        "queued_date": "2022-05-27T19:53:10.658000",
+        "start_date": "2022-05-27T19:53:10.756000",
+        "end_date": "2022-05-27T19:53:35.758000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "C3A9E08B9FCD-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2210948
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "C779D24D1C1C",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:53:38.390000",
+      "queued_date": "2022-05-27T19:53:38.390000",
+      "start_date": "2022-05-27T19:53:38.509000",
+      "end_date": "2022-05-27T19:53:43.507000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "C779D24D1C1C",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:53:38.401000",
+        "queued_date": "2022-05-27T19:53:38.400000",
+        "start_date": "2022-05-27T19:53:38.507000",
+        "end_date": "2022-05-27T19:53:43.505000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "C779D24D1C1C-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2211394
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "C779D24D1C1C"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "4FD5375E13C8",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:53:44.086000",
+      "queued_date": "2022-05-27T19:53:44.086000",
+      "start_date": "2022-05-27T19:53:44.204000",
+      "end_date": "2022-05-27T19:53:49.217000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "4FD5375E13C8",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:53:44.098000",
+        "queued_date": "2022-05-27T19:53:44.098000",
+        "start_date": "2022-05-27T19:53:44.202000",
+        "end_date": "2022-05-27T19:53:49.216000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "4FD5375E13C8-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2211463
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "F6AE4C648AAD",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:54:23.162000",
+      "queued_date": "2022-05-27T19:54:23.162000",
+      "start_date": "2022-05-27T19:54:23.291000",
+      "end_date": "2022-05-27T19:54:28.291000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "F6AE4C648AAD",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:54:23.173000",
+        "queued_date": "2022-05-27T19:54:23.173000",
+        "start_date": "2022-05-27T19:54:23.290000",
+        "end_date": "2022-05-27T19:54:28.290000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "F6AE4C648AAD-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2212181
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "F6AE4C648AAD"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "0E3BF40EDBAB",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:54:28.859000",
+      "queued_date": "2022-05-27T19:54:28.859000",
+      "start_date": "2022-05-27T19:54:28.975000",
+      "end_date": "2022-05-27T19:54:33.982000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "0E3BF40EDBAB",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:54:28.870000",
+        "queued_date": "2022-05-27T19:54:28.870000",
+        "start_date": "2022-05-27T19:54:28.974000",
+        "end_date": "2022-05-27T19:54:33.981000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "0E3BF40EDBAB-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2212364
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "BED406AA64BE",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:55:02.483000",
+      "queued_date": "2022-05-27T19:55:02.483000",
+      "start_date": "2022-05-27T19:55:02.607000",
+      "end_date": "2022-05-27T19:55:07.612000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "BED406AA64BE",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:55:02.496000",
+        "queued_date": "2022-05-27T19:55:02.496000",
+        "start_date": "2022-05-27T19:55:02.606000",
+        "end_date": "2022-05-27T19:55:07.611000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "BED406AA64BE-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2213012
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "BED406AA64BE"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "B44D7DBB1DDE",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:55:08.207000",
+      "queued_date": "2022-05-27T19:55:08.207000",
+      "start_date": "2022-05-27T19:55:08.334000",
+      "end_date": "2022-05-27T19:55:13.341000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "B44D7DBB1DDE",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:55:08.219000",
+        "queued_date": "2022-05-27T19:55:08.219000",
+        "start_date": "2022-05-27T19:55:08.333000",
+        "end_date": "2022-05-27T19:55:13.340000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "B44D7DBB1DDE-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2213068
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "C903CA3AAF8E",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:55:23.583000",
+      "queued_date": "2022-05-27T19:55:23.583000",
+      "start_date": "2022-05-27T19:55:23.693000",
+      "end_date": "2022-05-27T19:55:28.720000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "C903CA3AAF8E",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:55:23.596000",
+        "queued_date": "2022-05-27T19:55:23.596000",
+        "start_date": "2022-05-27T19:55:23.692000",
+        "end_date": "2022-05-27T19:55:28.719000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "C903CA3AAF8E-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2213365
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "C903CA3AAF8E"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "AEE9ECA4E7EF",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T19:55:23.322000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-05-27T19:55:24.339000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T19:55:23.322000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-05-27T19:55:24.334000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "job1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "BBBD8F263EFA",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:55:33.540000",
+      "queued_date": "2022-05-27T19:55:33.540000",
+      "start_date": "2022-05-27T19:55:33.643000",
+      "end_date": "2022-05-27T19:55:38.664000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "BBBD8F263EFA",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:55:33.551000",
+        "queued_date": "2022-05-27T19:55:33.551000",
+        "start_date": "2022-05-27T19:55:33.642000",
+        "end_date": "2022-05-27T19:55:38.663000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "BBBD8F263EFA-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2213642
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "BBBD8F263EFA"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "5C9EAE4DC33C",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:55:39.206000",
+      "queued_date": "2022-05-27T19:55:39.206000",
+      "start_date": "2022-05-27T19:55:39.324000",
+      "end_date": "2022-05-27T19:55:44.320000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "5C9EAE4DC33C",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:55:39.217000",
+        "queued_date": "2022-05-27T19:55:39.217000",
+        "start_date": "2022-05-27T19:55:39.323000",
+        "end_date": "2022-05-27T19:55:44.319000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "5C9EAE4DC33C-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2213861
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "EC4C84AAB600",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:56:12.944000",
+      "queued_date": "2022-05-27T19:56:12.944000",
+      "start_date": "2022-05-27T19:56:13.067000",
+      "end_date": "2022-05-27T19:56:18.066000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "EC4C84AAB600",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:56:12.955000",
+        "queued_date": "2022-05-27T19:56:12.955000",
+        "start_date": "2022-05-27T19:56:13.066000",
+        "end_date": "2022-05-27T19:56:18.065000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "EC4C84AAB600-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2214404
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "EC4C84AAB600"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "1CEFB4A9AFB5",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:56:18.646000",
+      "queued_date": "2022-05-27T19:56:18.646000",
+      "start_date": "2022-05-27T19:56:23.195000",
+      "end_date": "2022-05-27T19:56:28.216000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "1CEFB4A9AFB5",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:56:18.659000",
+        "queued_date": "2022-05-27T19:56:18.659000",
+        "start_date": "2022-05-27T19:56:23.194000",
+        "end_date": "2022-05-27T19:56:28.215000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "1CEFB4A9AFB5-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2214700
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "21FC6B1C15E7",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T19:56:13.248000",
+      "queued_date": "2022-05-27T19:56:13.248000",
+      "start_date": "2022-05-27T19:56:18.132000",
+      "end_date": "2022-05-27T19:56:23.134000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "21FC6B1C15E7",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T19:56:13.260000",
+        "queued_date": "2022-05-27T19:56:13.260000",
+        "start_date": "2022-05-27T19:56:18.130000",
+        "end_date": "2022-05-27T19:56:23.132000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "21FC6B1C15E7-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2214639
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_cancel_dependency_job2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "21FC6B1C15E7"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "089CB6DDC8E9",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T19:56:12.692000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-05-27T19:56:13.708000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T19:56:12.692000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-05-27T19:56:13.701000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "76F8CAAB3833",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-05-27T19:58:35.480000",
+      "queued_date": "2022-05-27T19:58:35.480000",
+      "start_date": "2022-05-27T19:58:35.607000",
+      "end_date": "2022-05-27T19:58:40.216000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "76F8CAAB3833",
+      "exit_code": -9,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-05-27T19:58:35.494000",
+        "queued_date": "2022-05-27T19:58:35.494000",
+        "start_date": "2022-05-27T19:58:35.606000",
+        "end_date": "2022-05-27T19:58:40.214000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "76F8CAAB3833-0",
+        "exit_code": -9,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2216796
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "76F8CAAB3833"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "9AE8F4AD5CFA",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T19:58:35.214000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-05-27T19:58:40.523000",
+      "error_code": null,
+      "error_message": "Execution of 76F8CAAB3833 failed.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T19:58:35.214000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-05-27T19:58:40.517000",
+        "error_code": null,
+        "error_message": "Execution of 76F8CAAB3833 failed.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "A6C0646AA282",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:18:57.704000",
+      "queued_date": "2022-05-27T20:18:57.704000",
+      "start_date": "2022-05-27T20:18:57.817000",
+      "end_date": "2022-05-27T20:19:17.828000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "A6C0646AA282",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:18:57.716000",
+        "queued_date": "2022-05-27T20:18:57.716000",
+        "start_date": "2022-05-27T20:18:57.816000",
+        "end_date": "2022-05-27T20:19:17.827000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "A6C0646AA282-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2237276
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "A6C0646AA282"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "0C9984DCFD9E",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:19:18.414000",
+      "queued_date": "2022-05-27T20:19:18.414000",
+      "start_date": "2022-05-27T20:19:18.550000",
+      "end_date": "2022-05-27T20:19:38.551000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "0C9984DCFD9E",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:19:18.426000",
+        "queued_date": "2022-05-27T20:19:18.426000",
+        "start_date": "2022-05-27T20:19:18.548000",
+        "end_date": "2022-05-27T20:19:38.550000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "0C9984DCFD9E-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2237818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "35DE1CF8B887",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:19:49.376000",
+      "queued_date": "2022-05-27T20:19:49.375000",
+      "start_date": "2022-05-27T20:19:49.504000",
+      "end_date": "2022-05-27T20:20:09.501000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "35DE1CF8B887",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:19:49.388000",
+        "queued_date": "2022-05-27T20:19:49.388000",
+        "start_date": "2022-05-27T20:19:49.503000",
+        "end_date": "2022-05-27T20:20:09.501000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "35DE1CF8B887-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2238422
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "35DE1CF8B887"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "B4E8ED1CCBA2",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:20:10.083000",
+      "queued_date": "2022-05-27T20:20:10.083000",
+      "start_date": "2022-05-27T20:20:10.200000",
+      "end_date": "2022-05-27T20:20:30.212000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "B4E8ED1CCBA2",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:20:10.095000",
+        "queued_date": "2022-05-27T20:20:10.095000",
+        "start_date": "2022-05-27T20:20:10.198000",
+        "end_date": "2022-05-27T20:20:30.211000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "B4E8ED1CCBA2-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2238805
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "4D9DBB23BBE0",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:20:56.630000",
+      "queued_date": "2022-05-27T20:20:56.630000",
+      "start_date": "2022-05-27T20:20:56.751000",
+      "end_date": "2022-05-27T20:21:16.761000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "4D9DBB23BBE0",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:20:56.642000",
+        "queued_date": "2022-05-27T20:20:56.642000",
+        "start_date": "2022-05-27T20:20:56.750000",
+        "end_date": "2022-05-27T20:21:16.760000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "4D9DBB23BBE0-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2239623
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "4D9DBB23BBE0"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "98D96E0EC05D",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:21:17.329000",
+      "queued_date": "2022-05-27T20:21:17.329000",
+      "start_date": "2022-05-27T20:21:17.444000",
+      "end_date": "2022-05-27T20:21:37.443000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "98D96E0EC05D",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:21:17.339000",
+        "queued_date": "2022-05-27T20:21:17.339000",
+        "start_date": "2022-05-27T20:21:17.442000",
+        "end_date": "2022-05-27T20:21:37.442000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "98D96E0EC05D-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2240131
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6A5C55A1_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "2FF3A49C5E13",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:26:01.729000",
+      "queued_date": "2022-05-27T20:26:01.729000",
+      "start_date": "2022-05-27T20:26:01.854000",
+      "end_date": "2022-05-27T20:26:21.848000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "2FF3A49C5E13",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:26:01.741000",
+        "queued_date": "2022-05-27T20:26:01.741000",
+        "start_date": "2022-05-27T20:26:01.852000",
+        "end_date": "2022-05-27T20:26:21.847000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "2FF3A49C5E13-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2245236
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6A5C55A1_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "2FF3A49C5E13"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "665D51A71BDC",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:26:22.455000",
+      "queued_date": "2022-05-27T20:26:22.455000",
+      "start_date": "2022-05-27T20:26:22.570000",
+      "end_date": "2022-05-27T20:26:42.582000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "665D51A71BDC",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:26:22.467000",
+        "queued_date": "2022-05-27T20:26:22.467000",
+        "start_date": "2022-05-27T20:26:22.569000",
+        "end_date": "2022-05-27T20:26:42.581000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "665D51A71BDC-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2245708
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AD4C_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "C3D0DAADCAFC",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:26:43.264000",
+      "queued_date": "2022-05-27T20:26:43.264000",
+      "start_date": "2022-05-27T20:26:43.406000",
+      "end_date": "2022-05-27T20:27:03.398000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "C3D0DAADCAFC",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:26:43.275000",
+        "queued_date": "2022-05-27T20:26:43.274000",
+        "start_date": "2022-05-27T20:26:43.405000",
+        "end_date": "2022-05-27T20:27:03.396000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "C3D0DAADCAFC-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2245955
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AD4C_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "C3D0DAADCAFC"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "9ACDA348FEC9",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:27:03.967000",
+      "queued_date": "2022-05-27T20:27:03.967000",
+      "start_date": "2022-05-27T20:27:23.516000",
+      "end_date": "2022-05-27T20:27:43.513000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "9ACDA348FEC9",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:27:03.977000",
+        "queued_date": "2022-05-27T20:27:03.977000",
+        "start_date": "2022-05-27T20:27:23.515000",
+        "end_date": "2022-05-27T20:27:43.512000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "9ACDA348FEC9-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2246849
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AD4C_test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "C29DF8AB40FC",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:26:43.600000",
+      "queued_date": "2022-05-27T20:26:43.600000",
+      "start_date": "2022-05-27T20:27:03.458000",
+      "end_date": "2022-05-27T20:27:23.457000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "C29DF8AB40FC",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:26:43.612000",
+        "queued_date": "2022-05-27T20:26:43.612000",
+        "start_date": "2022-05-27T20:27:03.457000",
+        "end_date": "2022-05-27T20:27:23.456000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "C29DF8AB40FC-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2246409
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AD4C_test_cancel_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "C29DF8AB40FC"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "426BC82AFBFC",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T20:26:42.999000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-05-27T20:26:48.018000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T20:26:42.999000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-05-27T20:26:48.011000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "206D_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "DABB43CED7CE",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:27:29.399000",
+      "queued_date": "2022-05-27T20:27:29.399000",
+      "start_date": "2022-05-27T20:27:43.584000",
+      "end_date": "2022-05-28T00:28:03.576000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "DABB43CED7CE",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:27:29.413000",
+        "queued_date": "2022-05-27T20:27:29.412000",
+        "start_date": "2022-05-27T20:27:43.582000",
+        "end_date": "2022-05-27T20:28:03.575000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "DABB43CED7CE-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2247172
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "206D_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "DABB43CED7CE"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "D1EAA8722EB0",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:28:04.167000",
+      "queued_date": "2022-05-27T20:28:04.166000",
+      "start_date": "2022-05-27T20:28:14.992000",
+      "end_date": "2022-05-27T23:28:34.995000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "D1EAA8722EB0",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:28:04.177000",
+        "queued_date": "2022-05-27T20:28:04.177000",
+        "start_date": "2022-05-27T20:28:14.991000",
+        "end_date": "2022-05-27T21:28:34.994000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "D1EAA8722EB0-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2247984
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "206D_test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "63E5FAB67D5E",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:27:29.693000",
+      "queued_date": "2022-05-27T20:27:29.693000",
+      "start_date": "2022-05-27T20:28:03.640000",
+      "end_date": "2022-05-27T20:31:39.331000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "63E5FAB67D5E",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:27:29.706000",
+        "queued_date": "2022-05-27T20:27:29.706000",
+        "start_date": "2022-05-27T20:28:03.639000",
+        "end_date": "2022-05-27T20:31:39.330000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "63E5FAB67D5E-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2247599
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "206D_test_cancel_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "63E5FAB67D5E"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "B2FA7FBB19EC",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T20:27:29.193000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-05-27T20:27:34.213000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T20:27:29.193000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-05-27T20:27:34.208000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "6A49_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "A5B3BCEDAC9D",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:40:24.506000",
+      "queued_date": "2022-05-27T20:40:24.506000",
+      "start_date": "2022-05-27T20:40:24.720000",
+      "end_date": "2022-05-27T21:40:44.727000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "A5B3BCEDAC9D",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:40:24.618000",
+        "queued_date": "2022-05-27T20:40:24.618000",
+        "start_date": "2022-05-27T20:40:24.719000",
+        "end_date": "2022-05-27T22:40:44.726000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "A5B3BCEDAC9D-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2260186
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6A49_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "A5B3BCEDAC9D"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "A3C8C3944CD4",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:40:45.312000",
+      "queued_date": "2022-05-27T20:40:45.312000",
+      "start_date": "2022-05-27T20:40:58.604000",
+      "end_date": "2022-05-27T20:41:18.605000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "A3C8C3944CD4",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:40:45.324000",
+        "queued_date": "2022-05-27T20:40:45.324000",
+        "start_date": "2022-05-27T20:40:58.603000",
+        "end_date": "2022-05-27T20:41:18.604000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "A3C8C3944CD4-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2260836
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6A49_test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "A2CE965CC4BB",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T20:40:24.913000",
+      "queued_date": "2022-05-27T20:40:24.913000",
+      "start_date": "2022-05-27T20:40:44.793000",
+      "end_date": "2022-05-27T20:43:04.068000",
+      "error_code": null,
+      "error_message": "N/A",
+      "internal_id": "A2CE965CC4BB",
+      "exit_code": null,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T20:40:24.925000",
+        "queued_date": "2022-05-27T20:40:24.925000",
+        "start_date": "2022-05-27T20:40:44.792000",
+        "end_date": "2022-05-27T20:43:04.368000",
+        "error_code": null,
+        "error_message": "N/A",
+        "internal_id": "A2CE965CC4BB-0",
+        "exit_code": null,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2260558
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "6A49_test_cancel_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "A2CE965CC4BB"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "ABFC6CBC2470",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T20:40:24.241000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-05-27T20:40:29.263000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T20:40:24.241000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-05-27T20:40:29.256000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "789F_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "DD74C0D387D1",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:47:41.469000",
+      "queued_date": "2022-05-27T20:47:41.469000",
+      "start_date": "2022-05-27T20:47:41.706000",
+      "end_date": "2022-05-27T20:48:01.701000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "DD74C0D387D1",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:47:41.580000",
+        "queued_date": "2022-05-27T20:47:41.580000",
+        "start_date": "2022-05-27T20:47:41.705000",
+        "end_date": "2022-05-27T20:48:01.700000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "DD74C0D387D1-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2267417
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "789F_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "DD74C0D387D1"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "DEB4EEC4C1D3",
+    "state": {
+      "state": "done",
+      "create_date": "2022-05-27T20:48:02.276000",
+      "queued_date": "2022-05-27T20:48:02.276000",
+      "start_date": "2022-05-27T20:48:08.212000",
+      "end_date": "2022-05-27T20:48:28.216000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "DEB4EEC4C1D3",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-05-27T20:48:02.287000",
+        "queued_date": "2022-05-27T20:48:02.287000",
+        "start_date": "2022-05-27T20:48:08.211000",
+        "end_date": "2022-05-27T20:48:28.215000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "DEB4EEC4C1D3-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2267934
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "789F_test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "BBE0983CFE3A",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T20:47:41.865000",
+      "queued_date": "2022-05-27T20:47:41.865000",
+      "start_date": "2022-05-27T20:48:01.762000",
+      "end_date": "2022-05-27T20:48:16.864000",
+      "error_code": null,
+      "error_message": "N/A",
+      "internal_id": "BBE0983CFE3A",
+      "exit_code": null,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T20:47:41.875000",
+        "queued_date": "2022-05-27T20:47:41.875000",
+        "start_date": "2022-05-27T20:48:01.761000",
+        "end_date": "2022-05-27T20:48:17.195000",
+        "error_code": null,
+        "error_message": "N/A",
+        "internal_id": "BBE0983CFE3A-0",
+        "exit_code": null,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 2267867
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "789F_test_cancel_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "BBE0983CFE3A"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "B83EE9A1CBF7",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-05-27T20:47:41.205000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-05-27T20:47:46.227000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-05-27T20:47:41.205000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-05-27T20:47:46.220000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "testapp.sh"
+      ]
+    },
+    "app_type": "shell",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "in": "/projects/vel.gem.json",
+      "out": "/projects/deleteme.vds"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "C3D49549AACD",
+    "state": {
+      "state": "done",
+      "create_date": "2022-06-01T22:42:11.247000",
+      "queued_date": "2022-06-01T22:42:11.247000",
+      "start_date": "2022-06-01T22:42:11.350000",
+      "end_date": "2022-06-01T22:42:11.417000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "C3D49549AACD",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-06-01T22:42:11.255000",
+        "queued_date": "2022-06-01T22:42:11.255000",
+        "start_date": "2022-06-01T22:42:11.348000",
+        "end_date": "2022-06-01T22:42:11.416000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "C3D49549AACD-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "zrcdmrc",
+            "pid": 1132716
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "B4A1_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "C64FFC8DF91F",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:43:07.254000",
+      "queued_date": "2022-06-30T18:43:07.254000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:07.478000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "C64FFC8DF91F",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:43:07.385000",
+        "queued_date": "2022-06-30T18:43:07.385000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:07.478000",
+        "error_code": -1,
+        "error_message": "",
+        "internal_id": "C64FFC8DF91F-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "B4A1_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "C64FFC8DF91F"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "D25DDECCD384",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-06-30T18:43:07.159000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:07.574000",
+      "error_code": null,
+      "error_message": "Execution of C64FFC8DF91F failed.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-06-30T18:43:07.159000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:07.569000",
+        "error_code": null,
+        "error_message": "Execution of C64FFC8DF91F failed.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "B4A1_test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "5C3EB1B0E9AA",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:43:07.457000",
+      "queued_date": "2022-06-30T18:43:07.457000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:07.577000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "5C3EB1B0E9AA",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:43:07.464000",
+        "queued_date": "2022-06-30T18:43:07.464000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:07.577000",
+        "error_code": -1,
+        "error_message": "",
+        "internal_id": "5C3EB1B0E9AA-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "B4A1_test_cancel_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "5C3EB1B0E9AA"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "666DBF60FBB4",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-06-30T18:43:07.169000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:12.182000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-06-30T18:43:07.169000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:12.180000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "1E43_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "A9CCFE44CA88",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:43:40.571000",
+      "queued_date": "2022-06-30T18:43:40.571000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:40.858000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "A9CCFE44CA88",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:43:40.580000",
+        "queued_date": "2022-06-30T18:43:40.580000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:40.857000",
+        "error_code": -1,
+        "error_message": "",
+        "internal_id": "A9CCFE44CA88-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "1E43_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "A9CCFE44CA88"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "3B826FB76B1B",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-06-30T18:43:40.502000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:40.934000",
+      "error_code": null,
+      "error_message": "Execution of A9CCFE44CA88 failed.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-06-30T18:43:40.502000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:40.930000",
+        "error_code": null,
+        "error_message": "Execution of A9CCFE44CA88 failed.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "1E43_test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "B89A7244B3E2",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:43:40.649000",
+      "queued_date": "2022-06-30T18:43:40.649000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:41.097000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "B89A7244B3E2",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:43:40.658000",
+        "queued_date": "2022-06-30T18:43:40.658000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:41.096000",
+        "error_code": -1,
+        "error_message": "",
+        "internal_id": "B89A7244B3E2-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "1E43_test_cancel_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "B89A7244B3E2"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "1DBCB86DB991",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-06-30T18:43:40.512000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:45.524000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-06-30T18:43:40.512000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:45.522000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "14BA_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "BD7FCAC9AEA9",
+    "state": {
+      "state": "queued",
+      "create_date": "2022-06-30T18:43:50.704000",
+      "queued_date": "2022-06-30T18:43:50.704000",
+      "start_date": null,
+      "end_date": null,
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "BD7FCAC9AEA9",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "queued",
+        "create_date": "2022-06-30T18:43:50.712000",
+        "queued_date": "2022-06-30T18:43:50.712000",
+        "start_date": null,
+        "end_date": null,
+        "error_code": null,
+        "error_message": null,
+        "internal_id": "BD7FCAC9AEA9-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "14BA_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "BD7FCAC9AEA9"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "C6BEBCD52385",
+    "state": {
+      "state": "pending",
+      "create_date": "2022-06-30T18:43:50.642000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": null,
+      "error_code": null,
+      "error_message": null,
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "pending",
+        "create_date": "2022-06-30T18:43:50.642000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": null,
+        "error_code": null,
+        "error_message": null,
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "14BA_test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "F51A43067A71",
+    "state": {
+      "state": "done",
+      "create_date": "2022-06-30T18:43:50.790000",
+      "queued_date": "2022-06-30T18:43:50.790000",
+      "start_date": "2022-06-30T18:44:31.157000",
+      "end_date": "2022-06-30T18:44:33.165000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "F51A43067A71",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-06-30T18:43:50.798000",
+        "queued_date": "2022-06-30T18:43:50.798000",
+        "start_date": "2022-06-30T18:44:31.156000",
+        "end_date": "2022-06-30T18:44:33.164000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "F51A43067A71-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "gembox",
+            "pid": 373104
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "14BA_test_cancel_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "F51A43067A71"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "2DE11BD89054",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-06-30T18:43:50.654000",
+      "queued_date": null,
+      "start_date": null,
+      "end_date": "2022-06-30T18:43:55.667000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": null,
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-06-30T18:43:50.654000",
+        "queued_date": null,
+        "start_date": null,
+        "end_date": "2022-06-30T18:43:55.663000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": null,
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "C9B8_test_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "ABB82E4AC56E",
+    "state": {
+      "state": "done",
+      "create_date": "2022-06-30T18:44:36.383000",
+      "queued_date": "2022-06-30T18:44:36.383000",
+      "start_date": "2022-06-30T18:44:36.653000",
+      "end_date": "2022-06-30T18:44:38.663000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "ABB82E4AC56E",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-06-30T18:44:36.391000",
+        "queued_date": "2022-06-30T18:44:36.391000",
+        "start_date": "2022-06-30T18:44:36.653000",
+        "end_date": "2022-06-30T18:44:38.662000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "ABB82E4AC56E-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "gembox",
+            "pid": 373413
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C9B8_test_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "ABB82E4AC56E"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "BDE7735DBDFA",
+    "state": {
+      "state": "done",
+      "create_date": "2022-06-30T18:44:38.802000",
+      "queued_date": "2022-06-30T18:44:38.802000",
+      "start_date": "2022-06-30T18:44:41.136000",
+      "end_date": "2022-06-30T18:44:43.129000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "BDE7735DBDFA",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-06-30T18:44:38.811000",
+        "queued_date": "2022-06-30T18:44:38.811000",
+        "start_date": "2022-06-30T18:44:41.135000",
+        "end_date": "2022-06-30T18:44:43.129000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "BDE7735DBDFA-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "gembox",
+            "pid": 373493
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C9B8_test_cancel_dependency_1",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "E661AE8A4C95",
+    "state": {
+      "state": "done",
+      "create_date": "2022-06-30T18:44:36.462000",
+      "queued_date": "2022-06-30T18:44:36.462000",
+      "start_date": "2022-06-30T18:44:38.893000",
+      "end_date": "2022-06-30T18:44:40.892000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "E661AE8A4C95",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-06-30T18:44:36.468000",
+        "queued_date": "2022-06-30T18:44:36.468000",
+        "start_date": "2022-06-30T18:44:38.892000",
+        "end_date": "2022-06-30T18:44:40.892000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "E661AE8A4C95-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "gembox",
+            "pid": 373454
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C9B8_test_cancel_dependency_2",
+    "project": "test",
+    "app": {
+      "cmd": [
+        "/apps/testapp.sh"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [
+      "E661AE8A4C95"
+    ],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {},
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "0B8A070BDEA2",
+    "state": {
+      "state": "canceled",
+      "create_date": "2022-06-30T18:44:41.028000",
+      "queued_date": "2022-06-30T18:44:41.028000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:44:41.347000",
+      "error_code": null,
+      "error_message": "this is a test.",
+      "internal_id": "0B8A070BDEA2",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "canceled",
+        "create_date": "2022-06-30T18:44:41.036000",
+        "queued_date": "2022-06-30T18:44:41.036000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:44:41.417000",
+        "error_code": null,
+        "error_message": "this is a test.",
+        "internal_id": "0B8A070BDEA2-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_create_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "882CE6EDAFE2",
+    "state": {
+      "state": "done",
+      "create_date": "2022-06-30T18:46:37.840000",
+      "queued_date": "2022-06-30T18:46:37.839000",
+      "start_date": "2022-06-30T18:46:38.139000",
+      "end_date": "2022-06-30T18:46:38.223000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "882CE6EDAFE2",
+      "exit_code": 0,
+      "hosts": []
+    },
+    "task_state": [
+      {
+        "state": "done",
+        "create_date": "2022-06-30T18:46:37.847000",
+        "queued_date": "2022-06-30T18:46:37.847000",
+        "start_date": "2022-06-30T18:46:38.138000",
+        "end_date": "2022-06-30T18:46:38.223000",
+        "error_code": 0,
+        "error_message": "Normal execution.",
+        "internal_id": "882CE6EDAFE2-0",
+        "exit_code": 0,
+        "hosts": [
+          {
+            "hostname": "gembox",
+            "pid": 375869
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "53B4FC8A5F1A",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:46:54.124000",
+      "queued_date": "2022-06-30T18:46:54.124000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:46:54.402000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "53B4FC8A5F1A",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:46:54.130000",
+        "queued_date": "2022-06-30T18:46:54.130000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:46:54.401000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "53B4FC8A5F1A-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "F874BB60D8FD",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:48:16.623000",
+      "queued_date": "2022-06-30T18:48:16.623000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:48:16.920000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "F874BB60D8FD",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:48:16.631000",
+        "queued_date": "2022-06-30T18:48:16.631000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:48:16.920000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "F874BB60D8FD-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "10B79FB5FC63",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:48:34.185000",
+      "queued_date": "2022-06-30T18:48:34.185000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:48:34.479000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "10B79FB5FC63",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:48:34.193000",
+        "queued_date": "2022-06-30T18:48:34.193000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:48:34.478000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "10B79FB5FC63-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "DB5D7BD9DE0F",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:50:21.021000",
+      "queued_date": "2022-06-30T18:50:21.021000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:50:21.322000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "DB5D7BD9DE0F",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:50:21.029000",
+        "queued_date": "2022-06-30T18:50:21.029000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:50:21.321000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "DB5D7BD9DE0F-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "94DEAA8DFFA1",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:50:38.003000",
+      "queued_date": "2022-06-30T18:50:38.003000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:50:38.323000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "94DEAA8DFFA1",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:50:38.011000",
+        "queued_date": "2022-06-30T18:50:38.011000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:50:38.322000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "94DEAA8DFFA1-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "5D7C11539BCD",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:52:26.802000",
+      "queued_date": "2022-06-30T18:52:26.802000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:52:27.074000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "5D7C11539BCD",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:52:26.808000",
+        "queued_date": "2022-06-30T18:52:26.808000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:52:27.073000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "5D7C11539BCD-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "AFF36EA3E483",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:54:04.468000",
+      "queued_date": "2022-06-30T18:54:04.468000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:54:04.739000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "AFF36EA3E483",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:54:04.475000",
+        "queued_date": "2022-06-30T18:54:04.475000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:54:04.738000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "AFF36EA3E483-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "BF446AEB0ED2",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:54:24.121000",
+      "queued_date": "2022-06-30T18:54:24.121000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:54:24.400000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "BF446AEB0ED2",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:54:24.131000",
+        "queued_date": "2022-06-30T18:54:24.131000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:54:24.399000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "BF446AEB0ED2-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "CE1C214118F6",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:54:51.843000",
+      "queued_date": "2022-06-30T18:54:51.843000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:54:52.123000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "CE1C214118F6",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:54:51.852000",
+        "queued_date": "2022-06-30T18:54:51.852000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:54:52.122000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "CE1C214118F6-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "7A25AB67CBDE",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:55:01.171000",
+      "queued_date": "2022-06-30T18:55:01.171000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:55:01.462000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "7A25AB67CBDE",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:55:01.178000",
+        "queued_date": "2022-06-30T18:55:01.178000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:55:01.461000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "7A25AB67CBDE-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "CF3A8FBDCA0E",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T18:55:14.936000",
+      "queued_date": "2022-06-30T18:55:14.936000",
+      "start_date": null,
+      "end_date": "2022-06-30T18:55:15.206000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "CF3A8FBDCA0E",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T18:55:14.944000",
+        "queued_date": "2022-06-30T18:55:14.944000",
+        "start_date": null,
+        "end_date": "2022-06-30T18:55:15.206000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "CF3A8FBDCA0E-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "89BADD11AC8A",
+    "state": {
+      "state": "failed",
+      "create_date": "2022-06-30T19:00:12.566000",
+      "queued_date": "2022-06-30T19:00:12.566000",
+      "start_date": null,
+      "end_date": "2022-06-30T19:00:26.494000",
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "89BADD11AC8A",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "failed",
+        "create_date": "2022-06-30T19:00:12.573000",
+        "queued_date": "2022-06-30T19:00:12.573000",
+        "start_date": null,
+        "end_date": "2022-06-30T19:00:26.494000",
+        "error_code": 1,
+        "error_message": "",
+        "internal_id": "89BADD11AC8A-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  },
+  {
+    "name": "test-job",
+    "project": "test-project",
+    "app": {
+      "cmd": [
+        "gem_cdreate_data"
+      ]
+    },
+    "app_type": "gem_mod",
+    "owner": "tester",
+    "depends_on": [],
+    "num_tasks": 1,
+    "environment": {},
+    "variables": {},
+    "arguments": {
+      "out": "/projects/deleteme.gem.json"
+    },
+    "cluster": {
+      "name": "cpu_cluster",
+      "queue": null
+    },
+    "tags": {},
+    "pre_execution": [],
+    "post_execution": [],
+    "state_cb": null,
+    "id": "4CA70D9B15AC",
+    "state": {
+      "state": "queued",
+      "create_date": "2022-06-30T19:00:48.462000",
+      "queued_date": "2022-06-30T19:00:48.462000",
+      "start_date": null,
+      "end_date": null,
+      "error_code": null,
+      "error_message": null,
+      "internal_id": "4CA70D9B15AC",
+      "exit_code": null,
+      "hosts": null
+    },
+    "task_state": [
+      {
+        "state": "queued",
+        "create_date": "2022-06-30T19:00:48.473000",
+        "queued_date": "2022-06-30T19:00:48.473000",
+        "start_date": null,
+        "end_date": null,
+        "error_code": null,
+        "error_message": null,
+        "internal_id": "4CA70D9B15AC-0",
+        "exit_code": null,
+        "hosts": null
+      }
+    ]
+  }
+]
