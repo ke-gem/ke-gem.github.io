@@ -59,16 +59,47 @@ for (j = 0; j < rows.length; j++){
 var data_links = [data_z1, data_z2, data_z3];
 
 for (m = 0; m < l_data.length; m++){
-	data_links.push({x: l_data[m][0], y: l_data[m][1],z: l_data[m][2],  opacity: 0.4,  mode: 'lines', type: 'scatter3d', })
+	data_links.push({x: l_data[m][0], y: l_data[m][1],z: l_data[m][2],  opacity: 0.2,  mode: 'lines', type: 'scatter3d' });
+	data_links.push({x: l_data[m][0], y: l_data[m][1],z: l_data[m][2],  opacity: 0.05,  type:'mesh3d', color:'rgb(100,100,100)'})
 		
 }
 
 var layout = {
   autosize: false,
   width: 1600,
-  height: 1000
+  height: 1000,
+  hovermode: 'closest',
+  scene: {camera: {
+        center: {
+              x: 0, y: 0, z: 0}, 
+        eye: { 
+              x:0.1, y:0.1, z:-2.5}, 
+        up: {
+              x: 0, y: 0, z: 1}
+    }
+  }
 };
 
 
 Plotly.newPlot('myDiv',data_links,layout);
+
+var gd = document.getElementById('myDiv');
+var activeColor = '#ff7f00';
+var d3 = Plotly.d3;
+d3.selectAll('button')
+    .data(z_data)
+  .enter()
+    .append('button')
+    .attr('type', 'button')
+    .on('click', function(d, i) {
+      var button = d3.select(this);
+      var active = button.attr('value');
+      Plotly.restyle(gd, 'marker.size', 2);
+      Plotly.restyle(gd, 'marker.size', 8, [i]);
+      button.attr('value', active ? null : 'true');
+    })
+    .append('div')
+    .text(function(d, i) { 
+		return headers[i].join(' | '); 
+     })
 });
