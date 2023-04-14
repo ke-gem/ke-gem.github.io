@@ -1,0 +1,302 @@
+{
+ "file_header": {
+  "version": "1.1",
+  "id": "426206a9-d02e-4e8a-91a1-82b2b8cbccf5",
+  "author": "kevin",
+  "creation_date": "2023-04-13T19:31:57",
+  "type": "envelope"
+ },
+ "schema": {
+  "properties": {
+   "cmpx_halfw": 150,
+   "cmpy_halfw": 150,
+   "crossline_spacing": 12.5,
+   "d_gate": 64,
+   "inline_spacing": 12.5,
+   "model": "s3://gem-pluto//model/model_vti.gem.json",
+   "n_gate": 108,
+   "n_pick": 3,
+   "o_gate": -320,
+   "offx_halfw": 150,
+   "offy_halfw": 150,
+   "wavelets": "../wavelets_prod_halfw_150/wavelets_OFFX_310.gem.json"
+  },
+  "dimensions": [
+   {
+    "begin": 0.0,
+    "count": 0,
+    "delta": 1.0,
+    "name": "samples"
+   },
+   {
+    "begin": 1.0,
+    "count": 1,
+    "delta": 1.0,
+    "name": "picks"
+   },
+   {
+    "begin": -320.0,
+    "count": 108,
+    "delta": 64.0,
+    "name": "gates"
+   },
+   {
+    "begin": 70025.0,
+    "count": 5,
+    "delta": 75.0,
+    "name": "cmpx"
+   },
+   {
+    "begin": 30000.0,
+    "count": 5,
+    "delta": 75.0,
+    "name": "cmpy"
+   },
+   {
+    "begin": 310.0,
+    "count": 1,
+    "delta": 75.0,
+    "name": "offx"
+   },
+   {
+    "begin": 0.0,
+    "count": 1,
+    "delta": 600.0,
+    "name": "offy"
+   }
+  ],
+  "tra": {
+   "data_format": "float32"
+  },
+  "hdr": {
+   "fields": [
+    {
+     "name": "src_x",
+     "format": "float32"
+    },
+    {
+     "name": "src_y",
+     "format": "float32"
+    },
+    {
+     "name": "src_z",
+     "format": "float32"
+    },
+    {
+     "name": "rcv_x",
+     "format": "float32"
+    },
+    {
+     "name": "rcv_y",
+     "format": "float32"
+    },
+    {
+     "name": "rcv_z",
+     "format": "float32"
+    },
+    {
+     "name": "ps_x",
+     "format": "float32"
+    },
+    {
+     "name": "ps_y",
+     "format": "float32"
+    },
+    {
+     "name": "pr_x",
+     "format": "float32"
+    },
+    {
+     "name": "pr_y",
+     "format": "float32"
+    },
+    {
+     "name": "psm_x",
+     "format": "float32"
+    },
+    {
+     "name": "psm_y",
+     "format": "float32"
+    },
+    {
+     "name": "prm_x",
+     "format": "float32"
+    },
+    {
+     "name": "prm_y",
+     "format": "float32"
+    },
+    {
+     "name": "tme",
+     "format": "float32"
+    },
+    {
+     "name": "zerr",
+     "format": "float32"
+    },
+    {
+     "name": "zeql",
+     "format": "float32"
+    },
+    {
+     "name": "ssl_x",
+     "format": "float32"
+    },
+    {
+     "name": "ssl_y",
+     "format": "float32"
+    },
+    {
+     "name": "ssl_z",
+     "format": "float32"
+    },
+    {
+     "name": "tks_x",
+     "format": "float32"
+    },
+    {
+     "name": "tks_y",
+     "format": "float32"
+    },
+    {
+     "name": "tks_z",
+     "format": "float32"
+    },
+    {
+     "name": "tkr_x",
+     "format": "float32"
+    },
+    {
+     "name": "tkr_y",
+     "format": "float32"
+    },
+    {
+     "name": "tkr_z",
+     "format": "float32"
+    },
+    {
+     "name": "rfs_x",
+     "format": "float32"
+    },
+    {
+     "name": "rfs_y",
+     "format": "float32"
+    },
+    {
+     "name": "rfs_z",
+     "format": "float32"
+    },
+    {
+     "name": "rfr_x",
+     "format": "float32"
+    },
+    {
+     "name": "rfr_y",
+     "format": "float32"
+    },
+    {
+     "name": "rfr_z",
+     "format": "float32"
+    },
+    {
+     "name": "tmes",
+     "format": "float32"
+    },
+    {
+     "name": "err",
+     "format": "float32"
+    },
+    {
+     "name": "vints",
+     "format": "float32"
+    },
+    {
+     "name": "vintr",
+     "format": "float32"
+    },
+    {
+     "name": "vintzs",
+     "format": "float32"
+    },
+    {
+     "name": "intgs",
+     "format": "float32"
+    },
+    {
+     "name": "intgr",
+     "format": "float32"
+    },
+    {
+     "name": "vintgr",
+     "format": "float32"
+    },
+    {
+     "name": "refdp",
+     "format": "float32"
+    },
+    {
+     "name": "ssalt",
+     "format": "int16"
+    },
+    {
+     "name": "rsalt",
+     "format": "int16"
+    },
+    {
+     "name": "signs_ref",
+     "format": "float32"
+    },
+    {
+     "name": "searchedSlope",
+     "format": "int32"
+    },
+    {
+     "name": "rms_perc",
+     "format": "float32"
+    }
+   ]
+  }
+ },
+ "data": {
+  "extent_mapping": "fixed_size",
+  "extent_size": 2700,
+  "extent_list": [
+   {
+    "tra": null,
+    "hdr": {
+     "path": "test2.gem.hdr.bin",
+     "path_format": "binary"
+    }
+   }
+  ]
+ },
+ "task_context": {
+  "batch_user": "kevin",
+  "config": {
+   "argument_overrides": [
+    "dim4_max",
+    "dim4_min",
+    "dim5_max",
+    "dim5_min",
+    "in",
+    "out"
+   ],
+   "arguments": {
+    "dim4_max": 70300.0,
+    "dim4_min": 70000.0,
+    "dim5_max": 30300.0,
+    "dim5_min": 30000.0,
+    "in": "test.gem.json",
+    "out": "test2.gem.json"
+   }
+  },
+  "gem_mod_version": "0.1.9-c7141c",
+  "job_id": "?",
+  "job_name": "?",
+  "mod_name": "GEMcut",
+  "mod_version": "0.0.9am-18-g9ba2d0-NOT_FOUND",
+  "num_tasks": 1,
+  "project_id": "?",
+  "task_id": 0
+ }
+}
