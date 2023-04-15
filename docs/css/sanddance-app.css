@@ -722,7 +722,9 @@
 .sanddance-dialog ul {
   margin: 0;
 }
-
+.sanddance-dialog section.tip, .sanddance-dialog section.schema {
+  margin-top: 0px;
+}
 .sanddance-dialog section {
   margin-top: 1em;
 }
