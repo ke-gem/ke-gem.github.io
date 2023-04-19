@@ -52,7 +52,7 @@
 .range-slider input[type="range"]:focus {
   outline: none;
 }
-span.range-value-min-cmpx, span.range-value-max-cmpx {
+span.range-value-min, span.range-value-max {
     position: absolute;
     z-index: 5;
 }
