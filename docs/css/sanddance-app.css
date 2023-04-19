@@ -17,7 +17,6 @@
   width: 100%;
 }
 
-
 span.range-value-min, span.range-value-max {
     position: absolute;
     z-index: 5;
@@ -68,6 +67,9 @@ span.range-value-min, span.range-value-max {
   background-color: #fff;
   pointer-events: auto;
   -moz-appearance: none;
+}
+.no-outline:focus {
+  outline: none;
 }
 
 .range-input {
