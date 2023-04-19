@@ -35,7 +35,7 @@ span.range-value-min, span.range-value-max {
   right: 30%;
   position: absolute;
   border-radius: 5px;
-  background-color: #1b53c0;
+  background-color: #0078d499;
 }
 
 .range-input {
@@ -55,7 +55,7 @@ span.range-value-min, span.range-value-max {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  border: 3px solid #1b53c0;
+  border: 3px solid #0078d4;
   background-color: #fff;
   pointer-events: auto;
   -webkit-appearance: none;
@@ -64,7 +64,7 @@ span.range-value-min, span.range-value-max {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  border: 3px solid #1b53c0;
+  border: 3px solid #0078d4;
   background-color: #fff;
   pointer-events: auto;
   -moz-appearance: none;
@@ -91,13 +91,13 @@ span.range-value-min, span.range-value-max {
   margin-right: 5px;
 }
 .range-value input {
-  width: 40px;
+  width: 40%;
   padding: 5px;
 }
 .range-value input:first-of-type {
   margin-right: 15px;
 }
-  
+
 .sanddance-root {
   height: 100%;
   position: relative;
