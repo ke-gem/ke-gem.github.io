@@ -80,7 +80,24 @@ span.range-value-min, span.range-value-max {
   margin: 0 10px;
   text-align: center;
 }
-
+.range-value {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.range-value label {
+  margin-right: 5px;
+}
+.range-value input {
+  width: 40px;
+  padding: 5px;
+}
+.range-value input:first-of-type {
+  margin-right: 15px;
+}
+  
 .sanddance-root {
   height: 100%;
   position: relative;
