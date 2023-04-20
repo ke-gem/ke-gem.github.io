@@ -31,8 +31,6 @@ span.range-value-min, span.range-value-max {
 }
 .range-selected {
   height: 100%;
-  left: 30%;
-  right: 30%;
   position: absolute;
   border-radius: 5px;
   background-color: #0078d499;
