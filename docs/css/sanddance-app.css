@@ -71,8 +71,12 @@ span.range-value-min, span.range-value-max {
   -moz-appearance: none;
   z-index: 9;
 }
-.range-input input.max::-moz-range-thumb {
+.range-input input.max, .range-input input.max::-moz-range-thumb {
   z-index: 10;
+}
+.range-input input.max {
+  width: 95%;
+  right: 0;
 }
 .no-outline:focus {
   outline: none;
