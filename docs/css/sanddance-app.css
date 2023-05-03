@@ -123,7 +123,9 @@ label.dimension-tag {
     display: block;
     font-weight: 800;
 }
-
+#ray_button .progress_bar{
+    background: rgb(125 199 255);
+}
 .sanddance-root {
   height: 100%;
   position: relative;
