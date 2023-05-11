@@ -126,6 +126,9 @@ label.dimension-tag {
 #ray_button .progress_bar{
     background: rgb(125 199 255);
 }
+.sanddance-dialog .ms-Button-label {
+  margin:0px;
+}
 .sanddance-root {
   height: 100%;
   position: relative;
