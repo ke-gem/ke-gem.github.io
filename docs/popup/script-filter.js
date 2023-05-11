@@ -1074,7 +1074,19 @@ Plotly.newPlot('myDiv', [{
   x: x,
   y: y,
   z: z,
+  text: c,
   opacity: 1,
+   yaxis: {
+   autorange:"reversed"
+  },
+  hovertemplate:
+    "<b>x and y value divided by 12.5</b><br>" +
+    "x: %{x}<br>" +
+    "y: %{y}<br>" +
+    "z: %{z}<br>" +
+    "velocity: %{text}" +
+    "<extra></extra>",
+  hovermode: 'closest',
   line: {
     width: 6,
     color: c,
@@ -1083,7 +1095,7 @@ Plotly.newPlot('myDiv', [{
 }], {
   width: 1600,
   height: 1000,
-  hovermode: 'closest',
+ 
   scene: {camera: {
         center: {
               x: 0, y: 0, z: 0}, 
