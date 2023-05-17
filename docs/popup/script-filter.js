@@ -31,22 +31,22 @@ function load_dataset(csv) {
 
 
 // handle upload button
-function upload_button(el, callback) {
-  var uploader = document.getElementById(el);  
-  var reader = new FileReader();
+// function upload_button(el, callback) {
+//   var uploader = document.getElementById(el);  
+//   var reader = new FileReader();
 
-  reader.onload = function(e) {
-    var contents = e.target.result;
-    callback(contents);
-  };
+//   reader.onload = function(e) {
+//     var contents = e.target.result;
+//     callback(contents);
+//   };
 
-  uploader.addEventListener("change", handleFiles, false);  
+//   uploader.addEventListener("change", handleFiles, false);  
 
-  function handleFiles() {
-    var file = this.files[0];
-    reader.readAsText(file);
-  };
-};
+//   function handleFiles() {
+//     var file = this.files[0];
+//     reader.readAsText(file);
+//   };
+// };
 
 d3.csv(localStorage.getItem("ray_trace_csv"), function(err, rows){
  	load_dataset(rows);
