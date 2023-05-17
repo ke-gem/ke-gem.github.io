@@ -1,12 +1,12 @@
 //use for computing
-var offset_dict = {'All':[]};
+//var offset_dict = {'All':[]};
 var rows = {};
 
-var headers = ["X_location","Y_location","Z_location","velocity"];
+var headers = ["x-location","y-location","z-location","velocity"];
 
 function load_dataset(rows) {
   //rows = d3.csv.parse(csv);
-  offset_dict['All'] = rows;
+  //offset_dict['All'] = rows;
   console.log(rows);
 
   var keys = d3.keys(rows[0]);
@@ -54,12 +54,7 @@ d3.csv(localStorage.getItem("ray_trace_csv"), function(err, rows){
 function unpack(rows, key) {
   return rows.map(function(row){
       if (key in row){
-        if (key=='X_location' || key=='Y_location'){
-          return parseFloat(row[key])/12.5; //TODO: redo grid here
-        }
-        else {
-          return row[key];
-        }
+        return row[key]
       } 
       else {
         return 0; //missing velocity, show gray scale
@@ -67,9 +62,9 @@ function unpack(rows, key) {
 }
 
 function drawChart(){
-var x=unpack(rows, 'X_location'),
-    y=unpack(rows, 'Y_location'),
-    z=unpack(rows, 'Z_location'),
+var x=unpack(rows, 'x-location'),
+    y=unpack(rows, 'y-location'),
+    z=unpack(rows, 'z-location'),
     c=unpack(rows , 'velocity');
 
 
