@@ -52,6 +52,7 @@ d3.csv(localStorage.getItem("ray_trace_csv"), function(err, rows){
  	load_dataset(rows);
  })
 function unpack(rows, key) {
+  console.log(rows);
   return rows.map(function(row){
       if (key in row){
         return row[key]
