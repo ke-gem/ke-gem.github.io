@@ -47,7 +47,8 @@ function upload_button(el, callback) {
     reader.readAsText(file);
   };
 };
- d3.csv('https://raw.githubusercontent.com/ke-gem/ke-gem.github.io/master/docs/sample-data/isa-xyz.csv', function(err, rows){
+
+d3.csv(localStorage.getItem("ray_trace_csv"), function(err, rows){
  	load_dataset(rows);
  })
 function unpack(rows, key) {
