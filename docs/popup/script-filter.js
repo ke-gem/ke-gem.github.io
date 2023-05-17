@@ -4,8 +4,8 @@ var rows = {};
 
 var headers = ["X_location","Y_location","Z_location","velocity"];
 
-function load_dataset(csv) {
-  rows = d3.csv.parse(csv);
+function load_dataset(rows) {
+  //rows = d3.csv.parse(csv);
   offset_dict['All'] = rows;
   console.log(rows);
 
