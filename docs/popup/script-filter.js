@@ -1,14 +1,12 @@
 //use for computing
 //var offset_dict = {'All':[]};
-var rows = {};
 
 var headers = ["x-location","y-location","z-location","velocity"];
-
+d3.csv(localStorage.getItem("ray_trace_csv"), function(err, rows){
 function load_dataset(rows) {
   //rows = d3.csv.parse(csv);
   //offset_dict['All'] = rows;
   console.log(rows);
-
   var keys = d3.keys(rows[0]);
 
   var stats = d3.select("#stats")
@@ -29,30 +27,9 @@ function load_dataset(rows) {
   drawChart();
 }
 
+load_dataset(rows);
 
-// handle upload button
-// function upload_button(el, callback) {
-//   var uploader = document.getElementById(el);  
-//   var reader = new FileReader();
-
-//   reader.onload = function(e) {
-//     var contents = e.target.result;
-//     callback(contents);
-//   };
-
-//   uploader.addEventListener("change", handleFiles, false);  
-
-//   function handleFiles() {
-//     var file = this.files[0];
-//     reader.readAsText(file);
-//   };
-// };
-
-d3.csv(localStorage.getItem("ray_trace_csv"), function(err, rows){
- 	load_dataset(rows);
- })
 function unpack(rows, key) {
-  
   return rows.map(function(row){
       if (key in row){
         return row[key]
@@ -110,5 +87,5 @@ Plotly.newPlot('myDiv', [{
  
 
 var gd = document.getElementById('myDiv');
-
 }
+})
