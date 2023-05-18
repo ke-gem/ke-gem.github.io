@@ -25,6 +25,9 @@ function load_dataset(rows) {
     .text("Web Trace Returned: " + keys.join(','));
 
   drawChart();
+
+  var json = d3.select("#json")
+    .html(JSON.stringify(rows, null, "\t"))
 }
 
 load_dataset(rows);
@@ -58,7 +61,6 @@ Plotly.newPlot('myDiv', [{
    autorange:"reversed"
   },
   hovertemplate:
-    "<b>x and y value divided by 12.5</b><br>" +
     "x: %{x}<br>" +
     "y: %{y}<br>" +
     "z: %{z}<br>" +
@@ -85,7 +87,5 @@ Plotly.newPlot('myDiv', [{
   }
 });
  
-
-var gd = document.getElementById('myDiv');
 }
 })
