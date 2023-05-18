@@ -26,7 +26,7 @@ function load_dataset(rows) {
   stats.append("div")
     .text("Web Trace Returned: " + keys.join(','));
 
-  //drawChart();
+  drawChart();
 }
 
 
