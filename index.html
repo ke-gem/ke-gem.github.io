@@ -1,412 +1,624 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>GEO EX MACHINA</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GEO Ex Machina, Industry Recognized Innovators">
-<meta name="keywords" content="HTML, CSS, JavaScript, mazal, icons">
-<meta name="author" content="Sara Mazal">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Geo Ex Machina 2.0</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<link rel="apple-touch-icon" sizes="180x180" href="resource/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resource/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resource/img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+.video-bg {
+    position: fixed;
+    top: -10vh;
+    left: 0;
+    width: 100vw;
+    height: 120vh;
+    object-fit: cover;
+    transform: translateY(10vh);
+    z-index: -1;
+    pointer-events: none;
+}
+  :root {
+    --main-color: #03dac6;
+  }
+  .timeline-container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      max-width: 1400px;
+      margin: 0 auto;
+      height: 350px;
+  }
+ .timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--main-color);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+.timeline-item {
+  max-width: 160px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+  justify-content: flex-end; /* bottom by default */
+}
+.timeline-item.top {
+  justify-content: flex-start; /* top for top items */
+}
+.timeline-pin {
+  width: 4px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+.timeline-item.top .timeline-pin {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+.timeline-item:not(.top) .timeline-pin {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.timeline-year, .timeline-title, .timeline-content {
+  color: #d1d5db;
+}
+.timeline-year {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  color: var(--main-color);
+}
+.timeline-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.timeline-content {
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: pre-line;
+}
+.timeline-arrow-container {
+  position: absolute;
+  top: 50%;
+  height: 20px;
+  width: 100%;
+  pointer-events: none;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26px;
+  transform: translateY(-50%);
+}
+.timeline-arrow {
+  width: 0;
+  height: 0;
+  border: 4px solid var(--main-color);
+  border-radius:50%;
+}
+.timeline-arrow:hover {
+  opacity: 1;
+}
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 4px #03dac6, 0 0 8px #03dac6;
+  }
+  50% {
+    box-shadow: 0 0 8px #03dac6, 0 0 8px #03dac6;
+  }
+  100% {
+    box-shadow: 0 0 4px #03dac6, 0 0 8px #03dac6;
+  }
+}
+.toggle-content {
+  padding: 20px;
+}
+.glow-border {
+  border: 2px solid #03dac6;
+  animation: pulse-glow 2s ease-in-out infinite;
+  transition: box-shadow 0.3s ease-in-out;
+}
+#gem-slider button {
+  /* Push nav buttons further to the sides */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+#gem-slider button:first-of-type {
+  left: -2.5rem; /* Move left button outside container */
+}
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-
+#gem-slider button:last-of-type {
+  right: -2.5rem; /* Move right button outside container */
+}
+</style>
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<sectio class="nav" id="nav-menu">
-<img src="resource/img/logo.svg" id="gem_logo" alt="Geo Ex Machina"/>
-<!--   <h1>Geo Ex Machina</h1> -->
-<h3 class="span loader"><span class="m">Geologically</span><span class="m">&nbsp;</span><span class="m">Constrained</span></h3>
-<h3 class="span loader"><span class="m">Model</span> <span class="m">Building</span></h3>
-<div class="nav-container"><a class="nav-tab" href="#nav-menu"><img src="resource/img/logo.svg" id="gem_logo_menu"/></a><a class="nav-tab" href="#tab-team">Our Team</a><a class="nav-tab" href="#tab-value">Value Proposition</a><a class="nav-tab" href="#tab-image">Imaging Examples</a><a class="nav-tab" href="#tab-integration">Integration Examples</a><a class="nav-tab" href="#tab-contact">Contact Us</a></div>
-</sectio>
-<main class="main">
-<section class="slider" id="tab-team">
-  <h1>Industry Recognized Innovators</h1>
-  <div class="team">
-    <div class="member">
-      <img src="resource/img/johnsherwood.jpeg"/>
-      <h2>John W.C. Sherwood</h2>
-      <h3>President</h3>
-      <h4>Primary Responsibilities</h4>
-      <p>Algorithm development</p>
-    </div>
-    <div class="member">
-      <img src="resource/img/sam_brown.jpeg"/>
-      <h2>Sam Brown</h2>
-      <h3>CTO</h3>
-      <h4>Primary Responsibilities</h4>
-      <p>Technical strategy, <br />platform strategy, <br />and technical development</p>
-    </div>
-    <div class="member">
-      <img src="resource/img/dave_hale.jpeg"/>
-      <h2>Dave Hale</h2>
-      <h3>Development</h3>
-      <h4>Primary Responsibilities</h4>
-      <p>Software and algorithm development</p>
-    </div>
-    <div class="member">
-    <img src="resource/img/hans_tieman.jpeg"/>
-      <h2>Hans Tieman</h2>
-      <h3>Development</h3>
-      <h4>Primary Responsibilities</h4>
-      <p>Migration & Tomography</p>
-    </div>
-  </div>
+<body class="text-white bg-black">
 
-</section>
-<section id="newslider-section" class="newslider-section"></section>    
-</section>
-<section class="slider" id="tab-team-awards">
-    <div class="awards">
-    <img src="resource/img/hart_meritorious.png"/>
-    <img src="resource/img/cecil_green.jpeg"/>
-    <img src="resource/img/maurice_ewing.jpeg"/>
-  </div>
-  <div class="awards-list">
-    <div>
-      <h2>SEG Awards</h2>
-    <ul>
-      <li>Cecil Green</li>
-      <li>Virgil Kauffman x 2</li>
-      <li>Maurice Ewing</li>
-      <li>Best Paper x 3</li>
-      <li>Distinguished Lecturer x 2</li>
-    </ul>
-    </div>
-    <div>
-      <h2>Technology Innovation</h2>
-    <ul>
-      <li>DMO</li>
-      <li>Tomography</li>
-      <li>Beam migration</li>
-      <li>Beam workflow</li>
-      <li>Seismic anomaly detection</li>
-    </ul>
-    </div>
-  </div>
-</section>
-<section class="slider" id="tab-value">
-  <div class="values text-two-col">
-  <div class="col">
-  <div>
-  <h2>Improve G&G interaction</h2>
-  <ul>
-      <li>InteractivAI driven VMB</li>
-      <li>Geological constrained anisotropic models</li>
-    </ul>
-  </div>
-  <div>
-  <h2>Reduce VMB cycle time</h2>
-  <ul>
-      <li>Real-time testing</li>
-      <li>Full migrations in hours</li>
-      <li>High resolution tomography</li>
-    </ul>
-  </div>
-  </div>
-  <div class="col">
-  <div>
-  <h2>Reduce anisotropic uncertainty</h2>
-  <ul>
-      <li>Higher quality elastic models</li>
-      <li>Simultaneous inversion of velocity and anisotropy</li>
-      <li>Improve salt flank positioning</li>
-      <li>Improve AVO/AVAZ</li>
-    </ul>
-  </div>
-  <div>
-  <h2>Flexible Deployment</h2>
-  <ul>
-      <li>AWS</li>
-      <li>AZURE</li>
-      <li>Datacenter</li>
-      <li>Linear scaling</li>
-    </ul>
-  </div>
-  </div>
-</div>
-<div class="value-detail text-two-col">
-    <img src="resource/img/bluware_logo.png"/>
-    <img src="resource/img/aws_logo.png"/>
-    <img src="resource/img/kubernetes_logo.png"/>
-    <img src="resource/img/elastic_logo.png"/>
-    <img src="resource/img/react_logo.jpeg"/>
-    <img src="resource/img/python_logo.png"/>
-    <img src="resource/img/docker_logo.png"/>
-    <img src="resource/img/fastapi_logo.png"/>
-    <img src="resource/img/nvidia_logo.png"/>
-    <img src="resource/img/prometheus_logo.png"/>
-    <img src="resource/img/consul_logo.jpeg"/>
-    <img src="resource/img/grafana_logo.png"/>
-</div>
-</section>
-<section class="slider" id="tab-image">
-<div class="tables-wrapper">
-  <!-- Traditional -->
-  <table id="table1">
-    <caption>Traditional Model Building Workflow</caption>
-    <thead>
-      <tr>
-        <th>Step</th>
-        <th>Grid Size</th>
-        <th>Smoother</th>
-        <th>Masking</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Shallow Tomography</td>
-        <td>50m x 50m x 50m</td>
-        <td>1km x 300m x 150m</td>
-        <td>Water bottom + 250</td>
-      </tr>
-      <tr>
-        <td>Grid Tomography 1</td>
-        <td>50m x 50m x 50m</td>
-        <td>1km x 1km x 150m</td>
-        <td>(WB – 120) - 5.5km</td>
-      </tr>
-      <tr>
-        <td>Grid Tomography 2</td>
-        <td>50m x 50m x 50m</td>
-        <td>500m x 500m x 150m</td>
-        <td>(WB – 120) - 5.5km</td>
-      </tr>
-    </tbody>
-  </table>
+<!-- Video Background -->
+<video class="video-bg" autoplay muted loop playsinline>
+  <source src="resource/video/v-main.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-  <!-- GEM VM -->
-  <table id="table2">
-    <caption>GEM VM Model Building Workflow</caption>
-    <thead>
-      <tr>
-        <th>Step</th>
-        <th>Grid Size</th>
-        <th>Smoother</th>
-        <th>Masking</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Shallow Tomography</td>
-        <td>50m x 50m x 50m</td>
-        <td>1km x 300m x 150m</td>
-        <td>Water bottom + 250</td>
-      </tr>
-      <tr>
-        <td>Grid Tomography 1</td>
-        <td>50m x 50m x 50m</td>
-        <td>1km x 1km x 150m</td>
-        <td>(WB - 120) - 5.5km</td>
-      </tr>
-      <tr>
-        <td>Grid Tomography 2</td>
-        <td>50m x 50m x 50m</td>
-        <td>500m x 500m x 150m</td>
-        <td>(WB - 120) - 5.5km</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-  <h2>Data Sets: SEAM Subsalt</h2>
-  <div class="slideshow-container">
-  <div class="mySlides fade">
-  <figure>
-    <figcaption>SEAM IL 825 WAZEW</figcaption>
-    <img src="resource/img/segnaz_il875.png"/>
-  </figure>
-  </div>
-  <div class="mySlides fade">
-  <figure>
-    <figcaption>SEAM IL 375 WAZEW</figcaption>
-    <img src="resource/img/segnaz_il375.png"/>
-  </figure>
-  </div>
-  <div class="mySlides fade">
-  <figure>
-    <figcaption>SEAM IL 1225 WAZEW</figcaption>
-    <img src="resource/img/segnaz_IL1275.png"/>
-  </figure>
-  </div>
-  <div class="mySlides fade">
-  <figure>
-    <figcaption>SEAM Z 2100 WAZEW with Vp</figcaption>
-    <img src="resource/img/z2100_seismic_velocity.png"/>
-  </figure>
-  </div>
-  <div class="mySlides fade">
-  <figure>
-    <figcaption>SEAM Z 3000 WAZEW with Vp</figcaption>
-    <img src="resource/img/z3100_seismic_velocity.png"/>
-  </figure>
-  </div>
-  <div class="mySlides fade">
-  <figure>
-    <figcaption>SEAM Z 4240 WAZEW with Vp</figcaption>
-    <img src="resource/img/z4000_seismic_veloicty.png"/>
-  </figure>
-  </div>
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-  </div>
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
+<section class="h-screen flex items-center justify-center text-center bg-black bg-opacity-60">
+  <div>
+    <img src="resource/img/logo.svg" alt="Geo Ex Machina Logo" class="mx-auto mb-6 h-auto" />
+    <h1 class="text-5xl font-bold mb-4">Geo Ex Machina</h1>
+    <p class="text-xl">Geologically Constrained Model Building</p>
   </div>
 </section>
-<section class="slider" id="tab-integration">
-  <h2>User Friendliness</h2>
-  <div class="image-text-container">
-    <div>
-      <h3>Focus on geophysics and geology</h3>
-      <h4>
-        Users parameterize workflows, not applications
-      </h4>
-    </div>
-  <div class="image-text">
-  <figure>
-    <figcaption>Seamless integration with existing tools, processes and file formats</figcaption>
-    <img src="resource/img/gem_flow_endpoints.png"/>
-  </figure>
-  </div>
-</section>
-  <section class="slider" id="tab-integration-cloud">
-  <h3>Data Center and Cloud Deployment</h3>
-  <div class="image-text-container">
-    <div class="text-two-col">
-      <div class="col">
-        <p>
-         Support for internal file formats: <span>GEM, SEP, SEGY, OpenVDS, VDS</span>
-        </p>
-        <p>
-        Support internal and cloud storage: <span>AWS, Azure, local</span>
-        </p>
+
+<section id="case-studies" class="relative py-16 bg-gray-900/90 z-10">
+  <div class="container mx-auto px-4 relative z-20">
+    <h2 class="text-3xl font-semibold mb-8 text-center text-[#03dac6]">Case Studies</h2>
+
+    <div class="swiper mySwiper rounded-xl overflow-hidden">
+      <div class="swiper-wrapper">
+        <!-- Slide 1: Australia -->
+        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
+          <img src="resource/img/gorgon.png" alt="Australia Case Study" class="w-full h-full object-cover rounded-lg" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
+            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">Australia</h3>
+          </div>
+        </div>
+
+        <!-- Slide 2: North Sea -->
+        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
+          <img src="resource/img/gorgon.png" alt="North Sea Case Study" class="w-full h-full object-cover rounded-lg" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
+            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">North Sea</h3>
+          </div>
+        </div>
+
+        <!-- Slide 3: Gorgon -->
+        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
+          <img src="resource/img/gorgon.png" alt="Gorgon Case Study" class="w-full h-full object-cover rounded-lg" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
+            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">Gorgon</h3>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <p>
-        Simple APIs: <span>C++, Python, ScaleOut, Swagger</span>
-        </p>
-        <p>
-        Source code: <span>Github, Docker, Ansible, Terraform</span>
-        </p>
+
+      <div class="swiper-pagination mt-4 z-30 relative"></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="key-technologies" class="bg-gray-900 text-white py-16 px-4 md:px-12">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-10 text-center">
+      Key Technologies
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12 text-gray-300 text-base leading-relaxed">
+      <!-- GEM VM -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM VM</h3>
+        <ul class="list-disc list-inside space-y-2 pl-4">
+          <li><span class="font-medium text-white">Generate:</span> Beam forming</li>
+          <li><span class="font-medium text-white">Align:</span> 6D residuals for each beam</li>
+          <li><span class="font-medium text-white">Tomography:</span> Joint Inversion for Velocity, Delta, and Epsilon</li>
+        </ul>
+      </div>
+
+      <!-- QC -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">QC</h3>
+        <ul class="list-disc list-inside space-y-2 pl-4">
+          <li>COCA / CACA Gathers</li>
+          <li>FARIS Illumination</li>
+          <li>Selective Demigration</li>
+        </ul>
       </div>
     </div>
-  <div class="image-text">
-  <figure>
-    <figcaption>Cloud & datacenter friendly API for internal developers</figcaption>
-    <img src="resource/img/cloud_deployment.png"/>
-  </figure>
-  </div>
-</section>
-<section class="slider" id="tab-contact">
-  <h1>Want to know more?</h1>
-  <h2>Email to: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
-</section>
-</main>
-<canvas class="background"></canvas>
-<div class="footer">
-&copy; <span id="year"></span> Geo Ex Machina. All rights reserved.
+
+<!-- Hidden expanded description -->
+<div id="gemvm-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
+
+  <!-- What is GEM VM? -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-what')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">What is GEM VM?</h3>
+    <div id="gemvm-what" class="toggle-content hidden">
+      <p class="mb-4">LF velocity, delta, and epsilon that conform to regional geology</p>
+      <p class="mb-4">Flattens COCA/CACA gathers in Z, X, and Y</p>
+      <p class="mb-4">Maximizes illumination in Azimuth, Angle, and Offset</p>
+      <p class="mb-4">Every effort to minimize parameter crosstalk prior to FWI</p>
+    </div>
+  </section>
+
+  <!-- Parameter Crosstalk -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-crosstalk')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">Parameter Crosstalk</h3>
+    <div id="gemvm-crosstalk" class="toggle-content hidden">
+      <p class="mb-4">To estimate velocity/delta/epsilon accurately, inversion requires a rich set of P wave propagation angles in each tomography cell</p>
+      <p class="mb-4">In FWI, direct arrivals have limited range of propagation angles limiting resolution between anisotropic parameters</p>
+      <p class="mb-4">GEM takes advantage of FAZ data to:</p>
+      <ul class="list-disc list-inside pl-6 space-y-1">
+        <li>Generate 6D picks for every beam creating a rich set of propagation angles</li>
+        <li>Simultaneously invert for Velocity/Delta/Epsilon</li>
+        <li>QC with COCA/CACA gathers to validate earth model</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GEM Tomography Overview -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-tomography')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM Tomography Overview</h3>
+    <div id="gemvm-tomography" class="toggle-content hidden">
+      <div class="md:flex md:space-x-8 mb-6">
+        <div class="md:w-1/2">
+          <p class="mb-4 font-semibold">1. Align Residual Estimation</p>
+          <p class="mb-4">Estimates the 6D spatial/temporal shift of a Beam along its reflector dip attributes which will best align the Beam with the Image stack</p>
+          <p class="mb-4">6D picks minimize cycle skipping (IL, XL, Z, OffX, OffY, Reflector azimuth)</p>
+          <p class="mb-4">One shift per Beam, not per location</p>
+          <p class="mb-4">No dip limitation</p>
+          <p class="mb-4">Apply shifts for QC</p>
+        </div>
+        <div class="md:w-1/2">
+          <p class="mb-4 font-semibold">2. Inversion</p>
+          <p class="mb-4">One linearized equation per Beam</p>
+          <p class="mb-4">VM updated along the migrated ray path of each aligned residual</p>
+          <p class="mb-4">Iterative conjugate gradient method gives LSE solution</p>
+          <p class="mb-4">Quality due to:</p>
+          <ul class="list-disc list-inside pl-6 space-y-1">
+            <li>6D residual alignments</li>
+            <li>Separate masks & smoothing for parameters</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-4">
+        <img src="resource/img/gem_slides/gem_slide_0.png" alt="GEM Slide 0" class="w-full rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
 </div>
+<div id="gemqc-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
+
+  <!-- 5D COCA Generation and Viewer -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-coca')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">5D COCA Generation and Viewer</h3>
+    <div id="gemvm-coca" class="toggle-content hidden">
+      <div class="mb-4">
+        <p class="mb-2 font-semibold">COCA/CACA Z</p>
+        <ul class="list-disc list-inside pl-6 space-y-1 mb-4">
+          <li>Sensitive to vertical velocity and azimuthal variations</li>
+          <li>X, Y are constant, Z varies</li>
+          <li>Horizontal: offset or angle, azimuth</li>
+          <li>QC RNMO, S/R offsets, AZI on low dip reflectors</li>
+        </ul>
+      </div>
+      <div class="mb-4">
+        <p class="mb-2 font-semibold">COCA/CACA X & Y</p>
+        <ul class="list-disc list-inside pl-6 space-y-1">
+          <li>Sensitive to horizontal velocity error</li>
+          <li>Z constant, X or Y varies</li>
+          <li>Horizontal: offset or angle, azimuth</li>
+          <li>QC RNMO, S/R offsets, AZI on steep dip reflectors</li>
+        </ul>
+      </div>
+      <div class="flex gap-6 mt-4">
+        <img src="resource/img/gem_slides/gem_slide_5.png" alt="GEM Slide 5" class="w-1/2 rounded-lg object-cover" />
+        <img src="resource/img/gem_slides/gem_slide_6.png" alt="GEM Slide 6" class="w-1/2 rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="bg-gray-900 text-white py-16 px-4 md:px-12">
+<div class="max-w-7xl mx-auto">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-8 text-center">
+    GEM Technology: Enhancing Shot-Based Migration
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-10 text-gray-300 text-base leading-relaxed">
+    <div>
+      <p class="mb-4">
+        GEM technology is <span class="text-white font-semibold">complementary</span> to traditional shot-based migration methods such as:
+      </p>
+      <ul class="list-disc list-inside space-y-1 pl-4">
+        <li>Kirchhoff</li>
+        <li>WEM (Wave Equation Migration)</li>
+        <li>RTM (Reverse Time Migration)</li>
+        <li>FWI (Full Waveform Inversion)</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="mb-4 font-semibold text-white">Our Focus:</p>
+      <ul class="list-disc list-inside space-y-2 pl-4">
+        <li>Evaluating robustness of existing FWI velocity models</li>
+        <li>Developing geologically conforming anisotropic VMs as FWI inputs</li>
+        <li>Reducing model uncertainty</li>
+        <li>Providing QC tools to measure errors in velocity, delta, epsilon, and structural positioning</li>
+        <li>Utilizing proprietary algorithms to minimize parameter crosstalk</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Team Slider Section -->
+<section id="tab-team" class="py-16 bg-gray-900 bg-opacity-90">
+<div class="container mx-auto px-4">
+  <h2 class="text-3xl font-semibold mb-10 text-center">Industry Recognized Innovators</h2>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <div class="bg-gray-800 p-6 rounded-lg text-center shadow-md hover:shadow-xl transition">
+      <img src="resource/img/johnsherwood.jpeg" alt="John W.C. Sherwood" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+      <h3 class="text-xl font-bold">John W.C. Sherwood</h3>
+      <h4 class="text-gray-400 font-semibold mb-2">President</h4>
+      <h5 class="text-gray-300 text-sm font-medium uppercase tracking-wide mb-1">Primary Responsibilities</h5>
+      <p class="text-gray-300 text-sm">Algorithm development</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg text-center shadow-md hover:shadow-xl transition">
+      <img src="resource/img/dave_hale.jpeg" alt="Dave Hale" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+      <h3 class="text-xl font-bold">Dave Hale</h3>
+      <h4 class="text-gray-400 font-semibold mb-2">Guru</h4>
+      <h5 class="text-gray-300 text-sm font-medium uppercase tracking-wide mb-1">Primary Responsibilities</h5>
+      <p class="text-gray-300 text-sm">Software and algorithm development</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg text-center shadow-md hover:shadow-xl transition">
+      <img src="resource/img/hans_tieman.jpeg" alt="Hans Tieman" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+      <h3 class="text-xl font-bold">Hans Tieman</h3>
+      <h4 class="text-gray-400 font-semibold mb-2">Migration & Tomography</h4>
+      <h5 class="text-gray-300 text-sm font-medium uppercase tracking-wide mb-1">Primary Responsibilities</h5>
+      <p class="text-gray-300 text-sm">Migration, Raytracing, Tomography</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg text-center shadow-md hover:shadow-xl transition">
+      <img src="resource/img/sam_brown.jpeg" alt="Sam Brown" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+      <h3 class="text-xl font-bold">Sam Brown</h3>
+      <h4 class="text-gray-400 font-semibold mb-2">CTO</h4>
+      <h5 class="text-gray-300 text-sm font-medium uppercase tracking-wide mb-1">Primary Responsibilities</h5>
+      <p class="text-gray-300 text-sm">Technical strategy,<br/>platform strategy,<br/>and technical development</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- History Timeline -->
+<section id="history" class="py-16 bg-black bg-opacity-90 overflow-x-auto">
+<div class="timeline-container">
+  <div class="timeline-line"></div>
+  <div class="timeline-arrow-container">
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+  </div>
+
+  <div class="timeline-item" >
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2017</div>
+    <div class="timeline-title">Idea</div>
+    <div class="timeline-content">Algorithm Development
+Focused on AVO/AVAZ</div>
+  </div>
+
+  <div class="timeline-item top">
+    <div class="timeline-year">2018</div>
+    <div class="timeline-title">Proof of Concept</div>
+    <div class="timeline-content">Orthorhombic land synthetics</div>
+    <div class="timeline-pin"></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2019</div>
+    <div class="timeline-title">Formation</div>
+    <div class="timeline-content">GEM formed by experts in Geophysics, Cloud, Visualization, Software Development</div>
+  </div>
+
+  <div class="timeline-item top">
+    <div class="timeline-year">2020</div>
+    <div class="timeline-title">Infrastructure</div>
+    <div class="timeline-content">Cloud Computing
+Flow Engine
+Marine Synthetics</div>
+    <div class="timeline-pin"></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2021</div>
+    <div class="timeline-title">Beta Testing</div>
+    <div class="timeline-content">NAZ Marine
+WAZ Marine
+FAZ Marine
+Anisotropy Synthetics
+COCA Viewer</div>
+  </div>
+
+  <div class="timeline-item top">
+    <div class="timeline-year">2022</div>
+    <div class="timeline-title">Production</div>
+    <div class="timeline-content">FWI VM Validation
+GEM VM for FWI
+Full Azimuth Raytracing System</div>
+    <div class="timeline-pin"></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2023</div>
+    <div class="timeline-title">Fully Shot Based</div>
+    <div class="timeline-content">Sparse Marine Node
+FARIS Updates
+CACA Viewer</div>
+  </div>
+
+  <div class="timeline-item top">
+    <div class="timeline-year">2024</div>
+    <div class="timeline-title">Model Uncertainty</div>
+    <div class="timeline-content">Enhanced tomographic workflows and equations to minimize parameter crosstalk</div>
+    <div class="timeline-pin"></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2025</div>
+    <div class="timeline-title">Future</div>
+    <div class="timeline-content">Next generation developments & innovations</div>
+  </div>
+
+</div>
+</section>
+<section id="gem-slider" class="relative bg-black overflow-hidden">
+<div class="max-w-7xl mx-auto py-12 px-4">
+  <h2 class="text-3xl md:text-4xl font-bold text-center text-[#03dac6] mb-8">Slides</h2>
+
+  <div class="relative w-full max-w-4xl mx-auto">
+    <img id="slider-image" src="resource/img/gem_slides/gem_slide_2.png" alt="GEM Slide" class="w-full rounded-lg shadow-lg transition-opacity duration-500 ease-in-out" />
+
+    <!-- Navigation -->
+    <button onclick="prevSlide()" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
+      ‹
+    </button>
+    <button onclick="nextSlide()" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
+      ›
+    </button>
+  </div>
+
+  <p class="text-center text-sm text-gray-400 mt-4">Slide <span id="slide-number">1</span> / 42</p>
+</div>
+</section>
+
+<!-- Contact Us -->
+<section id="tab-contact" class="py-16 bg-gray-900 bg-opacity-90">
+  <div class="container mx-auto py-12 px-4">
+  <h1 class="text-3xl font-semibold mb-10 text-center">Want to know more?</h1>
+  <h2 class="text-2xl font-semibold mb-10 text-center">Email to: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-950 text-gray-400 py-6 px-4 mt-16">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+  <p>&copy; <span id="year"></span> Geo Ex Machina. All rights reserved.</p>
+  <div class="mt-4 md:mt-0">
+    <a href="#tab-team" class="text-[#03dac6] hover:underline mx-2">Team</a>
+    <a href="#history" class="text-[#03dac6] hover:underline mx-2">History</a>
+    <a href="#key-technologies" class="text-[#03dac6] hover:underline mx-2">Technology</a>
+    <a href="#tab-contact" class="text-[#03dac6] hover:underline mx-2">Contact</a>
+  </div>
+</div>
+</footer>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
-const sliders = [
-  ["Velocity Comparison", "velocity"],
-  ["Velocity Model Comparison", "velocity_model"],
-  ["Epsilon Comparison", "epsilon"],
-  ["Epsilon Model Comparison", "epsilon_model"],
-  ["Delta Comparison", "delta"],
-  ["Stack Comparison: Depth Slice 1300m", "stack_1300"],
-  ["Stack Comparison: Depth Slice 2000m", "stack_2000"],
-  ["Stack Comparison: Depth Slice 3500m", "stack_3500"],
-  ["Stack Comparison: Depth Slice 4400m", "stack_4400"]
-];
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: { slidesPerView: 2.5 },
+      1024: { slidesPerView: 3.5 }
+    }
+  });
+document.getElementById("year").textContent = new Date().getFullYear();
+    // Scroll to the last card on load
+window.addEventListener('load', () => {
+  const timeline = document.querySelector('#history .flex');
+  timeline.scrollLeft = timeline.scrollWidth;
+});
+  let currentSlide = 2;
+const totalSlides = 43;
+const sliderImg = document.getElementById("slider-image");
+const slideNum = document.getElementById("slide-number");
 
-const container = document.getElementById("newslider-section");
+function updateSlide() {
+  sliderImg.src = `resource/img/gem_slides/gem_slide_${currentSlide}.png`;
+  slideNum.textContent = currentSlide;
+}
 
-sliders.forEach(([title, prefix]) => {
-  const html = `
-  <div class="newslider">
-    <div class="slider-header">${title}</div>
-    <div class="slider-controls">
-      <button class="slider-btn" data-view="0">Traditional</button>
-      <button class="slider-btn active" data-view="1">Starting</button>
-      <button class="slider-btn" data-view="2">GEM VM</button>
-    </div>
-    <div class="slider-track">
-      <div class="slide-group">
-        <div class="slide starting-slide">
-          <div class="click-half right-half"></div>
-          <img src="${prefix}_traditional.jpg" alt="Traditional">
-        </div>
-        <div class="slide starting-slide">
-          <div class="click-half left-half"></div>
-          <div class="click-half right-half"></div>
-          <img src="${prefix}_starting.jpg" alt="Starting">
-        </div>
-        <div class="slide starting-slide">
-          <div class="click-half left-half"></div>
-          <img src="${prefix}_gemvm.jpg" alt="GEM VM">
-        </div>
-      </div>
-    </div>
-  </div>`;
-  container.insertAdjacentHTML("beforeend", html);
+function prevSlide() {
+  currentSlide = currentSlide > 2 ? currentSlide - 1 : totalSlides;
+  updateSlide();
+}
+
+function nextSlide() {
+  currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 2;
+  updateSlide();
+}
+document.addEventListener('DOMContentLoaded', () => {
+  // Select the two main section headers inside #key-technologies
+  const gemVmHeader = document.querySelector('#key-technologies > div > div > div:nth-child(1) > h3');
+  const gemQcHeader = document.querySelector('#key-technologies > div > div > div:nth-child(2) > h3');
+  
+  const gemVmExpanded = document.getElementById('gemvm-expanded');
+  const gemQcExpanded = document.getElementById('gemqc-expanded');
+
+  // Defensive check and set cursor
+  [gemVmHeader, gemQcHeader].forEach(h => {
+    if (h) h.style.cursor = 'pointer';
+  });
+
+  // Toggle GEM VM expanded section
+  if (gemVmHeader && gemVmExpanded) {
+    gemVmHeader.addEventListener('click', () => {
+      const isVisible = !gemVmExpanded.classList.contains('hidden');
+      if (isVisible) {
+        gemVmExpanded.classList.add('hidden');
+      } else {
+        gemVmExpanded.classList.remove('hidden');
+        gemVmExpanded.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Optionally hide the other section
+        gemQcExpanded?.classList.add('hidden');
+      }
+    });
+  }
+
+  // Toggle QC expanded section
+  if (gemQcHeader && gemQcExpanded) {
+    gemQcHeader.addEventListener('click', () => {
+      const isVisible = !gemQcExpanded.classList.contains('hidden');
+      if (isVisible) {
+        gemQcExpanded.classList.add('hidden');
+      } else {
+        gemQcExpanded.classList.remove('hidden');
+        gemQcExpanded.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Optionally hide the other section
+        gemVmExpanded?.classList.add('hidden');
+      }
+    });
+  }
 });
 
-/*
-Animation sequence:
-Starting (1) → Traditional (0) → Starting (1)
-Starting (1) → GEM VM (2) → Starting (1)
-*/
-
-function animateSliders() {
-  const allSliders = container.querySelectorAll('.newslider');
-
-  allSliders.forEach(slider => {
-    const sequence = [1, 0, 1, 2];
-    let seqIndex = 0;
-
-    const buttons = slider.querySelectorAll('.slider-btn');
-    const slideGroup = slider.querySelector('.slide-group');
-
-    function updateView(viewIndex) {
-      // Move the slide group horizontally
-      slideGroup.style.transform = `translateX(-${viewIndex * 100}%)`;
-
-      // Update active buttons
-      buttons.forEach(btn => {
-        btn.classList.toggle('active', Number(btn.dataset.view) === viewIndex);
-      });
-    }
-
-    updateView(sequence[seqIndex]);
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const view = Number(btn.dataset.view);
-        seqIndex = sequence.indexOf(view);
-        if (seqIndex === -1) seqIndex = 0;
-        updateView(view);
-      });
-    });
-
-    setInterval(() => {
-      seqIndex = (seqIndex + 1) % sequence.length;
-      updateView(sequence[seqIndex]);
-    }, 3000);
-  });
+// Nested toggle function used in inline onclick handlers
+function toggleSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.classList.toggle('hidden');
+  }
 }
-</script>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</script>
 </body>
 </html>
