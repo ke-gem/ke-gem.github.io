@@ -485,6 +485,75 @@ CACA Viewer</div>
 
 </div>
 </section>
+<section class="bg-black bg-opacity-70 py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-white mb-8">
+      Method Comparison for FWI Starting Model
+    </h2>
+    <div class="overflow-x-auto rounded-lg backdrop-blur-sm bg-white/10 shadow-lg border">
+      <table class="min-w-full text-sm text-left text-white">
+        <thead class="bg-blue-900/80">
+          <tr>
+            <th class="py-3 px-4 font-semibold"> </th>
+            <th class="py-3 px-4 font-semibold">Kirchhoff</th>
+            <th class="py-3 px-4 font-semibold">RTM / FWI</th>
+            <th class="py-3 px-4 font-semibold">GEM VM</th>
+          </tr>
+        </thead>
+        <tbody class="bg-blue-50 text-gray-800">
+          <tr>
+            <td class="py-2 px-4 font-medium">Gather QCs</td>
+            <td class="py-2 px-4">Butterfly Gathers</td>
+            <td class="py-2 px-4">Butterfly Gathers</td>
+            <td class="py-2 px-4 font-bold text-black">COCO, CACA Gathers</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Gather QC dimensionality</td>
+            <td class="py-2 px-4">4D</td>
+            <td class="py-2 px-4">4D</td>
+            <td class="py-2 px-4 font-bold text-black">6D</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">QC azimuthal variation</td>
+            <td class="py-2 px-4">Orthogonal gathers</td>
+            <td class="py-2 px-4">Orthogonal gathers</td>
+            <td class="py-2 px-4 font-bold text-black">FAZ: 360°, WATS: 180°</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">QC Reflector Dip Constraint</td>
+            <td class="py-2 px-4">60°</td>
+            <td class="py-2 px-4">60°</td>
+            <td class="py-2 px-4 font-bold text-black">None</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Sensitive to vertical velocity?</td>
+            <td class="py-2 px-4">Yes</td>
+            <td class="py-2 px-4">Yes</td>
+            <td class="py-2 px-4 font-bold text-black">Yes</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Sensitive to horizontal velocity?</td>
+            <td class="py-2 px-4">No</td>
+            <td class="py-2 px-4">No</td>
+            <td class="py-2 px-4 font-bold text-black">Yes</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">RMO Picking</td>
+            <td class="py-2 px-4">4D</td>
+            <td class="py-2 px-4">N/A</td>
+            <td class="py-2 px-4 font-bold text-black">6D</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Input to Inversions</td>
+            <td class="py-2 px-4">Target Lines</td>
+            <td class="py-2 px-4">Random shots</td>
+            <td class="py-2 px-4 font-bold text-black">All data</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 <section id="gem-slider" class="relative bg-black overflow-hidden">
 <div class="max-w-7xl mx-auto py-12 px-4">
   <h2 class="text-3xl md:text-4xl font-bold text-center text-[#03dac6] mb-8">Slides</h2>
