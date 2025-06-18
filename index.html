@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Geo Ex Machina 2.0</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<link rel="apple-touch-icon" sizes="180x180" href="resource/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resource/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resource/img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+.video-bg {
+    position: fixed;
+    top: -10vh;
+    left: 0;
+    width: 100vw;
+    height: 120vh;
+    object-fit: cover;
+    transform: translateY(10vh);
+    z-index: -1;
+    pointer-events: none;
+}
+  :root {
+    --main-color: #03dac6;
+  }
+  .timeline-container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      max-width: 1400px;
+      margin: 0 auto;
+      height: 350px;
+  }
+ .timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--main-color);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+.timeline-item {
+  max-width: 160px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+  justify-content: flex-end; /* bottom by default */
+}
+.timeline-item.top {
+  justify-content: flex-start; /* top for top items */
+}
+.timeline-pin {
+  width: 4px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+.timeline-item.top .timeline-pin {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+.timeline-item:not(.top) .timeline-pin {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.timeline-year, .timeline-title, .timeline-content {
+  color: #d1d5db;
+}
+.timeline-year {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  color: var(--main-color);
+}
+.timeline-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.timeline-content {
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: pre-line;
+}
+.timeline-arrow-container {
+  position: absolute;
+  top: 50%;
+  height: 20px;
+  width: 100%;
+  pointer-events: none;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26px;
+  transform: translateY(-50%);
+}
+.timeline-arrow {
+  width: 0;
+  height: 0;
+  border: 4px solid var(--main-color);
+  border-radius:50%;
+}
+.timeline-arrow:hover {
+  opacity: 1;
+}
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 4px #03dac6, 0 0 8px #03dac6;
+  }
+  50% {
+    box-shadow: 0 0 8px #03dac6, 0 0 8px #03dac6;
+  }
+  100% {
+    box-shadow: 0 0 4px #03dac6, 0 0 8px #03dac6;
+  }
+}
+.toggle-content {
+  padding: 20px;
+}
+.glow-border {
+  border: 2px solid #03dac6;
+  animation: pulse-glow 2s ease-in-out infinite;
+  transition: box-shadow 0.3s ease-in-out;
+}
+#gem-slider button {
+  /* Push nav buttons further to the sides */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#gem-slider button:first-of-type {
+  left: -2.5rem; /* Move left button outside container */
+}
+
+#gem-slider button:last-of-type {
+  right: -2.5rem; /* Move right button outside container */
+}
+section.newslider-section {
+max-width: 1200px;
+margin: auto;
+}
+
+section.newslider-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.newslider {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.slider-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 10px;
+}
+
+.slider-btn {
+  background-color: #1e1f26;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.slider-btn.active,
+.slider-btn:hover {
+  background-color: #03dac6;
+}
+
+.slider-track {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-group {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+  height: auto; /* Adjust if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-fallback {
+  color: white;
+  font-size: 5rem;
+  font-style: italic;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.starting-slide {
+  position: relative;
+}
+
+.click-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.left-half {
+  left: 0;
+}
+
+.right-half {
+  right: 0;
+}
+
+/* Optional hover effect */
+.left-half:hover,
+.right-half:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* slight white overlay */
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .timeline-container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .timeline-line {
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-arrow-container {
+    flex-direction: column;
+    height: 100%;
+    width: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 26px 0;
+  }
+
+  .timeline-arrow {
+    margin: 10px 0;
+  }
+
+  .timeline-item {
+    max-width: none;
+    width: 90%;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ffffff22;
+  }
+
+  .timeline-item.top {
+    justify-content: flex-start;
+  }
+
+  .timeline-pin {
+    width: 4px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .timeline-item.top .timeline-pin,
+  .timeline-item:not(.top) .timeline-pin {
+    display: none;
+  }
+
+  .timeline-year,
+  .timeline-title,
+  .timeline-content {
+    text-align: left;
+  }
+
+  .timeline-item > div:not(.timeline-pin) {
+    flex: 1;
+  }
+}
+
+</style>
+</head>
+<body class="text-white bg-black">
+
+<!-- Video Background -->
+<video class="video-bg" autoplay muted playsinline id="backgroundVideo">
+  <source id="videoSource" src="resource/video/v-main.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<section class="h-screen flex items-center justify-center text-center bg-black bg-opacity-60">
+  <div>
+    <img src="resource/img/logo.svg" alt="Geo Ex Machina Logo" class="mx-auto mb-6 h-auto" />
+    <h1 class="text-5xl font-bold mb-4">Geo Ex Machina</h1>
+    <p class="text-xl">Geologically Constrained Model Building</p>
+  </div>
+</section>
+
+<section id="case-studies" class="relative py-16 bg-gray-900/90 z-10">
+  <div class="container mx-auto px-4 relative z-20">
+    <h2 class="text-3xl font-semibold mb-8 text-center text-[#03dac6]">Case Studies</h2>
+
+    <div class="swiper mySwiper rounded-xl overflow-hidden">
+      <div class="swiper-wrapper">
+        <!-- Slide 1: Australia -->
+        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
+          <img src="resource/img/gorgon.png" alt="Australia Case Study" class="w-full h-full object-cover rounded-lg" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
+            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">Australia</h3>
+          </div>
+        </div>
+
+        <!-- Slide 2: North Sea -->
+        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
+          <img src="resource/img/gorgon.png" alt="North Sea Case Study" class="w-full h-full object-cover rounded-lg" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
+            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">North Sea</h3>
+          </div>
+        </div>
+
+        <!-- Slide 3: Gorgon -->
+        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
+          <img src="resource/img/gorgon.png" alt="Gorgon Case Study" class="w-full h-full object-cover rounded-lg" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
+            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">Gorgon</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination mt-4 z-30 relative"></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="key-technologies" class="bg-gray-900 text-white py-16 px-4 md:px-12">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-10 text-center">
+      Key Technologies
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12 text-gray-300 text-base leading-relaxed">
+      <!-- GEM VM -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM VM</h3>
+        <ul class="list-disc list-inside space-y-2 pl-4">
+          <li><span class="font-medium text-white">Generate:</span> Beam forming</li>
+          <li><span class="font-medium text-white">Align:</span> 6D residuals for each beam</li>
+          <li><span class="font-medium text-white">Tomography:</span> Joint Inversion for Velocity, Delta, and Epsilon</li>
+        </ul>
+      </div>
+
+      <!-- QC -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">QC</h3>
+        <ul class="list-disc list-inside space-y-2 pl-4">
+          <li>COCA / CACA Gathers</li>
+          <li>FARIS Illumination</li>
+          <li>Selective Demigration</li>
+        </ul>
+      </div>
+    </div>
+
+<!-- Hidden expanded description -->
+<div id="gemvm-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
+
+  <!-- What is GEM VM? -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-what')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">What is GEM VM?</h3>
+    <div id="gemvm-what" class="toggle-content hidden">
+      <p class="mb-4">LF velocity, delta, and epsilon that conform to regional geology</p>
+      <p class="mb-4">Flattens COCA/CACA gathers in Z, X, and Y</p>
+      <p class="mb-4">Maximizes illumination in Azimuth, Angle, and Offset</p>
+      <p class="mb-4">Every effort to minimize parameter crosstalk prior to FWI</p>
+      <div id="newslider-section" class="newslider-section"></div>    
+    </div>
+  </section>
+
+  <!-- Parameter Crosstalk -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-crosstalk')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">Parameter Crosstalk</h3>
+    <div id="gemvm-crosstalk" class="toggle-content hidden">
+      <p class="mb-4">To estimate velocity/delta/epsilon accurately, inversion requires a rich set of P wave propagation angles in each tomography cell</p>
+      <p class="mb-4">In FWI, direct arrivals have limited range of propagation angles limiting resolution between anisotropic parameters</p>
+      <p class="mb-4">GEM takes advantage of FAZ data to:</p>
+      <ul class="list-disc list-inside pl-6 space-y-1">
+        <li>Generate 6D picks for every beam creating a rich set of propagation angles</li>
+        <li>Simultaneously invert for Velocity/Delta/Epsilon</li>
+        <li>QC with COCA/CACA gathers to validate earth model</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GEM Tomography Overview -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-tomography')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM Tomography Overview</h3>
+    <div id="gemvm-tomography" class="toggle-content hidden">
+      <div class="md:flex md:space-x-8 mb-6">
+        <div class="md:w-1/2">
+          <p class="mb-4 font-semibold">1. Align Residual Estimation</p>
+          <p class="mb-4">Estimates the 6D spatial/temporal shift of a Beam along its reflector dip attributes which will best align the Beam with the Image stack</p>
+          <p class="mb-4">6D picks minimize cycle skipping (IL, XL, Z, OffX, OffY, Reflector azimuth)</p>
+          <p class="mb-4">One shift per Beam, not per location</p>
+          <p class="mb-4">No dip limitation</p>
+          <p class="mb-4">Apply shifts for QC</p>
+        </div>
+        <div class="md:w-1/2">
+          <p class="mb-4 font-semibold">2. Inversion</p>
+          <p class="mb-4">One linearized equation per Beam</p>
+          <p class="mb-4">VM updated along the migrated ray path of each aligned residual</p>
+          <p class="mb-4">Iterative conjugate gradient method gives LSE solution</p>
+          <p class="mb-4">Quality due to:</p>
+          <ul class="list-disc list-inside pl-6 space-y-1">
+            <li>6D residual alignments</li>
+            <li>Separate masks & smoothing for parameters</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-4">
+        <img src="resource/img/gem_slides/gem_slide_0.png" alt="GEM Slide 0" class="w-full rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
+</div>
+<div id="gemqc-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
+
+  <!-- 5D COCA Generation and Viewer -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-coca')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">5D COCA Generation and Viewer</h3>
+    <div id="gemvm-coca" class="toggle-content hidden">
+      <div class="mb-4">
+        <p class="mb-2 font-semibold">COCA/CACA Z</p>
+        <ul class="list-disc list-inside pl-6 space-y-1 mb-4">
+          <li>Sensitive to vertical velocity and azimuthal variations</li>
+          <li>X, Y are constant, Z varies</li>
+          <li>Horizontal: offset or angle, azimuth</li>
+          <li>QC RNMO, S/R offsets, AZI on low dip reflectors</li>
+        </ul>
+      </div>
+      <div class="mb-4">
+        <p class="mb-2 font-semibold">COCA/CACA X & Y</p>
+        <ul class="list-disc list-inside pl-6 space-y-1">
+          <li>Sensitive to horizontal velocity error</li>
+          <li>Z constant, X or Y varies</li>
+          <li>Horizontal: offset or angle, azimuth</li>
+          <li>QC RNMO, S/R offsets, AZI on steep dip reflectors</li>
+        </ul>
+      </div>
+      <div class="flex gap-6 mt-4">
+        <img src="resource/img/gem_slides/gem_slide_5.png" alt="GEM Slide 5" class="w-1/2 rounded-lg object-cover" />
+        <img src="resource/img/gem_slides/gem_slide_6.png" alt="GEM Slide 6" class="w-1/2 rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="bg-gray-900 text-white py-16 px-4 md:px-12">
+<div class="max-w-7xl mx-auto">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-8 text-center">
+    GEM Technology: Enhancing Shot-Based Migration
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-10 text-gray-300 text-base leading-relaxed">
+    <div>
+      <p class="mb-4">
+        GEM technology is <span class="text-white font-semibold">complementary</span> to traditional shot-based migration methods such as:
+      </p>
+      <ul class="list-disc list-inside space-y-1 pl-4">
+        <li>Kirchhoff</li>
+        <li>WEM (Wave Equation Migration)</li>
+        <li>RTM (Reverse Time Migration)</li>
+        <li>FWI (Full Waveform Inversion)</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="mb-4 font-semibold text-white">Our Focus:</p>
+      <ul class="list-disc list-inside space-y-2 pl-4">
+        <li>Evaluating robustness of existing FWI velocity models</li>
+        <li>Developing geologically conforming anisotropic VMs as FWI inputs</li>
+        <li>Reducing model uncertainty</li>
+        <li>Providing QC tools to measure errors in velocity, delta, epsilon, and structural positioning</li>
+        <li>Utilizing proprietary algorithms to minimize parameter crosstalk</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Team Slider Section -->
+<section id="tab-team" class="py-16 bg-gray-900 bg-opacity-90">
+<div class="container mx-auto px-4">
+  <h2 class="text-3xl font-semibold mb-10 text-center">Industry Recognized Innovators</h2>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <div class="bg-gray-800 p-6 rounded-lg text-center shadow-md hover:shadow-xl transition">
+      <img src="resource/img/johnsherwood.jpeg" alt="John W.C. Sherwood" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+      <h3 class="text-xl font-bold">John W.C. Sherwood</h3>
+      <h4 class="text-gray-400 font-semibold mb-2">President</h4>
+      <h5 class="text-gray-300 text-sm font-medium uppercase tracking-wide mb-1">Primary Responsibilities</h5>
+      <p class="text-gray-300 text-sm">Algorithm development</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg text-center shadow-md hover:shadow-xl transition">
+      <img src="resource/img/dave_hale.jpeg" alt="Dave Hale" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+      <h3 class="text-xl font-bold">Dave Hale</h3>
+      <h4 class="text-gray-400 font-semibold mb-2">Guru</h4>
+      <h5 class="text-gray-300 text-sm font-medium uppercase tracking-wide mb-1">Primary Responsibilities</h5>
+      <p class="text-gray-300 text-sm">Software and algorithm development</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg text-center shadow-md hover:shadow-xl transition">
+      <img src="resource/img/hans_tieman.jpeg" alt="Hans Tieman" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+      <h3 class="text-xl font-bold">Hans Tieman</h3>
+      <h4 class="text-gray-400 font-semibold mb-2">Migration & Tomography</h4>
+      <h5 class="text-gray-300 text-sm font-medium uppercase tracking-wide mb-1">Primary Responsibilities</h5>
+      <p class="text-gray-300 text-sm">Migration, Raytracing, Tomography</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg text-center shadow-md hover:shadow-xl transition">
+      <img src="resource/img/sam_brown.jpeg" alt="Sam Brown" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+      <h3 class="text-xl font-bold">Sam Brown</h3>
+      <h4 class="text-gray-400 font-semibold mb-2">CTO</h4>
+      <h5 class="text-gray-300 text-sm font-medium uppercase tracking-wide mb-1">Primary Responsibilities</h5>
+      <p class="text-gray-300 text-sm">Technical strategy,<br/>platform strategy,<br/>and technical development</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- History Timeline -->
+<section id="history" class="py-16 bg-black bg-opacity-90 overflow-x-auto">
+<div class="timeline-container">
+  <div class="timeline-line"></div>
+  <div class="timeline-arrow-container">
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+    <div class="timeline-arrow"></div>
+  </div>
+
+  <div class="timeline-item" >
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2017</div>
+    <div class="timeline-title">Idea</div>
+    <div class="timeline-content">Algorithm Development
+Focused on AVO/AVAZ</div>
+  </div>
+
+  <div class="timeline-item top">
+    <div class="timeline-year">2018</div>
+    <div class="timeline-title">Proof of Concept</div>
+    <div class="timeline-content">Orthorhombic land synthetics</div>
+    <div class="timeline-pin"></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2019</div>
+    <div class="timeline-title">Formation</div>
+    <div class="timeline-content">GEM formed by experts in Geophysics, Cloud, Visualization, Software Development</div>
+  </div>
+
+  <div class="timeline-item top">
+    <div class="timeline-year">2020</div>
+    <div class="timeline-title">Infrastructure</div>
+    <div class="timeline-content">Cloud Computing
+Flow Engine
+Marine Synthetics</div>
+    <div class="timeline-pin"></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2021</div>
+    <div class="timeline-title">Beta Testing</div>
+    <div class="timeline-content">NAZ Marine
+WAZ Marine
+FAZ Marine
+Anisotropy Synthetics
+COCA Viewer</div>
+  </div>
+
+  <div class="timeline-item top">
+    <div class="timeline-year">2022</div>
+    <div class="timeline-title">Production</div>
+    <div class="timeline-content">FWI VM Validation
+GEM VM for FWI
+Full Azimuth Raytracing System</div>
+    <div class="timeline-pin"></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2023</div>
+    <div class="timeline-title">Fully Shot Based</div>
+    <div class="timeline-content">Sparse Marine Node
+FARIS Updates
+CACA Viewer</div>
+  </div>
+
+  <div class="timeline-item top">
+    <div class="timeline-year">2024</div>
+    <div class="timeline-title">Model Uncertainty</div>
+    <div class="timeline-content">Enhanced tomographic workflows and equations to minimize parameter crosstalk</div>
+    <div class="timeline-pin"></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-pin"></div>
+    <div class="timeline-year">2025</div>
+    <div class="timeline-title">Future</div>
+    <div class="timeline-content">Next generation developments & innovations</div>
+  </div>
+
+</div>
+</section>
+<section class="bg-black bg-opacity-70 py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-white mb-8">
+      Method Comparison for FWI Starting Model
+    </h2>
+    <div class="overflow-x-auto rounded-lg backdrop-blur-sm bg-white/10 shadow-lg border">
+      <table class="min-w-full text-sm text-left text-white">
+        <thead class="bg-blue-900/80">
+          <tr>
+            <th class="py-3 px-4 font-semibold"> </th>
+            <th class="py-3 px-4 font-semibold">Kirchhoff</th>
+            <th class="py-3 px-4 font-semibold">RTM / FWI</th>
+            <th class="py-3 px-4 font-semibold">GEM VM</th>
+          </tr>
+        </thead>
+        <tbody class="bg-blue-50 text-gray-800">
+          <tr>
+            <td class="py-2 px-4 font-medium">Gather QCs</td>
+            <td class="py-2 px-4">Butterfly Gathers</td>
+            <td class="py-2 px-4">Butterfly Gathers</td>
+            <td class="py-2 px-4 font-bold text-black">COCO, CACA Gathers</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Gather QC dimensionality</td>
+            <td class="py-2 px-4">4D</td>
+            <td class="py-2 px-4">4D</td>
+            <td class="py-2 px-4 font-bold text-black">6D</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">QC azimuthal variation</td>
+            <td class="py-2 px-4">Orthogonal gathers</td>
+            <td class="py-2 px-4">Orthogonal gathers</td>
+            <td class="py-2 px-4 font-bold text-black">FAZ: 360°, WATS: 180°</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">QC Reflector Dip Constraint</td>
+            <td class="py-2 px-4">60°</td>
+            <td class="py-2 px-4">60°</td>
+            <td class="py-2 px-4 font-bold text-black">None</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Sensitive to vertical velocity?</td>
+            <td class="py-2 px-4">Yes</td>
+            <td class="py-2 px-4">Yes</td>
+            <td class="py-2 px-4 font-bold text-black">Yes</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Sensitive to horizontal velocity?</td>
+            <td class="py-2 px-4">No</td>
+            <td class="py-2 px-4">No</td>
+            <td class="py-2 px-4 font-bold text-black">Yes</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">RMO Picking</td>
+            <td class="py-2 px-4">4D</td>
+            <td class="py-2 px-4">N/A</td>
+            <td class="py-2 px-4 font-bold text-black">6D</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-4 font-medium">Input to Inversions</td>
+            <td class="py-2 px-4">Target Lines</td>
+            <td class="py-2 px-4">Random shots</td>
+            <td class="py-2 px-4 font-bold text-black">All data</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section id="gem-slider" class="relative bg-black overflow-hidden">
+  <!-- WebGL Background Canvas -->
+  <canvas id="canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
+
+  <div class="max-w-7xl mx-auto py-12 px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#03dac6] mb-8">Slides</h2>
+
+    <div class="relative w-full max-w-4xl mx-auto">
+      <img id="slider-image" src="resource/img/gem_slides/gem_slide_2.png" alt="GEM Slide"
+        class="w-full rounded-lg shadow-lg transition-opacity duration-500 ease-in-out" />
+
+      <!-- Navigation Arrows -->
+      <button onclick="prevSlide()"
+        class="absolute top-1/2 left-0 -translate-y-1/2 transform text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
+        ‹
+      </button>
+      <button onclick="nextSlide()"
+        class="absolute top-1/2 right-0 -translate-y-1/2 transform text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
+        ›
+      </button>
+    </div>
+
+    <p class="text-center text-sm text-gray-400 mt-4">
+      Slide <span id="slide-number">1</span> / 42
+    </p>
+  </div>
+</section>
+<section id="newslider-section" class="newslider-section"></section>    
+<section id="tab-integration" class="py-16 bg-gray-900 bg-opacity-90">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-white mb-8">User Friendliness</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold text-white mb-2">Focus on geophysics and geology</h3>
+        <h4 class="text-md text-gray-300">Users parameterize workflows, not applications</h4>
+      </div>
+      <div class="md:w-1/2">
+        <figure class="text-center bg-white p-4 rounded-md shadow-md">
+          <figcaption class="text-sm text-gray-400 mb-2">
+            Seamless integration with existing tools, processes and file formats
+          </figcaption>
+          <img src="resource/img/gem_flow_endpoints.png" class="w-full max-w-md mx-auto rounded-md" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tab-integration-cloud" class="py-16 bg-gray-900 bg-opacity-60">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold text-white mb-8">Data Center and Cloud Deployment</h3>
+    <div class="flex flex-col md:flex-row items-start gap-8">
+      <div class="flex flex-col gap-4 md:w-1/2 text-gray-300">
+        <div>
+          <p>Support for internal file formats: <span class="text-white font-medium">GEM, SEP, SEGY, OpenVDS, VDS</span></p>
+        </div>
+        <div>
+          <p>Support internal and cloud storage: <span class="text-white font-medium">AWS, Azure, local</span></p>
+        </div>
+        <div>
+          <p>Simple APIs: <span class="text-white font-medium">C++, Python, ScaleOut, Swagger</span></p>
+        </div>
+        <div>
+          <p>Source code: <span class="text-white font-medium">Github, Docker, Ansible, Terraform</span></p>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <figure class="text-center bg-white p-4 rounded-md shadow-md">
+          <figcaption class="text-sm text-gray-400 mb-2">
+            Cloud & datacenter friendly API for internal developers
+          </figcaption>
+          <img src="resource/img/cloud_deployment.png" class="w-full max-w-md mx-auto rounded-md" />
+        </figure>
+      </div>
+    </div>
+     <div class="flex flex-wrap justify-center items-center gap-4 mt-8">
+      <img src="resource/img/bluware_logo.png" class="h-10" />
+      <img src="resource/img/aws_logo.png" class="h-10" />
+      <img src="resource/img/kubernetes_logo.png" class="h-10" />
+      <img src="resource/img/elastic_logo.png" class="h-10" />
+      <img src="resource/img/react_logo.jpeg" class="h-10" />
+      <img src="resource/img/python_logo.png" class="h-10" />
+      <img src="resource/img/docker_logo.png" class="h-10" />
+      <img src="resource/img/fastapi_logo.png" class="h-10" />
+      <img src="resource/img/nvidia_logo.png" class="h-10" />
+      <img src="resource/img/prometheus_logo.png" class="h-10" />
+      <img src="resource/img/consul_logo.jpeg" class="h-10" />
+      <img src="resource/img/grafana_logo.png" class="h-10" />
+    </div>
+  </div>
+</section>
+<!-- Contact Us -->
+<section id="tab-contact" class="py-16 bg-gray-900 bg-opacity-90">
+  <div class="container mx-auto py-12 px-4">
+  <h1 class="text-3xl font-semibold mb-10 text-center">Want to know more?</h1>
+  <h2 class="text-2xl font-semibold mb-10 text-center">Email to: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-950 text-gray-400 py-6 px-4 mt-16">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+  <p>&copy; <span id="year"></span> Geo Ex Machina. All rights reserved.</p>
+  <div class="mt-4 md:mt-0">
+    <a href="#tab-team" class="text-[#03dac6] hover:underline mx-2">Team</a>
+    <a href="#history" class="text-[#03dac6] hover:underline mx-2">History</a>
+    <a href="#key-technologies" class="text-[#03dac6] hover:underline mx-2">Technology</a>
+    <a href="#tab-integration-cloud" class="text-[#03dac6] hover:underline mx-2">Integration</a>
+    <a href="#tab-contact" class="text-[#03dac6] hover:underline mx-2">Contact</a>
+  </div>
+</div>
+</footer>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script type="x-shader/x-fragment">#version 300 es
+precision highp float;
+out vec4 O;
+uniform float time;
+uniform vec2 resolution;
+uniform vec2 move;
+#define FC gl_FragCoord.xy
+#define R resolution
+#define T time
+#define N normalize
+#define S smoothstep
+#define MN min(R.x,R.y)
+#define rot(a) mat2(cos((a)-vec4(0,11,33,0)))
+#define csqr(a) vec2(a.x*a.x-a.y*a.y,2.*a.x*a.y)
+float rnd(vec3 p) {
+  p=fract(p*vec3(12.9898,78.233,156.34));
+  p+=dot(p,p+34.56);
+  return fract(p.x*p.y*p.z);
+}
+float swirls(in vec3 p) {
+  float d=.0;
+  vec3 c=p;
+  for(float i=min(.0,time); i<11.; i++) {
+    p=.7*abs(p)/dot(p,p)-.7;
+    p.yz=csqr(p.yz);
+    p=p.zxy;
+    d+=exp(-19.*abs(dot(p,c)));
+  }
+  return d;
+}
+vec3 march(in vec3 p, vec3 rd) {
+  float d=.2, t=.0, c=.0, k=mix(.9,1.,rnd(rd)),
+  maxd=length(p)-1.;
+  vec3 col=vec3(0);
+  for(float i=min(.0,time); i<120.; i++) {
+    t+=d*exp(-2.*c)*k;
+    c=swirls(p+rd*t);
+    if (t<5e-2 || t>maxd) break;
+    col+=vec3(c*c,c/1.05,c)*8e-3;
+  }
+  return col;
+}
+float rnd(vec2 p) {
+  p=fract(p*vec2(12.9898,78.233));
+  p+=dot(p,p+34.56);
+  return fract(p.x*p.y);
+}
+vec3 ray(vec2 p, bool anim) {
+    float starSpeed = 0.1;
+    vec2 motionOffset = T * starSpeed * vec2(0.4, 0.3); // scroll direction & speed
+
+    // Apply scroll & scale for density
+    p.x -= 0.17 - (anim ? 2e-4 * T : 0.0);
+    p *= 50.0;
+
+    vec2 id = floor(p + motionOffset);
+    vec2 gv = fract(p + motionOffset);
+
+    vec3 col = vec3(0.0);
+
+    for (int j = -1; j <= 1; ++j) {
+        for (int i = -1; i <= 1; ++i) {
+            vec2 neighbor = vec2(i, j);
+            vec2 nid = id + neighbor;
+            vec2 rand = vec2(rnd(nid), rnd(nid + 1.0));
+            vec2 star = neighbor + rand;
+
+            float d = length(gv - star);
+
+            // Per-star twinkle: random freq and phase
+            float freq = 2.0 + 3.0 * rnd(nid + 2.0);     // 2–5 Hz
+            float phase = 6.2831 * rnd(nid + 3.0);       // 0–2π
+            float pulse = 0.5 + 0.5 * sin(T * freq + phase); // 0–1
+
+            col += vec3(S(0.02, 0.005, d)) * pulse;
+
+            for (int jj = -1; jj <= 1; ++jj) {
+                for (int ii = -1; ii <= 1; ++ii) {
+                    vec2 neighbor2 = vec2(ii, jj);
+                    if (neighbor2 == neighbor) continue;
+
+                    vec2 nid2 = id + neighbor2;
+                    vec2 rand2 = vec2(rnd(nid2), rnd(nid2 + 1.0));
+                    vec2 star2 = neighbor2 + rand2;
+
+                    vec2 a = star;
+                    vec2 b = star2;
+                    vec2 ab = b - a;
+
+                    float len2 = dot(ab, ab);
+                    float t = clamp(dot(gv - a, ab) / len2, 0.0, 1.0);
+
+                    // Perpendicular direction for arc
+                    vec2 perp = vec2(-ab.y, ab.x);
+                    float curveAmp = 0.3; // adjust for arc strength
+                    float curve = curveAmp * sin(3.14159 * t);
+                    vec2 point = a + ab * t + perp * curve / length(ab);
+
+                    float dist = length(gv - point);
+
+                    // Elastic profile: thin center, thick ends
+                    float elastic = 0.5 + 0.5 * cos(t * 3.14159); // 1 at ends, 0 at center
+                    float thickness = mix(0.002, 0.01, elastic);
+
+                    col += vec3(S(thickness * 1.5, thickness, dist)) * 0.15 * pulse;
+                }
+            }
+        }
+    }
+
+    return col;
+}
+void cam(inout vec3 p) {
+  p.yz*=rot(move.y*6.3/MN-T*.05);
+  p.xz*=rot(-move.x*6.3/MN+T*.025);
+}
+void main() {
+  vec2 uv=(FC-.5*R)/MN;
+  vec3 col=vec3(0),
+  p=vec3(0,0,-16),
+  rd=N(vec3(uv,1)), rdd=rd;
+  cam(p); cam(rd);
+  col=march(p,rd);
+  col=S(-.2,.9,col);
+  vec2 sn=.5+vec2(atan(rdd.x,rdd.z),atan(length(rdd.xz),rdd.y))/6.28318;
+  col=max(col,vec3(ray(sn,true)+ray(2.+sn*2.,true)));
+  float t=min((time-.5)*.3,1.);
+  uv=FC/R*2.-1.;
+  uv*=.7;
+  float v=pow(dot(uv,uv),1.8);
+  col=mix(col,vec3(0),v);
+  col=mix(vec3(0),col,t);
+  col=max(col,.08);
+  O=vec4(col,1);
+}</script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: { slidesPerView: 2.5 },
+      1024: { slidesPerView: 3.5 }
+    }
+  });
+document.getElementById("year").textContent = new Date().getFullYear();
+window.addEventListener('load', () => {
+  const timeline = document.querySelector('#history .timeline-container');
+  timeline.scrollLeft = timeline.scrollWidth;
+});
+  const videoFiles = [
+    "resource/video/v-main.mp4",
+    "resource/video/v1.mp4",
+    "resource/video/v2.mp4",
+    "resource/video/v3.mp4",
+    "resource/video/v4.mp4"
+  ];
+
+  let currentIndex = 0;
+  const video = document.getElementById("backgroundVideo");
+  const source = document.getElementById("videoSource");
+
+  video.addEventListener("ended", () => {
+    // Move to next index, wrap around if at the end
+    currentIndex = (currentIndex + 1) % videoFiles.length;
+
+    // Update source and play next video
+    source.src = videoFiles[currentIndex];
+    video.load();
+    video.play();
+  });
+
+let currentSlide = 2;
+const totalSlides = 43;
+const sliderImg = document.getElementById("slider-image");
+const slideNum = document.getElementById("slide-number");
+
+function updateSlide() {
+  sliderImg.src = `resource/img/gem_slides/gem_slide_${currentSlide}.png`;
+  slideNum.textContent = currentSlide;
+}
+
+function prevSlide() {
+  currentSlide = currentSlide > 2 ? currentSlide - 1 : totalSlides;
+  updateSlide();
+}
+
+function nextSlide() {
+  currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 2;
+  updateSlide();
+}
+document.addEventListener('DOMContentLoaded', () => {
+  // Select the two main section headers inside #key-technologies
+  const gemVmHeader = document.querySelector('#key-technologies > div > div > div:nth-child(1) > h3');
+  const gemQcHeader = document.querySelector('#key-technologies > div > div > div:nth-child(2) > h3');
+  
+  const gemVmExpanded = document.getElementById('gemvm-expanded');
+  const gemQcExpanded = document.getElementById('gemqc-expanded');
+
+  // Defensive check and set cursor
+  [gemVmHeader, gemQcHeader].forEach(h => {
+    if (h) h.style.cursor = 'pointer';
+  });
+
+  // Toggle GEM VM expanded section
+  if (gemVmHeader && gemVmExpanded) {
+    gemVmHeader.addEventListener('click', () => {
+      const isVisible = !gemVmExpanded.classList.contains('hidden');
+      if (isVisible) {
+        gemVmExpanded.classList.add('hidden');
+      } else {
+        gemVmExpanded.classList.remove('hidden');
+        gemVmExpanded.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Optionally hide the other section
+        gemQcExpanded?.classList.add('hidden');
+      }
+    });
+  }
+
+  // Toggle QC expanded section
+  if (gemQcHeader && gemQcExpanded) {
+    gemQcHeader.addEventListener('click', () => {
+      const isVisible = !gemQcExpanded.classList.contains('hidden');
+      if (isVisible) {
+        gemQcExpanded.classList.add('hidden');
+      } else {
+        gemQcExpanded.classList.remove('hidden');
+        gemQcExpanded.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Optionally hide the other section
+        gemVmExpanded?.classList.add('hidden');
+      }
+    });
+  }
+});
+
+// Nested toggle function used in inline onclick handlers
+function toggleSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.classList.toggle('hidden');
+  }
+}
+
+let editMode = false // set to false to hide the code editor on load
+let resolution = 0.5 // set 1 for full resolution or to .5 to start with half resolution on load
+let renderDelay = 1000 // delay in ms before rendering the shader after a change
+let dpr = Math.max(1, resolution * window.devicePixelRatio)
+let frm, bksource, store, renderer, pointers
+const shaderId = 'oggKrGW'
+window.onload = init
+
+function resize() {
+  const { innerWidth: width, innerHeight: height } = window
+
+  canvas.width = width * dpr
+  canvas.height = height * dpr
+
+  if (renderer) {
+    renderer.updateScale(dpr)
+  }
+}
+
+function reset() {
+  let shader = bksource
+  if (shader) {
+    renderer.updateShader(shader.textContent)
+  } else {
+    renderer.updateShader(renderer.defaultSource)
+  }
+}
+
+function toggleResolution() {
+  resolution = 1
+  dpr = Math.max(1, resolution * window.devicePixelRatio)
+  pointers.updateScale(dpr)
+  resize()
+}
+
+function loop(now) {
+  renderer.updateMouse(pointers.first)
+  renderer.updatePointerCount(pointers.count)
+  renderer.updatePointerCoords(pointers.coords)
+  renderer.updateMove(pointers.move)
+  renderer.render(now)
+  frm = requestAnimationFrame(loop)
+}
+
+function renderThis() {
+  const sourceText = bksource ? bksource.textContent : renderer.defaultSource
+
+  const result = renderer.test(sourceText)
+
+  if (result) {
+    console.error(result)
+  } else {
+    renderer.updateShader(sourceText)
+  }
+  cancelAnimationFrame(frm) // Always cancel the previous frame!
+  loop(0)
+}
+
+const debounce = (fn, delay) => {
+  let timerId
+  return (...args) => {
+    clearTimeout(timerId)
+    timerId = setTimeout(() => fn.apply(this, args), delay)
+  }
+}
+const render = debounce(renderThis, renderDelay)
+
+function init() {
+  animateSliders()
+  bksource = document.querySelector("script[type='x-shader/x-fragment']")
+
+  document.title = document.title + " - See Through the Earth Differently"
+
+  renderer = new Renderer(canvas, dpr)
+  pointers = new PointerHandler(canvas, dpr)
+  store    = new Store(window.location)
+  // editor removed
+
+  renderer.setup()
+  renderer.init()
+
+  canvas.addEventListener('shader-error', e => {
+    console.error(e.detail)
+  })
+
+  resize()
+
+  if (renderer.test(bksource.textContent) === null) {
+    renderer.updateShader(bksource.textContent)
+  }
+  loop(0)
+  window.onresize = resize
+  window.addEventListener("keydown", e => {
+    if (e.key === "L" && e.ctrlKey) {
+      e.preventDefault()
+      btnToggleView.checked = !btnToggleView.checked
+    }
+  })
+}
+class Renderer {
+  #vertexSrc = "#version 300 es\nprecision highp float;\nin vec4 position;\nvoid main(){gl_Position=position;}"
+  #fragmtSrc = "#version 300 es\nprecision highp float;\nout vec4 O;\nuniform float time;\nuniform vec2 resolution;\nvoid main() {\n\tvec2 uv=gl_FragCoord.xy/resolution;\n\tO=vec4(uv,sin(time)*.5+.5,1);\n}"
+  #vertices = [-1, 1, -1, -1, 1, 1, 1, -1]
+  constructor(canvas, scale) {
+    this.canvas = canvas
+    this.scale = scale
+    this.gl = canvas.getContext("webgl2")
+    this.gl.viewport(0, 0, canvas.width * scale, canvas.height * scale)
+    this.shaderSource = this.#fragmtSrc
+    this.mouseMove = [0, 0]
+    this.mouseCoords = [0, 0]
+    this.pointerCoords = [0, 0]
+    this.nbrOfPointers = 0
+  }
+  get defaultSource() { return this.#fragmtSrc }
+  updateShader(source) {
+    this.reset()
+    this.shaderSource = source
+    this.setup()
+    this.init()
+  }
+  updateMove(deltas) {
+    this.mouseMove = deltas
+  }
+  updateMouse(coords) {
+    this.mouseCoords = coords
+  }
+  updatePointerCoords(coords) {
+    this.pointerCoords = coords
+  }
+  updatePointerCount(nbr) {
+    this.nbrOfPointers = nbr
+  }
+  updateScale(scale) {
+    this.scale = scale
+    this.gl.viewport(0, 0, this.canvas.width * scale, this.canvas.height * scale)
+  }
+  compile(shader, source) {
+    const gl = this.gl
+    gl.shaderSource(shader, source)
+    gl.compileShader(shader)
+
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      console.error(gl.getShaderInfoLog(shader))
+      this.canvas.dispatchEvent(new CustomEvent('shader-error', { detail: gl.getShaderInfoLog(shader) }))
+    }
+  }
+  test(source) {
+    let result = null
+    const gl = this.gl
+    const shader = gl.createShader(gl.FRAGMENT_SHADER)
+    gl.shaderSource(shader, source)
+    gl.compileShader(shader)
+
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      result = gl.getShaderInfoLog(shader)
+    }
+    if (gl.getShaderParameter(shader, gl.DELETE_STATUS)) {
+      gl.deleteShader(shader)
+    }
+    return result
+  }
+  reset() {
+    const { gl, program, vs, fs } = this
+    if (!program || gl.getProgramParameter(program, gl.DELETE_STATUS)) return
+    if (gl.getShaderParameter(vs, gl.DELETE_STATUS)) {
+      gl.detachShader(program, vs)
+      gl.deleteShader(vs)
+    }
+    if (gl.getShaderParameter(fs, gl.DELETE_STATUS)) {
+      gl.detachShader(program, fs)
+      gl.deleteShader(fs)
+    }
+    gl.deleteProgram(program)
+  }
+  setup() {
+    const gl = this.gl
+    this.vs = gl.createShader(gl.VERTEX_SHADER)
+    this.fs = gl.createShader(gl.FRAGMENT_SHADER)
+    this.compile(this.vs, this.#vertexSrc)
+    this.compile(this.fs, this.shaderSource)
+    this.program = gl.createProgram()
+    gl.attachShader(this.program, this.vs)
+    gl.attachShader(this.program, this.fs)
+    gl.linkProgram(this.program)
+
+    if (!gl.getProgramParameter(this.program, gl.LINK_STATUS)) {
+      console.error(gl.getProgramInfoLog(this.program))
+    }
+  }
+  init() {
+    const { gl, program } = this
+    this.buffer = gl.createBuffer()
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffer)
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.#vertices), gl.STATIC_DRAW)
+
+    const position = gl.getAttribLocation(program, "position")
+
+    gl.enableVertexAttribArray(position)
+    gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0)
+
+    program.resolution = gl.getUniformLocation(program, "resolution")
+    program.time = gl.getUniformLocation(program, "time")
+    program.move = gl.getUniformLocation(program, "move")
+    program.touch = gl.getUniformLocation(program, "touch")
+    program.pointerCount = gl.getUniformLocation(program, "pointerCount")
+    program.pointers = gl.getUniformLocation(program, "pointers")
+  }
+  render(now = 0) {
+    const { gl, program, buffer, canvas, mouseMove, mouseCoords, pointerCoords, nbrOfPointers } = this
+    
+    if (!program || gl.getProgramParameter(program, gl.DELETE_STATUS)) return
+
+    gl.clearColor(0, 0, 0, 1)
+    gl.clear(gl.COLOR_BUFFER_BIT)
+    gl.useProgram(program)
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
+    gl.uniform2f(program.resolution, canvas.width, canvas.height)
+    gl.uniform1f(program.time, now * 1e-3)
+    gl.uniform2f(program.move, ...mouseMove)
+    gl.uniform2f(program.touch, ...mouseCoords)
+    gl.uniform1i(program.pointerCount, nbrOfPointers)
+    gl.uniform2fv(program.pointers, pointerCoords)
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
+  }
+}
+
+class PointerHandler {
+  constructor(element, scale) {
+    this.scale = scale
+    this.active = false
+    this.pointers = new Map()
+    this.lastCoords = [0,0]
+    this.moves = [0,0]
+    const map = (element, scale, x, y) => [x * scale, element.height - y * scale]
+    element.addEventListener("pointerdown", (e) => {
+      this.active = true
+      this.pointers.set(e.pointerId, map(element, this.getScale(), e.clientX, e.clientY))
+    })
+    element.addEventListener("pointerup", (e) => {
+      if (this.count === 1) {
+        this.lastCoords = this.first
+      }
+      this.pointers.delete(e.pointerId)
+      this.active = this.pointers.size > 0
+    })
+    element.addEventListener("pointerleave", (e) => {
+      if (this.count === 1) {
+        this.lastCoords = this.first
+      }
+      this.pointers.delete(e.pointerId)
+      this.active = this.pointers.size > 0
+    })
+    element.addEventListener("pointermove", (e) => {
+      if (!this.active) return
+      this.lastCoords = [e.clientX, e.clientY]
+      this.pointers.set(e.pointerId, map(element, this.getScale(), e.clientX, e.clientY))
+      this.moves = [this.moves[0]+e.movementX, this.moves[1]+e.movementY]
+    })
+  }
+  getScale() {
+    return this.scale
+  }
+  updateScale(scale) { this.scale = scale }
+  reset() {
+    this.pointers.clear()
+    this.active = false
+    this.moves = [0,0]
+  }
+  get count() {
+    return this.pointers.size
+  }
+  get move() {
+    return this.moves
+  }
+  get coords() {
+    return this.pointers.size > 0 ? Array.from(this.pointers.values()).map((p) => [...p]).flat() : [0, 0]
+  }
+  get first() {
+    return this.pointers.values().next().value || this.lastCoords
+  }
+}
+class Store {
+  constructor(key) {
+    this.key = key
+    this.store = window.localStorage
+  }
+  #ownShadersKey = 'ownShaders'
+  #StorageType = Object.freeze({
+    shader: 'fragmentSource',
+    config: 'config'
+  })
+  #getKeyPrefix(type) {
+    return `${type}${btoa(this.key)}`
+  }
+  #getKey(type, name) {
+    return `${this.#getKeyPrefix(type)}${btoa(name)}`
+  }
+  putShaderSource(name, source) {
+    const storageType = this.#StorageType.shader
+    this.store.setItem(this.#getKey(storageType, name), source)
+  }
+  getShaderSource(name) {
+    const storageType = this.#StorageType.shader
+    return this.store.getItem(this.#getKey(storageType, name))
+  }
+  deleteShaderSource(name) {
+    const storageType = this.#StorageType.shader
+    this.store.removeItem(this.#getKey(storageType, name))
+  }
+  /** @returns {{title:string, uuid:string}[]} */
+  getOwnShaders() {
+    const storageType = this.#StorageType.config
+    const result = this.store.getItem(this.#getKey(storageType, this.#ownShadersKey))
+    
+    return result ? JSON.parse(result) : []
+  }
+  /** @param {{title:string, uuid:string}[]} shader */
+  putOwnShader(shader) {
+    const ownShaders = this.getOwnShaders()
+    const storageType = this.#StorageType.config
+    const index = ownShaders.findIndex((s) => s.uuid === shader.uuid)
+    if (index === -1) {
+      ownShaders.push(shader)
+    } else {
+      ownShaders[index] = shader
+    }
+    this.store.setItem(this.#getKey(storageType, this.#ownShadersKey), JSON.stringify(ownShaders))
+  }
+  deleteOwnShader(uuid) {
+    const ownShaders = this.getOwnShaders()
+    const storageType = this.#StorageType.config
+    this.store.setItem(this.#getKey(storageType, this.#ownShadersKey), JSON.stringify(ownShaders.filter((s) => s.uuid !== uuid) ))
+    this.deleteShaderSource(uuid)
+  }
+  /** @param {string[]} keep The names of the shaders to keep*/
+  cleanup(keep=[]) {
+    const storageType = this.#StorageType.shader
+    const ownShaders = this.getOwnShaders().map((s) => this.#getKey(storageType, s.uuid))
+    const premadeShaders = keep.map((name) => this.#getKey(storageType, name))
+    const keysToKeep = [...ownShaders, ...premadeShaders]
+    const result = []
+
+    for (let i = 0; i < this.store.length; i++) {
+      const key = this.store.key(i)
+
+      if (key.startsWith(this.#getKeyPrefix(this.#StorageType.shader)) && !keysToKeep.includes(key)) {
+        result.push(key)
+      }
+    }
+
+    result.forEach((key) => this.store.removeItem(key))
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('.newslider').forEach((slider, i) => {
+const btns = slider.querySelectorAll('.slider-btn');
+const group = slider.querySelector('.slide-group');
+
+// Set default to the middle slide: index 1
+const defaultIndex = 1;
+if (btns[defaultIndex]) {
+  btns.forEach(b => b.classList.remove('active'));
+  btns[defaultIndex].classList.add('active');
+  group.style.transform = `translateX(-${defaultIndex * 100}%)`;
+}
+
+// Add click handlers
+btns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    group.style.transform = `translateX(-${index * 100}%)`;
+  });
+});
+const imgs = slider.querySelectorAll('img');
+console.log(`Found ${imgs.length} images in slider #${i}`);
+slider.querySelectorAll('img').forEach(img => {
+if (!img.complete) {
+  // Not yet loaded: attach onerror now
+  img.onerror = function () {
+    handleImageFallback(this);
+  };
+} else if (img.naturalWidth === 0) {
+  // Already failed to load
+  handleImageFallback(img);
+}
+});
+});
+document.querySelectorAll(".newslider").forEach(slider => {
+const buttons = slider.querySelectorAll(".slider-btn");
+const slideGroup = slider.querySelector(".slide-group");
+
+const setActiveView = (index) => {
+  // Move the slide group
+  slideGroup.style.transform = `translateX(-${index * 100}%)`;
+
+  // Update button states
+  buttons.forEach((btn, i) => {
+    btn.classList.toggle("active", i === index);
+  });
+};
+
+// Button click
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    setActiveView(index);
+  });
+});
+
+// Click-half jump logic
+const clickHalves = slider.querySelectorAll(".click-half");
+clickHalves.forEach(half => {
+  half.addEventListener("click", () => {
+    const parentSlide = half.closest(".slide");
+    const slides = Array.from(parentSlide.parentElement.children);
+    const currentIndex = slides.indexOf(parentSlide);
+
+    if (half.classList.contains("left-half")) {
+      const newIndex = Math.max(0, currentIndex - 1);
+      setActiveView(newIndex);
+    } else if (half.classList.contains("right-half")) {
+      const newIndex = Math.min(2, currentIndex + 1);
+      setActiveView(newIndex);
+    }
+  });
+});
+
+// Set initial view to middle (1)
+setActiveView(1);
+});
+});
+
+function handleImageFallback(img) {
+const fallback = document.createElement('div');
+fallback.className = 'image-fallback';
+fallback.textContent = img.alt || 'Image not available';
+fallback.style.cssText = `
+background-color: #ccc;
+color: white;
+font-size: 5rem;
+`;
+img.style.display = 'none';
+img.parentNode.appendChild(fallback);
+}
+const sliders = [
+  ["Velocity Comparison", "velocity"],
+  ["Epsilon Comparison", "epsilon"],
+  ["Velocity Update Comparison", "velocity_update"],
+  ["Delta Comparison", "delta"],
+];
+
+const container = document.getElementById("newslider-section");
+
+sliders.forEach(([title, prefix]) => {
+  const html = `
+  <div class="newslider">
+    <div class="slider-header">${title}</div>
+    <div class="slider-controls">
+      <button class="slider-btn" data-view="0">Traditional</button>
+      <button class="slider-btn active" data-view="1">Starting</button>
+      <button class="slider-btn" data-view="2">GEM VM</button>
+    </div>
+    <div class="slider-track">
+      <div class="slide-group">
+        <div class="slide starting-slide">
+          <div class="click-half right-half"></div>
+          <img src="resource/img/${prefix}_traditional.png" alt="Traditional">
+        </div>
+        <div class="slide starting-slide">
+          <div class="click-half left-half"></div>
+          <div class="click-half right-half"></div>
+          <img src="resource/img/${prefix}_starting.png" alt="Starting">
+        </div>
+        <div class="slide starting-slide">
+          <div class="click-half left-half"></div>
+          <img src="resource/img/${prefix}_gemvm.png" alt="GEM VM">
+        </div>
+      </div>
+    </div>
+  </div>`;
+  container.insertAdjacentHTML("beforeend", html);
+});
+
+/*
+Animation sequence:
+Starting (1) → Traditional (0) → Starting (1)
+Starting (1) → GEM VM (2) → Starting (1)
+*/
+
+function animateSliders() {
+  const allSliders = container.querySelectorAll('.newslider');
+
+  allSliders.forEach(slider => {
+    const sequence = [1, 0, 1, 2];
+    let seqIndex = 0;
+
+    const buttons = slider.querySelectorAll('.slider-btn');
+    const slideGroup = slider.querySelector('.slide-group');
+
+    function updateView(viewIndex) {
+      // Move the slide group horizontally
+      slideGroup.style.transform = `translateX(-${viewIndex * 100}%)`;
+
+      // Update active buttons
+      buttons.forEach(btn => {
+        btn.classList.toggle('active', Number(btn.dataset.view) === viewIndex);
+      });
+    }
+
+    updateView(sequence[seqIndex]);
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const view = Number(btn.dataset.view);
+        seqIndex = sequence.indexOf(view);
+        if (seqIndex === -1) seqIndex = 0;
+        updateView(view);
+      });
+    });
+
+    setInterval(() => {
+      seqIndex = (seqIndex + 1) % sequence.length;
+      updateView(sequence[seqIndex]);
+    }, 3000);
+  });
+}
+</script>
+</body>
+</html>
