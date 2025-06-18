@@ -146,6 +146,182 @@
 #gem-slider button:last-of-type {
   right: -2.5rem; /* Move right button outside container */
 }
+section.newslider-section {
+max-width: 1200px;
+margin: auto;
+}
+
+section.newslider-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.newslider {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.slider-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 10px;
+}
+
+.slider-btn {
+  background-color: #1e1f26;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.slider-btn.active,
+.slider-btn:hover {
+  background-color: #03dac6;
+}
+
+.slider-track {
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-group {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+  height: auto; /* Adjust if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-fallback {
+  color: white;
+  font-size: 5rem;
+  font-style: italic;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.starting-slide {
+  position: relative;
+}
+
+.click-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.left-half {
+  left: 0;
+}
+
+.right-half {
+  right: 0;
+}
+
+/* Optional hover effect */
+.left-half:hover,
+.right-half:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* slight white overlay */
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .timeline-container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .timeline-line {
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-arrow-container {
+    flex-direction: column;
+    height: 100%;
+    width: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 26px 0;
+  }
+
+  .timeline-arrow {
+    margin: 10px 0;
+  }
+
+  .timeline-item {
+    max-width: none;
+    width: 90%;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ffffff22;
+  }
+
+  .timeline-item.top {
+    justify-content: flex-start;
+  }
+
+  .timeline-pin {
+    width: 4px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .timeline-item.top .timeline-pin,
+  .timeline-item:not(.top) .timeline-pin {
+    display: none;
+  }
+
+  .timeline-year,
+  .timeline-title,
+  .timeline-content {
+    text-align: left;
+  }
+
+  .timeline-item > div:not(.timeline-pin) {
+    flex: 1;
+  }
+}
+
 </style>
 </head>
 <body class="text-white bg-black">
@@ -240,6 +416,7 @@
       <p class="mb-4">Flattens COCA/CACA gathers in Z, X, and Y</p>
       <p class="mb-4">Maximizes illumination in Azimuth, Angle, and Offset</p>
       <p class="mb-4">Every effort to minimize parameter crosstalk prior to FWI</p>
+      <div id="newslider-section" class="newslider-section"></div>    
     </div>
   </section>
 
@@ -557,25 +734,94 @@ CACA Viewer</div>
 <section id="gem-slider" class="relative bg-black overflow-hidden">
   <!-- WebGL Background Canvas -->
   <canvas id="canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
-<div class="max-w-7xl mx-auto py-12 px-4">
-  <h2 class="text-3xl md:text-4xl font-bold text-center text-[#03dac6] mb-8">Slides</h2>
 
-  <div class="relative w-full max-w-4xl mx-auto">
-    <img id="slider-image" src="resource/img/gem_slides/gem_slide_2.png" alt="GEM Slide" class="w-full rounded-lg shadow-lg transition-opacity duration-500 ease-in-out" />
+  <div class="max-w-7xl mx-auto py-12 px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#03dac6] mb-8">Slides</h2>
 
-    <!-- Navigation -->
-    <button onclick="prevSlide()" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
-      ‹
-    </button>
-    <button onclick="nextSlide()" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
-      ›
-    </button>
+    <div class="relative w-full max-w-4xl mx-auto">
+      <img id="slider-image" src="resource/img/gem_slides/gem_slide_2.png" alt="GEM Slide"
+        class="w-full rounded-lg shadow-lg transition-opacity duration-500 ease-in-out" />
+
+      <!-- Navigation Arrows -->
+      <button onclick="prevSlide()"
+        class="absolute top-1/2 left-0 -translate-y-1/2 transform text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
+        ‹
+      </button>
+      <button onclick="nextSlide()"
+        class="absolute top-1/2 right-0 -translate-y-1/2 transform text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
+        ›
+      </button>
+    </div>
+
+    <p class="text-center text-sm text-gray-400 mt-4">
+      Slide <span id="slide-number">1</span> / 42
+    </p>
   </div>
-
-  <p class="text-center text-sm text-gray-400 mt-4">Slide <span id="slide-number">1</span> / 42</p>
-</div>
+</section>
+<section id="newslider-section" class="newslider-section"></section>    
+<section id="tab-integration" class="py-16 bg-gray-900 bg-opacity-90">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-white mb-8">User Friendliness</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2">
+        <h3 class="text-xl font-semibold text-white mb-2">Focus on geophysics and geology</h3>
+        <h4 class="text-md text-gray-300">Users parameterize workflows, not applications</h4>
+      </div>
+      <div class="md:w-1/2">
+        <figure class="text-center bg-white p-4 rounded-md shadow-md">
+          <figcaption class="text-sm text-gray-400 mb-2">
+            Seamless integration with existing tools, processes and file formats
+          </figcaption>
+          <img src="resource/img/gem_flow_endpoints.png" class="w-full max-w-md mx-auto rounded-md" />
+        </figure>
+      </div>
+    </div>
+  </div>
 </section>
 
+<section id="tab-integration-cloud" class="py-16 bg-gray-900 bg-opacity-60">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-semibold text-white mb-8">Data Center and Cloud Deployment</h3>
+    <div class="flex flex-col md:flex-row items-start gap-8">
+      <div class="flex flex-col gap-4 md:w-1/2 text-gray-300">
+        <div>
+          <p>Support for internal file formats: <span class="text-white font-medium">GEM, SEP, SEGY, OpenVDS, VDS</span></p>
+        </div>
+        <div>
+          <p>Support internal and cloud storage: <span class="text-white font-medium">AWS, Azure, local</span></p>
+        </div>
+        <div>
+          <p>Simple APIs: <span class="text-white font-medium">C++, Python, ScaleOut, Swagger</span></p>
+        </div>
+        <div>
+          <p>Source code: <span class="text-white font-medium">Github, Docker, Ansible, Terraform</span></p>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <figure class="text-center bg-white p-4 rounded-md shadow-md">
+          <figcaption class="text-sm text-gray-400 mb-2">
+            Cloud & datacenter friendly API for internal developers
+          </figcaption>
+          <img src="resource/img/cloud_deployment.png" class="w-full max-w-md mx-auto rounded-md" />
+        </figure>
+      </div>
+    </div>
+     <div class="flex flex-wrap justify-center items-center gap-4 mt-8">
+      <img src="resource/img/bluware_logo.png" class="h-10" />
+      <img src="resource/img/aws_logo.png" class="h-10" />
+      <img src="resource/img/kubernetes_logo.png" class="h-10" />
+      <img src="resource/img/elastic_logo.png" class="h-10" />
+      <img src="resource/img/react_logo.jpeg" class="h-10" />
+      <img src="resource/img/python_logo.png" class="h-10" />
+      <img src="resource/img/docker_logo.png" class="h-10" />
+      <img src="resource/img/fastapi_logo.png" class="h-10" />
+      <img src="resource/img/nvidia_logo.png" class="h-10" />
+      <img src="resource/img/prometheus_logo.png" class="h-10" />
+      <img src="resource/img/consul_logo.jpeg" class="h-10" />
+      <img src="resource/img/grafana_logo.png" class="h-10" />
+    </div>
+  </div>
+</section>
 <!-- Contact Us -->
 <section id="tab-contact" class="py-16 bg-gray-900 bg-opacity-90">
   <div class="container mx-auto py-12 px-4">
@@ -591,6 +837,7 @@ CACA Viewer</div>
     <a href="#tab-team" class="text-[#03dac6] hover:underline mx-2">Team</a>
     <a href="#history" class="text-[#03dac6] hover:underline mx-2">History</a>
     <a href="#key-technologies" class="text-[#03dac6] hover:underline mx-2">Technology</a>
+    <a href="#tab-integration-cloud" class="text-[#03dac6] hover:underline mx-2">Integration</a>
     <a href="#tab-contact" class="text-[#03dac6] hover:underline mx-2">Contact</a>
   </div>
 </div>
@@ -748,9 +995,13 @@ void main() {
     }
   });
 document.getElementById("year").textContent = new Date().getFullYear();
-
+window.addEventListener('load', () => {
+  const timeline = document.querySelector('#history .timeline-container');
+  timeline.scrollLeft = timeline.scrollWidth;
+});
   const videoFiles = [
     "resource/video/v-main.mp4",
+    "resource/video/v1.mp4",
     "resource/video/v2.mp4",
     "resource/video/v3.mp4",
     "resource/video/v4.mp4"
@@ -909,6 +1160,7 @@ const debounce = (fn, delay) => {
 const render = debounce(renderThis, renderDelay)
 
 function init() {
+  animateSliders()
   bksource = document.querySelector("script[type='x-shader/x-fragment']")
 
   document.title = document.title + " - See Through the Earth Differently"
@@ -1194,6 +1446,181 @@ class Store {
     result.forEach((key) => this.store.removeItem(key))
   }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('.newslider').forEach((slider, i) => {
+const btns = slider.querySelectorAll('.slider-btn');
+const group = slider.querySelector('.slide-group');
+
+// Set default to the middle slide: index 1
+const defaultIndex = 1;
+if (btns[defaultIndex]) {
+  btns.forEach(b => b.classList.remove('active'));
+  btns[defaultIndex].classList.add('active');
+  group.style.transform = `translateX(-${defaultIndex * 100}%)`;
+}
+
+// Add click handlers
+btns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    group.style.transform = `translateX(-${index * 100}%)`;
+  });
+});
+const imgs = slider.querySelectorAll('img');
+console.log(`Found ${imgs.length} images in slider #${i}`);
+slider.querySelectorAll('img').forEach(img => {
+if (!img.complete) {
+  // Not yet loaded: attach onerror now
+  img.onerror = function () {
+    handleImageFallback(this);
+  };
+} else if (img.naturalWidth === 0) {
+  // Already failed to load
+  handleImageFallback(img);
+}
+});
+});
+document.querySelectorAll(".newslider").forEach(slider => {
+const buttons = slider.querySelectorAll(".slider-btn");
+const slideGroup = slider.querySelector(".slide-group");
+
+const setActiveView = (index) => {
+  // Move the slide group
+  slideGroup.style.transform = `translateX(-${index * 100}%)`;
+
+  // Update button states
+  buttons.forEach((btn, i) => {
+    btn.classList.toggle("active", i === index);
+  });
+};
+
+// Button click
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    setActiveView(index);
+  });
+});
+
+// Click-half jump logic
+const clickHalves = slider.querySelectorAll(".click-half");
+clickHalves.forEach(half => {
+  half.addEventListener("click", () => {
+    const parentSlide = half.closest(".slide");
+    const slides = Array.from(parentSlide.parentElement.children);
+    const currentIndex = slides.indexOf(parentSlide);
+
+    if (half.classList.contains("left-half")) {
+      const newIndex = Math.max(0, currentIndex - 1);
+      setActiveView(newIndex);
+    } else if (half.classList.contains("right-half")) {
+      const newIndex = Math.min(2, currentIndex + 1);
+      setActiveView(newIndex);
+    }
+  });
+});
+
+// Set initial view to middle (1)
+setActiveView(1);
+});
+});
+
+function handleImageFallback(img) {
+const fallback = document.createElement('div');
+fallback.className = 'image-fallback';
+fallback.textContent = img.alt || 'Image not available';
+fallback.style.cssText = `
+background-color: #ccc;
+color: white;
+font-size: 5rem;
+`;
+img.style.display = 'none';
+img.parentNode.appendChild(fallback);
+}
+const sliders = [
+  ["Velocity Comparison", "velocity"],
+  ["Epsilon Comparison", "epsilon"],
+  ["Velocity Update Comparison", "velocity_update"],
+  ["Delta Comparison", "delta"],
+];
+
+const container = document.getElementById("newslider-section");
+
+sliders.forEach(([title, prefix]) => {
+  const html = `
+  <div class="newslider">
+    <div class="slider-header">${title}</div>
+    <div class="slider-controls">
+      <button class="slider-btn" data-view="0">Traditional</button>
+      <button class="slider-btn active" data-view="1">Starting</button>
+      <button class="slider-btn" data-view="2">GEM VM</button>
+    </div>
+    <div class="slider-track">
+      <div class="slide-group">
+        <div class="slide starting-slide">
+          <div class="click-half right-half"></div>
+          <img src="resource/img/${prefix}_traditional.png" alt="Traditional">
+        </div>
+        <div class="slide starting-slide">
+          <div class="click-half left-half"></div>
+          <div class="click-half right-half"></div>
+          <img src="resource/img/${prefix}_starting.png" alt="Starting">
+        </div>
+        <div class="slide starting-slide">
+          <div class="click-half left-half"></div>
+          <img src="resource/img/${prefix}_gemvm.png" alt="GEM VM">
+        </div>
+      </div>
+    </div>
+  </div>`;
+  container.insertAdjacentHTML("beforeend", html);
+});
+
+/*
+Animation sequence:
+Starting (1) → Traditional (0) → Starting (1)
+Starting (1) → GEM VM (2) → Starting (1)
+*/
+
+function animateSliders() {
+  const allSliders = container.querySelectorAll('.newslider');
+
+  allSliders.forEach(slider => {
+    const sequence = [1, 0, 1, 2];
+    let seqIndex = 0;
+
+    const buttons = slider.querySelectorAll('.slider-btn');
+    const slideGroup = slider.querySelector('.slide-group');
+
+    function updateView(viewIndex) {
+      // Move the slide group horizontally
+      slideGroup.style.transform = `translateX(-${viewIndex * 100}%)`;
+
+      // Update active buttons
+      buttons.forEach(btn => {
+        btn.classList.toggle('active', Number(btn.dataset.view) === viewIndex);
+      });
+    }
+
+    updateView(sequence[seqIndex]);
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const view = Number(btn.dataset.view);
+        seqIndex = sequence.indexOf(view);
+        if (seqIndex === -1) seqIndex = 0;
+        updateView(view);
+      });
+    });
+
+    setInterval(() => {
+      seqIndex = (seqIndex + 1) % sequence.length;
+      updateView(sequence[seqIndex]);
+    }, 3000);
+  });
+}
 </script>
 </body>
 </html>
+
