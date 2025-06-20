@@ -1068,9 +1068,13 @@ void main() {
   });
 document.getElementById("year").textContent = new Date().getFullYear();
 window.addEventListener('load', () => {
+  // Scroll timeline to the far right
   const timeline = document.querySelector('#history .timeline-container');
-  timeline.scrollLeft = timeline.scrollWidth;
-});
+  if (timeline) {
+    timeline.scrollLeft = timeline.scrollWidth;
+  }
+
+  // Set up looping video sequence
   const videoFiles = [
     "resource/video/v_0.mp4",
     "resource/video/v_1.mp4",
@@ -1083,15 +1087,20 @@ window.addEventListener('load', () => {
   const video = document.getElementById("backgroundVideo");
   const source = document.getElementById("videoSource");
 
-  video.addEventListener("ended", () => {
-    // Move to next index, wrap around if at the end
-    currentIndex = (currentIndex + 1) % videoFiles.length;
+  // Start with first video
+  source.src = videoFiles[currentIndex];
+  video.load();
+  video.play();
 
-    // Update source and play next video
+  // Loop through the video list
+  video.addEventListener("ended", () => {
+    currentIndex = (currentIndex + 1) % videoFiles.length;
     source.src = videoFiles[currentIndex];
     video.load();
     video.play();
   });
+});
+  
 
 let currentSlide = 2;
 const totalSlides = 43;
