@@ -11,6 +11,133 @@
 <link rel="icon" type="image/png" sizes="16x16" href="resource/img/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <style>
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+  display: none;
+}
+
+#scrollToTopBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+#top-section{
+  z-index: 99999;
+  position: relative;
+}
+ #top-section nav {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 680px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 200px;
+  z-index: 9;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+  #top-section nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  padding: 10px 20px;
+  line-height: 1;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+}
+#top-section nav button {
+  -webkit-appearance: none;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  transform: scale(0);
+}
+#top-section nav button span {
+  width: 40%;
+  background: #fff;
+  height: 2px;
+  display: block;
+  margin: 5px auto;
+  transform: scalex(0);
+  transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s margin ease-in 0s;
+}
+#top-section nav button:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+#top-section nav button:hover span {
+  margin: 10px auto;
+}
+
+#top-section.sticky #logo {
+  top: 0;
+  transform: scale(0.8);
+  opacity: 0;
+  transition-delay: 0.5s;
+}
+#top-section.sticky nav {
+  top: 20px;
+  padding: 0;
+  width: 90px;
+  height: 90px;
+  transition-delay: 0.5s;
+}
+#top-section.sticky nav button {
+  transform: scale(1);
+  transition-delay: 0.6s;
+}
+#top-section.sticky nav button span {
+  transform: scalex(1);
+  transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s, 0.3s margin ease-in 0s;
+}
+#top-section.sticky nav a {
+  padding: 0;
+  opacity: 0;
+  letter-spacing: 0px;
+  transform: scale(0.3);
+  transition-delay: 0.2s;
+}
 .video-bg {
     position: fixed;
     top: -10vh;
@@ -321,11 +448,23 @@ section.newslider-section {
     flex: 1;
   }
 }
-
 </style>
 </head>
 <body class="text-white bg-black">
-
+  <div id="top-section">
+    <nav>
+      <a href="#tab-team">Team</a>
+      <a href="#history">History</a>
+      <a href="#key-technologies">Technology</a>
+      <a href="#tab-integration-cloud">Integration</a>
+      <a href="#tab-contact">Contact</a>
+    <button id="openmenu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+  </div>
+<div id="content">
 <!-- Video Background -->
 <video class="video-bg" autoplay muted playsinline id="backgroundVideo">
   <source id="videoSource" src="resource/video/v_0.mp4" type="video/mp4">
@@ -901,6 +1040,10 @@ CACA Viewer</div>
   <h2 class="text-2xl font-semibold mb-10 text-center">Email to: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
 </div>
 </section>
+</div>
+<button id="scrollToTopBtn" title="Back to Top">
+  ↑
+</button>
 <!-- Footer -->
 <footer class="bg-gray-950 text-gray-400 py-6 px-4 mt-16">
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
@@ -1099,6 +1242,45 @@ window.addEventListener('load', () => {
     video.load();
     video.play();
   });
+
+  var header = document.getElementById('top-section');
+    var page = document.getElementById('content');
+    var openMenuButton = document.getElementById('openmenu');
+
+    window.addEventListener('scroll', function() {
+        page.classList.remove('menuopen');
+        if (window.scrollY >= 100) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    });
+
+    // Event listener to remove the sticky class when the button is clicked
+    openMenuButton.addEventListener('click', function() {
+        header.classList.remove('sticky');
+        page.classList.add('menuopen');
+    });
+  
+  var links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            // Prevent the default action
+            event.preventDefault();
+
+            // Get the target element
+            var targetId = this.getAttribute('href');
+            var targetElement = document.querySelector(targetId);
+
+            // Smooth scroll to target
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
   
 
@@ -1701,6 +1883,26 @@ function animateSliders() {
     }, 3000);
   });
 }
+
+const scrollBtn = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = "block";
+    scrollBtn.style.pointerEvents = "auto";
+  } else {
+    scrollBtn.style.display  = "none";
+    scrollBtn.style.pointerEvents = "none";
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
 </script>
 </body>
 </html>
