@@ -1235,31 +1235,40 @@ window.addEventListener('load', () => {
     timeline.scrollLeft = timeline.scrollWidth;
   }
 
-  // Set up looping video sequence
-  const videoFiles = [
-    "resource/video/v_0.mp4",
-    "resource/video/v_1.mp4",
-    "resource/video/v_2.mp4",
-    "resource/video/v_3.mp4",
-    "resource/video/v_4.mp4"
-  ];
+const videoFiles = [
+  "resource/video/v_0.mp4",
+  "resource/video/v_1.mp4",
+  "resource/video/v_2.mp4",
+  "resource/video/v_3.mp4",
+  "resource/video/v_4.mp4"
+];
 
-  let currentIndex = 0;
-  const video = document.getElementById("backgroundVideo");
-  const source = document.getElementById("videoSource");
+let currentIndex = 0;
+const video = document.getElementById("backgroundVideo");
+const source = document.getElementById("videoSource");
 
-  // Start with first video
+function playNextVideo() {
+  currentIndex = (currentIndex + 1) % videoFiles.length;
   source.src = videoFiles[currentIndex];
-  video.load();
-  video.play();
 
-  // Loop through the video list
-  video.addEventListener("ended", () => {
-    currentIndex = (currentIndex + 1) % videoFiles.length;
-    source.src = videoFiles[currentIndex];
-    video.load();
+  // Wait for the new video to be ready before playing
+  video.load();
+  
+  const canPlayHandler = () => {
     video.play();
-  });
+    video.removeEventListener('canplay', canPlayHandler);
+  };
+
+  video.addEventListener('canplay', canPlayHandler);
+}
+
+// Initial video setup
+source.src = videoFiles[currentIndex];
+video.load();
+video.play();
+
+// Transition on end
+video.addEventListener("ended", playNextVideo);
 
   var header = document.getElementById('top-section');
     var page = document.getElementById('content');
