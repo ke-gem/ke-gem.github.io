@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Geo Ex Machina 2.0</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 <link rel="apple-touch-icon" sizes="180x180" href="resource/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="resource/img/favicon-32x32.png">
@@ -193,7 +194,7 @@ a:hover {
   justify-content: flex-start; /* top for top items */
 }
 .timeline-pin {
-  width: 4px;
+  width: 2px;
   height: 30px;
   border: 2px solid white;
   border-radius: 2px;
@@ -434,7 +435,7 @@ section.newslider-section {
   }
 
   .timeline-pin {
-    width: 4px;
+    width: 2px;
     height: 30px;
     margin: 0;
   }
@@ -498,7 +499,7 @@ section.newslider-section {
   </div>
 </section>
 
-<section id="case-studies" class="relative py-16 bg-gray-900/90 z-10">
+<section id="case-studies" class="relative py-16 bg-gray-900/90 z-10" data-aos="fade-up" data-aos-delay="100">
   <div class="container mx-auto px-4 relative z-20">
     <h2 class="text-3xl font-semibold mb-8 text-center text-[#03dac6]">Case Studies</h2>
 
@@ -535,7 +536,7 @@ section.newslider-section {
 </section>
 
 
-<section id="key-technologies" class="bg-gray-900 bg-opacity-90 text-white py-16 px-4 md:px-12">
+<section id="key-technologies" class="bg-gray-900 bg-opacity-90 text-white py-16 px-4 md:px-12"  data-aos="fade-up" data-aos-delay="100">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-10 text-center">
       Key Technologies
@@ -744,7 +745,7 @@ section.newslider-section {
     <div class="timeline-arrow"></div>
   </div>
 
-  <div class="timeline-item" >
+  <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-pin"></div>
     <div class="timeline-year">2017</div>
     <div class="timeline-title">Idea</div>
@@ -752,21 +753,21 @@ section.newslider-section {
 Focused on AVO/AVAZ</div>
   </div>
 
-  <div class="timeline-item top">
+  <div class="timeline-item top" data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-year">2018</div>
     <div class="timeline-title">Proof of Concept</div>
     <div class="timeline-content">Orthorhombic land synthetics</div>
     <div class="timeline-pin"></div>
   </div>
 
-  <div class="timeline-item">
+  <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-pin"></div>
     <div class="timeline-year">2019</div>
     <div class="timeline-title">Formation</div>
     <div class="timeline-content">GEM formed by experts in Geophysics, Cloud, Visualization, Software Development</div>
   </div>
 
-  <div class="timeline-item top">
+  <div class="timeline-item top" data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-year">2020</div>
     <div class="timeline-title">Infrastructure</div>
     <div class="timeline-content">Cloud Computing
@@ -775,7 +776,7 @@ Marine Synthetics</div>
     <div class="timeline-pin"></div>
   </div>
 
-  <div class="timeline-item">
+  <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-pin"></div>
     <div class="timeline-year">2021</div>
     <div class="timeline-title">Beta Testing</div>
@@ -786,7 +787,7 @@ Anisotropy Synthetics
 COCA Viewer</div>
   </div>
 
-  <div class="timeline-item top">
+  <div class="timeline-item top"  data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-year">2022</div>
     <div class="timeline-title">Production</div>
     <div class="timeline-content">FWI VM Validation
@@ -795,7 +796,7 @@ Full Azimuth Raytracing System</div>
     <div class="timeline-pin"></div>
   </div>
 
-  <div class="timeline-item">
+  <div class="timeline-item"  data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-pin"></div>
     <div class="timeline-year">2023</div>
     <div class="timeline-title">Fully Shot Based</div>
@@ -804,14 +805,14 @@ FARIS Updates
 CACA Viewer</div>
   </div>
 
-  <div class="timeline-item top">
+  <div class="timeline-item top"  data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-year">2024</div>
     <div class="timeline-title">Model Uncertainty</div>
     <div class="timeline-content">Enhanced tomographic workflows and equations to minimize parameter crosstalk</div>
     <div class="timeline-pin"></div>
   </div>
 
-  <div class="timeline-item">
+  <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-pin"></div>
     <div class="timeline-year">2025</div>
     <div class="timeline-title">Future</div>
@@ -1934,6 +1935,8 @@ scrollBtn.addEventListener("click", () => {
 });
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE84L8LB8T"></script>
 <script>
