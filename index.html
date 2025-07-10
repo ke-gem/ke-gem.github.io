@@ -15,7 +15,6 @@
 <style>
 .container-faris {
   position: relative;
-  width: 100vw;
   height: 100vh;
   overflow: hidden;
   cursor: -webkit-grab;
@@ -1309,8 +1308,8 @@ CACA Viewer</div>
   <h2 class="text-2xl font-semibold mb-10 text-center">Email to: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
 </div>
 </section>
-
-<section class="py-16 bg-black">
+<section id="gallery-widget" class="py-16 bg-black"></section>
+<section class="py-16 bg-black" id="gallery">
 <div class="container-faris">
   <div class="canvas-faris" id="canvas-faris"></div>
   <div class="overlay-faris" id="overlay-faris"></div>
@@ -1327,7 +1326,6 @@ CACA Viewer</div>
 </div>
 <script type="module"> 
 import { Pane } from "https://cdn.skypack.dev/tweakpane@4.0.4";
-window.Pane = Pane;
 
 // Register GSAP plugins
 gsap.registerPlugin(CustomEase);
@@ -1422,22 +1420,25 @@ let titleSplit = null;
 let activeCaptionNameSplit = null;
 let activeCaptionNumberSplit = null;
 let paneInstance = null;
+const pane = Pane;
 // Initialize Tweakpane
 function initTweakpane() {
   // Wait for Pane to be available (imported via ES module)
-  if (!window.Pane) {
+  if (!pane) {
     setTimeout(initTweakpane, 100);
     return;
   }
+  const gallery = document.getElementById('gallery-widget');
   // Create the pane with a title and make it visible even when collapsed
-  paneInstance = new window.Pane({
+  paneInstance = new Pane({
+    container: gallery,
     title: "Gallery Settings",
     expanded: false
   });
   // Make sure the pane is visible by styling its container
   const paneElement = paneInstance.element;
-  paneElement.style.position = "fixed";
-  paneElement.style.top = "10px";
+  paneElement.style.position = "absolute";
+  paneElement.style.width = "250px";
   paneElement.style.right = "10px";
   paneElement.style.zIndex = "10000";
   // Item size settings
