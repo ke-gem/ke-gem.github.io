@@ -2409,15 +2409,7 @@ window.addEventListener('load', () => {
     timeline.scrollLeft = timeline.scrollWidth;
   }
 
-const videoFiles = [
-  "resource/video/v_0.mp4",
-  "resource/video/v_1.mp4",
-  "resource/video/v_2.mp4",
-  "resource/video/v_3.mp4",
-  "resource/video/v_4.mp4",
-  "resource/video/v_5.mp4",
-  "resource/video/v_6.mp4"
-];
+const videoFiles = Array.from({ length: 11 }, (_, i) => `resource/video/v_${i}.mp4`);
 
 let currentIndex = 0;
 const video = document.getElementById("backgroundVideo");
