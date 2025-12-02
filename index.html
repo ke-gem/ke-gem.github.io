@@ -783,6 +783,214 @@ section.newslider-section {
   </div>
 </section>
 
+<section class="max-w-6xl mx-auto my-20 space-y-16">
+
+  <!-- Industry Approach Card -->
+  <div class="bg-gray-900 bg-opacity-90 overflow-hidden flex flex-col md:flex-row text-white p-10 items-center">
+    
+    <!-- Text on the left -->
+    <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
+      <h2 class="text-3xl font-bold mb-6">Industry Approach for VMB</h2>
+      <p class="mb-6">Starting model</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-300 text-sm">
+        <li>Smoothed version of latest VMB</li>
+        <li>Delta and Epsilon are simple trends hung from the WB</li>
+        <li>Tilt fields challenged by complex geology, noise, weak signal</li>
+        <li>Earth model errors exist in velocity, delta, epsilon, and tilt</li>
+        <li>Only QC is 4D CIG</li>
+      </ul>
+    </div>
+
+    <!-- Funnel image on the right -->
+    <div class="md:w-1/2 relative w-full max-w-sm perspective">
+      <div class="funnel relative mx-auto mt-10 w-64 h-64 transform rotate-x-12">
+        <!-- Funnel gradient for 3D effect -->
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 rounded-b-full shadow-inner"></div>
+
+        <!-- Error balls -->
+        <div class="ball bg-red-500 text-white">Anisotropy Error</div>
+        <div class="ball bg-yellow-500 text-white">Velocity Error</div>
+        <div class="ball bg-green-500 text-white">Tilt Error</div>
+
+        <!-- Arrow as part of the funnel -->
+        <svg class="arrow mt-2 w-12 h-12 opacity-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="12" y1="0" x2="12" y2="18" stroke="white" stroke-width="4" stroke-linecap="round"/>
+          <polyline points="6,14 12,18 18,14" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+
+      </div>
+
+      <!-- Velocity Update Text -->
+      <div class="velocity-update mt-4 opacity-0 font-bold text-lg text-center">Velocity Update</div>
+    </div>
+  </div>
+
+  <!-- Our Approach Card -->
+  <div class="bg-gray-900 bg-opacity-90 overflow-hidden flex flex-col md:flex-row text-white p-10 items-center">
+    <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
+    <h2 class="text-3xl font-bold mb-6 text-white">GEM Approach for VMB</h2>
+    <p class="mb-6">Starting model</p>
+    <ul class="list-disc pl-5 space-y-1 text-gray-300 text-sm">
+      <li>Smoothed version of latest VMB OR higher frequency from sonics (Vp)</li>
+      <li>Delta and Epsilon are LF and follow geological boundaries</li>
+      <li>Tilt derived from beam attributes, not challenged by complex geology</li>
+      <li>Earth model errors exist in velocity, delta, epsilon, and tilt</li>
+    </ul>
+    </div>
+    <div class="md:w-1/2 relative w-full max-w-sm perspective">
+    <p class="mb-6">QCs</p>
+    <ul class="list-disc pl-5 space-y-1 text-white-700 text-sm">
+      <li>5D CACAs provide for vertical and horizontal volumetric QCs</li>
+      <li>Earth model errors are modeled in velocity, delta, epsilon, and tilt</li>
+      <li>CACA Z
+        <ul class="list-disc pl-5 space-y-1 text-white-700 text-sm">
+          <li>Sensitive to vertical velocities</li>
+          <li>Flat dips are high wave number</li>
+          <li>Steep dips are low wave number</li>
+        </ul>
+      </li>
+      <li>CACA XY
+        <ul class="list-disc pl-5 space-y-1 text-white-700 text-sm">
+          <li>Sensitive to horizontal velocities</li>
+          <li>Flat dips are low wave number</li>
+          <li>Steep dips are high wave number</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+</section>
+
+<style>
+/* Perspective container for 3D effect */
+.perspective {
+  perspective: 800px;
+}
+
+/* Funnel styling */
+.funnel {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  overflow: visible;
+  transform-style: preserve-3d;
+  transform: rotateX(20deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+/* Balls inside funnel */
+.ball {
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0;
+  margin: 5px 0;
+  animation: drop 0.8s forwards;
+}
+
+/* Sequential animation for balls */
+.ball:nth-child(1) { animation-delay: 0.2s; }
+.ball:nth-child(2) { animation-delay: 0.4s; }
+.ball:nth-child(3) { animation-delay: 0.6s; }
+
+/* Arrow animation */
+.arrow {
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 1.0s;
+}
+
+/* Velocity Update text animation */
+.velocity-update {
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 1.7s;
+}
+
+@keyframes drop {
+  from { opacity: 0; transform: translateY(-50px) scale(0.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+
+<style>
+/* Perspective container for 3D effect */
+.perspective {
+  perspective: 800px;
+}
+
+/* Funnel styling */
+.funnel {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  overflow: visible;
+  transform-style: preserve-3d;
+  transform: rotateX(20deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+/* Balls inside funnel */
+.ball {
+  width: 140px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0;
+  margin: 5px 0;
+  animation: drop 0.8s forwards;
+}
+
+/* Sequential animation for balls */
+.ball:nth-child(1) { animation-delay: 0.2s; }
+.ball:nth-child(2) { animation-delay: 0.4s; }
+.ball:nth-child(3) { animation-delay: 0.6s; }
+
+/* Arrow animation */
+.arrow {
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 1.0s;
+}
+
+/* Velocity Update text animation */
+.velocity-update {
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 1.7s;
+}
+
+@keyframes drop {
+  from { opacity: 0; transform: translateY(-50px) scale(0.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 
 <section id="key-technologies" class="bg-gray-900 bg-opacity-90 text-white py-16 px-4 md:px-12"  data-aos="fade-up" data-aos-delay="100">
   <div class="max-w-6xl mx-auto">
