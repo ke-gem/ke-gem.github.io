@@ -747,42 +747,6 @@ section.newslider-section {
   </div>
 </section>
 
-<section id="case-studies" class="relative py-16 bg-gray-900/90 z-10" data-aos="fade-up" data-aos-delay="100">
-  <div class="container mx-auto px-4 relative z-20">
-    <h2 class="text-3xl font-semibold mb-8 text-center text-[#03dac6]">Case Studies</h2>
-
-    <div class="swiper mySwiper rounded-xl overflow-hidden">
-      <div class="swiper-wrapper">
-        <!-- Slide 1: Australia -->
-        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
-          <img src="resource/img/gorgon.png" alt="Australia Case Study" class="w-full h-full object-cover rounded-lg" />
-          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
-            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">Australia</h3>
-          </div>
-        </div>
-
-        <!-- Slide 2: North Sea -->
-        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
-          <img src="resource/img/gorgon.png" alt="North Sea Case Study" class="w-full h-full object-cover rounded-lg" />
-          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
-            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">North Sea</h3>
-          </div>
-        </div>
-
-        <!-- Slide 3: Gorgon -->
-        <div class="swiper-slide relative aspect-[16/9] sm:h-[400px]">
-          <img src="resource/img/gorgon.png" alt="Gorgon Case Study" class="w-full h-full object-cover rounded-lg" />
-          <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center">
-            <h3 class="text-white text-xl sm:text-2xl font-semibold text-center px-4">Gorgon</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-pagination mt-4 z-30 relative"></div>
-    </div>
-  </div>
-</section>
-
 <section class="max-w-6xl mx-auto my-20 space-y-16">
 
   <!-- Industry Approach Card -->
@@ -1059,7 +1023,7 @@ section.newslider-section {
         <li>Developing geologically conforming anisotropic VMs as FWI inputs</li>
         <li>Reducing model uncertainty</li>
         <li>Providing QC tools to measure errors in velocity, delta, epsilon, and structural positioning</li>
-        <li>Utilizing proprietary algorithms to minimize parameter crosstalk</li>
+        <li>Utilizing proprietary algorithms to minimize parameter <a href="#gemvm-crosstalk">crosstalk</a></li>
       </ul>
     </div>
   </div>
@@ -1181,7 +1145,7 @@ CACA Viewer</div>
   <div class="timeline-item top"  data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-year">2024</div>
     <div class="timeline-title">Model Uncertainty</div>
-    <div class="timeline-content">Enhanced tomographic workflows and equations to minimize parameter crosstalk</div>
+    <div class="timeline-content">Enhanced tomographic workflows and equations</div>
     <div class="timeline-pin"></div>
   </div>
 
@@ -1189,7 +1153,7 @@ CACA Viewer</div>
     <div class="timeline-pin"></div>
     <div class="timeline-year">2025</div>
     <div class="timeline-title">Tilt Estimation</div>
-    <div class="timeline-content">Next generation developments & innovations</div>
+    <div class="timeline-content">Minimize parameter crosstalk</div>
   </div>
 
 </div>
@@ -1263,53 +1227,6 @@ CACA Viewer</div>
     </div>
   </div>
 </section>
-<section id="gem-slider" class="relative bg-black overflow-hidden">
-  <!-- WebGL Background Canvas -->
-  <canvas id="canvas" class="absolute inset-0 w-full h-full z-0"></canvas>
-
-  <div class="max-w-7xl mx-auto py-12 px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#03dac6] mb-8">Slides</h2>
-
-    <div class="relative w-full max-w-4xl mx-auto">
-      <img id="slider-image" src="resource/img/gem_slides/gem_slide_2.png" alt="GEM Slide"
-        class="w-full rounded-lg shadow-lg transition-opacity duration-500 ease-in-out" />
-
-      <!-- Navigation Arrows -->
-      <button onclick="prevSlide()"
-        class="absolute top-1/2 left-0 -translate-y-1/2 transform text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
-        ‹
-      </button>
-      <button onclick="nextSlide()"
-        class="absolute top-1/2 right-0 -translate-y-1/2 transform text-[#03dac6] text-3xl px-4 hover:text-white focus:outline-none">
-        ›
-      </button>
-    </div>
-
-    <p class="text-center text-sm text-gray-400 mt-4">
-      Slide <span id="slide-number">1</span> / 42
-    </p>
-  </div>
-</section>
-<section id="newslider-section" class="newslider-section"></section>    
-<!-- <section id="tab-integration" class="py-16 bg-gray-900 bg-opacity-90">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-white mb-8">User Friendliness</h2>
-    <div class="flex flex-col md:flex-row items-center gap-8">
-      <div class="md:w-1/2">
-        <h3 class="text-xl font-semibold text-white mb-2">Focus on geophysics and geology</h3>
-        <h4 class="text-md text-gray-300">Users parameterize workflows, not applications</h4>
-      </div>
-      <div class="md:w-1/2">
-        <figure class="text-center bg-white p-4 rounded-md shadow-md">
-          <figcaption class="text-sm text-gray-400 mb-2">
-            Seamless integration with existing tools, processes and file formats
-          </figcaption>
-          <img id="img1" src="resource/img/gem_flow_endpoints.png" class="w-full max-w-md mx-auto rounded-md cursor-pointer" />
-        </figure>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <section id="tab-integration-cloud" class="py-16 bg-gray-900 bg-opacity-60">
   <div class="max-w-6xl mx-auto px-4">
@@ -1430,7 +1347,7 @@ CACA Viewer</div>
 <section id="tab-contact" class="py-16 bg-gray-900 bg-opacity-90">
   <div class="container mx-auto py-12 px-4">
   <h1 class="text-3xl font-semibold mb-10 text-center">Want to know more?</h1>
-  <h2 class="text-2xl font-semibold mb-10 text-center">Email to: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
+  <h2 class="text-2xl font-semibold mb-10 text-center">Requesting case study info on Tiber, North Sea, Gorgon: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
 </div>
 </section>
 <section id="gallery-widget" class="py-16 bg-black"></section>
