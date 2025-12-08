@@ -795,27 +795,22 @@ section.newslider-section {
       <li>Earth model errors exist in velocity, delta, epsilon, and tilt</li>
     </ul>
     </div>
+    <!-- Funnel image on the right -->
     <div class="md:w-1/2 relative w-full max-w-sm perspective">
-    <p class="mb-6">QCs</p>
-    <ul class="list-disc pl-5 space-y-1 text-white-700 text-sm">
-      <li>5D CACAs provide for vertical and horizontal volumetric QCs</li>
-      <li>Earth model errors are modeled in velocity, delta, epsilon, and tilt</li>
-      <li>CACA Z
-        <ul class="list-disc pl-5 space-y-1 text-white-700 text-sm">
-          <li>Sensitive to vertical velocities</li>
-          <li>Flat dips are high wave number</li>
-          <li>Steep dips are low wave number</li>
-        </ul>
-      </li>
-      <li>CACA XY
-        <ul class="list-disc pl-5 space-y-1 text-white-700 text-sm">
-          <li>Sensitive to horizontal velocities</li>
-          <li>Flat dips are low wave number</li>
-          <li>Steep dips are high wave number</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+      <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
+      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
+
+        <!-- Error balls -->
+        <div class="smallball bg-red-500 text-white absolute top-28">Anisotropy Error</div>
+        <div class="ball bg-yellow-500 text-white absolute left-1/2 top-8">Velocity Error</div>
+        <div class="smallball bg-green-500 text-white absolute right-1/2 top-22">Slope Error</div>
+
+
+      </div>
+
+      <!-- Velocity Update Text -->
+      <div class="velocity-update mt-4 opacity-0 font-bold text-lg text-center">Velocity Update</div>
+    </div>
   </div>
 </section>
 
@@ -831,8 +826,8 @@ section.newslider-section {
 
 /* Balls inside funnel */
 .ball {
-    width: 120px;
-    height: 88px;
+    width: 140px;
+    height: 90px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -842,6 +837,20 @@ section.newslider-section {
     opacity: 0;
     margin: 5px 0;
     animation: drop 0.8s forwards;
+}
+
+.smallball {
+    width: 60px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 7px;
+    opacity: 0;
+    margin: 5px 0;
+    animation: drop 1.8s forwards;
 }
 
 /* Sequential animation for balls */
