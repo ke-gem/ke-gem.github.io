@@ -770,7 +770,7 @@ section.newslider-section {
       <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
       <div class="cup-top"></div>
       <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
-
+      <div class="cup-bottom"></div>
         <!-- Error balls -->
         <div class="ball bg-red-500 text-white absolute top-12">Anisotropy Error</div>
         <div class="ball bg-yellow-500 text-white absolute left-1/2 top-32">Velocity Error</div>
@@ -801,7 +801,7 @@ section.newslider-section {
       <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
       <div class="cup-top"></div>
       <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
-
+      <div class="cup-bottom"></div>
         <!-- Error balls -->
         <div class="smallball bg-red-500 text-white absolute top-12">Anisotropy Error</div>
         <div class="ball bg-yellow-500 text-white absolute left-1/2 top-32">Velocity Error</div>
@@ -875,7 +875,34 @@ section.newslider-section {
     margin: 5px 0;
     animation: drop 1.8s forwards;
 }
+/* 3D oval bottom */
+.cup-bottom {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 20px;
+    background: radial-gradient(ellipse at center, #1f2937 0%, #111827 100%);
+    border-radius: 50%;
+    box-shadow: 
+        0 2px 6px rgba(0,0,0,0.3),
+        inset 0 1px 3px rgba(0,0,0,0.2);
+    z-index: 0;
+    opacity: 0.8
+}
 
+.cup-bottom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 60%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+    border-radius: 50%;
+}
 /* Sequential animation for balls */
 .ball:nth-child(1) { animation-delay: 0.2s; }
 .ball:nth-child(2) { animation-delay: 0.4s; }
