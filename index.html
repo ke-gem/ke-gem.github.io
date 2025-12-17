@@ -716,107 +716,7 @@ section.newslider-section {
   }
 
 }
-</style>
-</head>
-<body class="text-white bg-black">
-  <div id="top-section">
-    <nav>
-      <a href="#key-technologies">Technology</a>
-      <a href="#tab-team">Team</a>
-      <a href="#history">History</a>
-      <a href="#tab-integration-cloud">Integration</a>
-      <a href="#tab-contact">Contact</a>
-    <button id="openmenu">
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
-  </div>
-<div id="content">
-<!-- Video Background -->
-<video class="video-bg" autoplay muted playsinline id="backgroundVideo">
-  <source id="videoSource" src="resource/video/v_0.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
-<section class="h-screen flex items-center justify-center text-center bg-black bg-opacity-60">
-  <div>
-    <img src="resource/img/logo.svg" alt="Geo Ex Machina Logo" class="mx-auto mb-6 h-auto" />
-    <h1 class="text-5xl font-bold mb-4">Geo Ex Machina</h1>
-    <p class="text-xl">Geologically Constrained Model Building</p>
-  </div>
-</section>
-
-<section class="max-w-7xl mx-auto my-20 space-y-16">
-
-  <!-- Industry Approach Card -->
-  <div class="bg-gray-900 bg-opacity-90 overflow-hidden flex flex-col md:flex-row text-white p-10 items-center">
-    
-    <!-- Text on the left -->
-    <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
-      <h2 class="text-3xl font-bold mb-6">Industry Approach for VMB</h2>
-      <p class="mb-6">Starting model</p>
-      <ul class="list-disc pl-5 space-y-1 text-gray-300 text-sm">
-        <li>Smoothed version of latest VMB</li>
-        <li>Delta and Epsilon are simple trends hung from the WB</li>
-        <li>Tilt fields challenged by complex geology, noise, weak signal</li>
-        <li>Earth model errors exist in velocity, delta, epsilon, and tilt</li>
-        <li>Only QC is 4D CIG</li>
-      </ul>
-    </div>
-
-    <!-- Funnel image on the right -->
-    <div class="md:w-1/2 relative w-full max-w-sm perspective">
-      <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
-      <div class="cup-top"></div>
-      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
-      <div class="cup-bottom"></div>
-        <!-- Error balls -->
-        <div class="ball bg-red-500 text-white absolute top-12">Anisotropy Error</div>
-        <div class="ball bg-yellow-500 text-white absolute left-1/2 top-32">Velocity Error</div>
-        <div class="ball bg-green-500 text-white absolute right-1/2 top-36">Tilt Error</div>
-
-
-      </div>
-
-      <!-- Velocity Update Text -->
-      <div class="velocity-update mt-4 opacity-0 font-bold text-lg text-center">Velocity Update</div>
-    </div>
-  </div>
-
-  <!-- Our Approach Card -->
-  <div class="bg-gray-900 bg-opacity-90 overflow-hidden flex flex-col md:flex-row text-white p-10 items-center">
-    <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
-    <h2 class="text-3xl font-bold mb-6 text-white">GEM Approach for VMB</h2>
-    <p class="mb-6">Starting model</p>
-    <ul class="list-disc pl-5 space-y-1 text-gray-300 text-sm">
-      <li>Smoothed version of latest VMB OR higher frequency from sonics (Vp)</li>
-      <li>Delta and Epsilon are LF and follow geological boundaries</li>
-      <li>Tilt derived from beam attributes, not challenged by complex geology</li>
-      <li>Earth model errors exist in velocity, delta, epsilon, and tilt</li>
-    </ul>
-    </div>
-    <!-- Funnel image on the right -->
-    <div class="md:w-1/2 relative w-full max-w-sm perspective">
-      <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
-      <div class="cup-top"></div>
-      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
-      <div class="cup-bottom"></div>
-        <!-- Error balls -->
-        <div class="smallball bg-red-500 text-white absolute top-12">Anisotropy Error</div>
-        <div class="ball bg-yellow-500 text-white absolute left-1/2 top-32">Velocity Error</div>
-        <div class="smallball bg-green-500 text-white absolute right-1/2 top-48">Tilt Error</div>
-
-
-      </div>
-
-      <!-- Velocity Update Text -->
-      <div class="velocity-update mt-4 opacity-0 font-bold text-lg text-center">Velocity Update</div>
-    </div>
-  </div>
-</section>
-
-<style>
   .clip-path-triangle {
       clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 30% 100%);
   }
@@ -929,164 +829,36 @@ section.newslider-section {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 </style>
-
-
-<section id="key-technologies" class="bg-gray-900 bg-opacity-90 text-white py-16 px-4 md:px-12"  data-aos="fade-up" data-aos-delay="100">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-10 text-center">
-      Key Technologies
-    </h2>
-
-    <div class="grid md:grid-cols-2 gap-12 text-gray-300 text-base leading-relaxed">
-      <!-- GEM VM -->
-      <div>
-        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM VM</h3>
-        <ul class="list-disc list-inside space-y-2 pl-4">
-          <li><span class="font-medium text-white">Generate:</span> Beam forming</li>
-          <li><span class="font-medium text-white">Align:</span> 6D residuals for each beam</li>
-          <li><span class="font-medium text-white">Tomography:</span> Joint Inversion for Velocity, Delta, and Epsilon</li>
-        </ul>
-      </div>
-
-      <!-- QC -->
-      <div>
-        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">QC</h3>
-        <ul class="list-disc list-inside space-y-2 pl-4">
-          <li>COCA / CACA Gathers</li>
-          <li>FARIS Illumination</li>
-          <li>Selective Demigration</li>
-        </ul>
-      </div>
-    </div>
-
-<!-- Hidden expanded description -->
-<div id="gemvm-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
-
-  <!-- What is GEM VM? -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-what')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">What is GEM VM?</h3>
-    <div id="gemvm-what" class="toggle-content hidden">
-      <p class="mb-4">LF velocity, delta, and epsilon that conform to regional geology</p>
-      <p class="mb-4">Flattens COCA/CACA gathers in Z, X, and Y</p>
-      <p class="mb-4">Maximizes illumination in Azimuth, Angle, and Offset</p>
-      <p class="mb-4">Every effort to minimize parameter crosstalk prior to FWI</p>
-      <div id="newslider-section" class="newslider-section"></div>    
-    </div>
-  </section>
-
-  <!-- Parameter Crosstalk -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-crosstalk')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">Parameter Crosstalk</h3>
-    <div id="gemvm-crosstalk" class="toggle-content hidden">
-      <p class="mb-4">To estimate velocity/delta/epsilon accurately, inversion requires a rich set of P wave propagation angles in each tomography cell</p>
-      <p class="mb-4">In FWI, direct arrivals have limited range of propagation angles limiting resolution between anisotropic parameters</p>
-      <p class="mb-4">GEM takes advantage of FAZ data to:</p>
-      <ul class="list-disc list-inside pl-6 space-y-1">
-        <li>Generate 6D picks for every beam creating a rich set of propagation angles</li>
-        <li>Simultaneously invert for Velocity/Delta/Epsilon</li>
-        <li>QC with COCA/CACA gathers to validate earth model</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- GEM Tomography Overview -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-tomography')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM Tomography Overview</h3>
-    <div id="gemvm-tomography" class="toggle-content hidden">
-      <div class="md:flex md:space-x-8 mb-6">
-        <div class="md:w-1/2">
-          <p class="mb-4 font-semibold">1. Align Residual Estimation</p>
-          <p class="mb-4">Estimates the 6D spatial/temporal shift of a Beam along its reflector dip attributes which will best align the Beam with the Image stack</p>
-          <p class="mb-4">6D picks minimize cycle skipping (IL, XL, Z, OffX, OffY, Reflector azimuth)</p>
-          <p class="mb-4">One shift per Beam, not per location</p>
-          <p class="mb-4">No dip limitation</p>
-          <p class="mb-4">Apply shifts for QC</p>
-        </div>
-        <div class="md:w-1/2">
-          <p class="mb-4 font-semibold">2. Inversion</p>
-          <p class="mb-4">One linearized equation per Beam</p>
-          <p class="mb-4">VM updated along the migrated ray path of each aligned residual</p>
-          <p class="mb-4">Iterative conjugate gradient method gives LSE solution</p>
-          <p class="mb-4">Quality due to:</p>
-          <ul class="list-disc list-inside pl-6 space-y-1">
-            <li>6D residual alignments</li>
-            <li>Separate masks & smoothing for parameters</li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-4">
-        <img src="resource/img/gem_slides/gem_slide_0.png" alt="GEM Slide 0" class="w-full rounded-lg object-cover" />
-      </div>
-    </div>
-  </section>
-</div>
-<div id="gemqc-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
-
-  <!-- 5D COCA Generation and Viewer -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-coca')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">5D COCA Generation and Viewer</h3>
-    <div id="gemvm-coca" class="toggle-content hidden">
-      <div class="mb-4">
-        <p class="mb-2 font-semibold">COCA/CACA Z</p>
-        <ul class="list-disc list-inside pl-6 space-y-1 mb-4">
-          <li>Sensitive to vertical velocity and azimuthal variations</li>
-          <li>X, Y are constant, Z varies</li>
-          <li>Horizontal: offset or angle, azimuth</li>
-          <li>QC RNMO, S/R offsets, AZI on low dip reflectors</li>
-        </ul>
-      </div>
-      <div class="mb-4">
-        <p class="mb-2 font-semibold">COCA/CACA X & Y</p>
-        <ul class="list-disc list-inside pl-6 space-y-1">
-          <li>Sensitive to horizontal velocity error</li>
-          <li>Z constant, X or Y varies</li>
-          <li>Horizontal: offset or angle, azimuth</li>
-          <li>QC RNMO, S/R offsets, AZI on steep dip reflectors</li>
-        </ul>
-      </div>
-      <div class="flex gap-6 mt-4">
-        <img src="resource/img/gem_slides/gem_slide_5.png" alt="GEM Slide 5" class="w-1/2 rounded-lg object-cover" />
-        <img src="resource/img/gem_slides/gem_slide_6.png" alt="GEM Slide 6" class="w-1/2 rounded-lg object-cover" />
-      </div>
-    </div>
-  </section>
-
-</div>
-</div>
-</section>
-<!-- About Us -->
-<section class="bg-gray-900 text-white py-16 px-4 md:px-12">
-<div class="max-w-7xl mx-auto">
-  <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-8 text-center">
-    GEM Technology: Enhancing Shot-Based Migration
-  </h2>
-
-  <div class="grid md:grid-cols-2 gap-10 text-gray-300 text-base leading-relaxed">
-    <div>
-      <p class="mb-4">
-        GEM technology is <span class="text-white font-semibold">complementary</span> to traditional shot-based migration methods such as:
-      </p>
-      <ul class="list-disc list-inside space-y-1 pl-4">
-        <li>Kirchhoff</li>
-        <li>WEM (Wave Equation Migration)</li>
-        <li>RTM (Reverse Time Migration)</li>
-        <li>FWI (Full Waveform Inversion)</li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="mb-4 font-semibold text-white">Our Focus:</p>
-      <ul class="list-disc list-inside space-y-2 pl-4">
-        <li>Evaluating robustness of existing FWI velocity models</li>
-        <li>Developing geologically conforming anisotropic VMs as FWI inputs</li>
-        <li>Reducing model uncertainty</li>
-        <li>Providing QC tools to measure errors in velocity, delta, epsilon, and structural positioning</li>
-        <li>Utilizing proprietary algorithms to minimize parameter <a href="#gemvm-crosstalk">crosstalk</a></li>
-      </ul>
-    </div>
+</head>
+<body class="text-white bg-black">
+  <div id="top-section">
+    <nav>
+      <a href="#key-technologies">Technology</a>
+      <a href="#tab-team">Team</a>
+      <a href="#history">History</a>
+      <a href="#tab-integration-cloud">Integration</a>
+      <a href="#tab-contact">Contact</a>
+    <button id="openmenu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
   </div>
-</div>
+<div id="content">
+<!-- Video Background -->
+<video class="video-bg" autoplay muted playsinline id="backgroundVideo">
+  <source id="videoSource" src="resource/video/v_0.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<section class="h-screen flex items-center justify-center text-center bg-black bg-opacity-60">
+  <div>
+    <img src="resource/img/logo.svg" alt="Geo Ex Machina Logo" class="mx-auto mb-6 h-auto" />
+    <h1 class="text-5xl font-bold mb-4">Geo Ex Machina</h1>
+    <p class="text-xl">We don't make FWI, we make FWI better.</p>
+  </div>
 </section>
 
 <!-- Team Slider Section -->
@@ -1180,14 +952,13 @@ Marine Synthetics</div>
 WAZ Marine
 FAZ Marine
 Anisotropy Synthetics
-COCA Viewer</div>
+COCA/CACA Viewer</div>
   </div>
 
   <div class="timeline-item top"  data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-year">2022</div>
     <div class="timeline-title">Production</div>
     <div class="timeline-content">FWI VM Validation
-GEM VM for FWI
 Full Azimuth Raytracing System</div>
     <div class="timeline-pin"></div>
   </div>
@@ -1196,9 +967,7 @@ Full Azimuth Raytracing System</div>
     <div class="timeline-pin"></div>
     <div class="timeline-year">2023</div>
     <div class="timeline-title">Fully Shot Based</div>
-    <div class="timeline-content">Sparse Marine Node
-FARIS Updates
-CACA Viewer</div>
+    <div class="timeline-content">Sparse Marine Node</div>
   </div>
 
   <div class="timeline-item top"  data-aos="fade-up" data-aos-delay="100">
@@ -1211,12 +980,274 @@ CACA Viewer</div>
   <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
     <div class="timeline-pin"></div>
     <div class="timeline-year">2025</div>
-    <div class="timeline-title">Tilt Estimation</div>
-    <div class="timeline-content">Minimize parameter crosstalk</div>
+    <div class="timeline-title">Minimize parameter crosstalk</div>
+    <div class="timeline-content">Tilt Estimation</div>
+    <div class="timeline-content">Anisotropic Estimation</div>
   </div>
 
 </div>
 </section>
+
+<section class="max-w-7xl mx-auto my-20 space-y-16">
+  <!-- Industry Approach Card -->
+  <div class="bg-gray-900 bg-opacity-90 overflow-hidden flex flex-col md:flex-row text-white p-10 items-center">
+    
+    <!-- Text on the left -->
+    <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
+      <h2 class="text-3xl font-bold mb-6">Industry Approach to VMB</h2>
+      <p class="mb-6">Starting model for FWI</p>
+      <ul class="list-disc pl-5 space-y-1 text-gray-300 text-sm">
+        <li>Smoothed version of latest VMB</li>
+        <li>Delta and Epsilon are simple trends hung from the WB</li>
+        <li>Tilt fields challenged by complex geology, noise, weak signal</li>
+        <li>Earth model errors exist in Vp, delta, epsilon, and tilt</li>
+        <li>All earth model errors are fit with Vp updates
+        <li>Only QC is 4D CIG which is mainly sensitive to vertical velocity error</li>
+      </ul>
+    </div>
+
+    <!-- Funnel image on the right -->
+    <div class="md:w-1/2 relative w-full max-w-sm perspective">
+      <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
+      <div class="cup-top"></div>
+      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
+      <div class="cup-bottom"></div>
+        <!-- Error balls -->
+        <div class="ball bg-red-500 text-white absolute top-12">Anisotropy Error</div>
+        <div class="ball bg-yellow-500 text-white absolute left-1/2 top-32">Velocity Error</div>
+        <div class="ball bg-green-500 text-white absolute right-1/2 top-36">Tilt Error</div>
+
+
+      </div>
+
+      <!-- Velocity Update Text -->
+      <div class="velocity-update mt-4 opacity-0 font-bold text-lg text-center">Velocity Update</div>
+    </div>
+  </div>
+
+  <!-- Our Approach Card -->
+  <div class="bg-gray-900 bg-opacity-90 overflow-hidden flex flex-col md:flex-row text-white p-10 items-center">
+    <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
+    <h2 class="text-3xl font-bold mb-6 text-white">GEM Approach to VMB</h2>
+    <p class="mb-6">Starting model</p>
+    <ul class="list-disc pl-5 space-y-1 text-gray-300 text-sm">
+      <li>Smoothed version of latest VMB OR directly from sonics (Vp)</li>
+      <li>Delta and Epsilon are LF and follow geological boundaries</li>
+      <li>Tilt derived from beam attributes, not challenged by complex geology</li>
+      <li>Earth model errors exist but have been minimized for delta, epsilon, and tilt</li>
+      <li>QCs are 5D COCA/CACA gathers which are sensitive to both vertical and horizontal velocity errors</li>
+    </ul>
+    </div>
+    <!-- Funnel image on the right -->
+    <div class="md:w-1/2 relative w-full max-w-sm perspective">
+      <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
+      <div class="cup-top"></div>
+      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
+      <div class="cup-bottom"></div>
+        <!-- Error balls -->
+        <div class="smallball bg-red-500 text-white absolute top-12">Anisotropy Error</div>
+        <div class="ball bg-yellow-500 text-white absolute left-1/2 top-32">Velocity Error</div>
+        <div class="smallball bg-green-500 text-white absolute right-1/2 top-48">Tilt Error</div>
+
+
+      </div>
+
+      <!-- Velocity Update Text -->
+      <div class="velocity-update mt-4 opacity-0 font-bold text-lg text-center">Velocity Update</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="key-technologies" class="bg-gray-900 bg-opacity-90 text-white py-16 px-4 md:px-12"  data-aos="fade-up" data-aos-delay="100">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-10 text-center">
+      Key Technologies
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12 text-gray-300 text-base leading-relaxed">
+      <!-- GEM VM -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM VM</h3>
+        <ul class="list-disc list-inside space-y-2 pl-4">
+          <li><span class="font-medium text-white">Generate:</span> Beam forming</li>
+          <li><span class="font-medium text-white">Align:</span> 6D residuals for each beam</li>
+          <li><span class="font-medium text-white">Tomography:</span> Joint Inversion for Velocity, Delta, and Epsilon</li>
+        </ul>
+      </div>
+
+      <!-- QC -->
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">QC</h3>
+        <ul class="list-disc list-inside space-y-2 pl-4">
+          <li>COCA / CACA Gathers</li>
+          <li>FARIS Illumination</li>
+          <li>Selective Demigration</li>
+        </ul>
+      </div>
+    </div>
+
+<!-- Hidden expanded description -->
+<div id="gemvm-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
+
+  <!-- What is GEM VM? -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-what')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">What is GEM VM?</h3>
+    <div id="gemvm-what" class="toggle-content hidden">
+      <p class="mb-4">Delta, epsilon, and tilt that conform to regional geology</p>
+      <p class="mb-4">Flattens COCA/CACA gathers in Z, X, and Y</p>
+      <p class="mb-4">Maximizes illumination in Azimuth, Angle, and Offset</p>
+      <p class="mb-4">Every effort to minimize parameter crosstalk prior to FWI</p>
+      <div id="newslider-section" class="newslider-section"></div>    
+    </div>
+  </section>
+
+  <!-- Parameter Crosstalk -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-crosstalk')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">Parameter Crosstalk</h3>
+    <div id="gemvm-crosstalk" class="toggle-content hidden">
+      <p class="mb-4">To estimate velocity/delta/epsilon accurately, inversion requires a rich set of P wave propagation angles in each tomography cell</p>
+      <p class="mb-4">In FWI, direct arrivals have limited range of propagation angles limiting resolution between anisotropic parameters</p>
+      <p class="mb-4">GEM takes advantage of FAZ data to:</p>
+      <ul class="list-disc list-inside pl-6 space-y-1">
+        <li>Generate 6D picks for every beam creating a rich set of propagation angles</li>
+        <li>Simultaneously invert for Velocity/Delta/Epsilon</li>
+        <li>QC with COCA/CACA gathers to validate earth model</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GEM Tomography Overview -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-tomography')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM Tomography Overview</h3>
+    <div id="gemvm-tomography" class="toggle-content hidden">
+      <div class="md:flex md:space-x-8 mb-6">
+        <div class="md:w-1/2">
+          <p class="mb-4 font-semibold">1. Align Residual Estimation</p>
+          <p class="mb-4">Estimates the 6D spatial/temporal shift of a Beam along its shot/receiver ray path</p>
+          <p class="mb-4">6D picks minimize cycle skipping (IL, XL, Z, OffX, OffY, Reflector azimuth)</p>
+          <p class="mb-4">One shift per Beam, not per location</p>
+          <p class="mb-4">No dip limitation</p>
+          <p class="mb-4">Apply shifts for QC</p>
+        </div>
+        <div class="md:w-1/2">
+          <p class="mb-4 font-semibold">2. Inversion</p>
+          <p class="mb-4">One linearized equation per Beam</p>
+          <p class="mb-4">VM updated along the migrated ray path of each aligned residual</p>
+          <p class="mb-4">Iterative conjugate gradient method gives LSE solution</p>
+          <p class="mb-4">Quality due to:</p>
+          <ul class="list-disc list-inside pl-6 space-y-1">
+            <li>6D residual alignments</li>
+            <li>Rich angles and azimuths</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-4">
+        <img src="resource/img/gem_slides/gem_slide_0.png" alt="GEM Slide 0" class="w-full rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="gemqc-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
+  <!-- 5D COCA/CACA Generation and Viewer -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-coca')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">5D COCA/CACA Generation and Viewer</h3>
+    <div id="gemvm-coca" class="toggle-content hidden">
+      <div class="mb-4">
+        <p class="mb-2 font-semibold">COCA/CACA Z</p>
+        <ul class="list-disc list-inside pl-6 space-y-1 mb-4">
+          <li>Sensitive to vertical velocity and azimuthal variations</li>
+          <li>X, Y are constant, Z varies</li>
+          <li>Horizontal: offset or angle, azimuth</li>
+          <li>QC RNMO, S/R offsets, AZI on low dip reflectors</li>
+        </ul>
+      </div>
+      <div class="mb-4">
+        <p class="mb-2 font-semibold">COCA/CACA X & Y</p>
+        <ul class="list-disc list-inside pl-6 space-y-1">
+          <li>Sensitive to horizontal velocity error</li>
+          <li>Z constant, X or Y varies</li>
+          <li>Horizontal: offset or angle, azimuth</li>
+          <li>QC RNMO, S/R offsets, AZI on steep dip reflectors</li>
+        </ul>
+      </div>
+      <div class="flex gap-6 mt-4">
+        <img src="resource/img/gem_slides/gem_slide_6.png" alt="GEM CACA Gathers" class="w-1/2 rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
+
+</div>
+<div id="gemqc-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
+
+  <!-- 5D COCA Generation and Viewer -->
+  <section class="mb-6">
+    <h3 onclick="toggleSection('gemvm-coca')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">5D COCA/CACA Generation and Viewer</h3>
+    <div id="gemvm-coca" class="toggle-content hidden">
+      <div class="mb-4">
+        <p class="mb-2 font-semibold">COCA/CACA Z</p>
+        <ul class="list-disc list-inside pl-6 space-y-1 mb-4">
+          <li>Sensitive to vertical velocity and azimuthal variations</li>
+          <li>X, Y are constant, Z varies</li>
+          <li>Horizontal: offset or angle, azimuth</li>
+          <li>QC RNMO, S/R offsets, AZI on low dip reflectors</li>
+        </ul>
+      </div>
+      <div class="mb-4">
+        <p class="mb-2 font-semibold">COCA/CACA X & Y</p>
+        <ul class="list-disc list-inside pl-6 space-y-1">
+          <li>Sensitive to horizontal velocity error</li>
+          <li>Z constant, X or Y varies</li>
+          <li>Horizontal: offset or angle, azimuth</li>
+          <li>QC RNMO, S/R offsets, AZI on steep dip reflectors</li>
+        </ul>
+      </div>
+      <div class="flex gap-6 mt-4">
+        <img src="resource/img/gem_slides/gem_slide_6.png" alt="GEM CACA Gathers" class="w-1/2 rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</div>
+</section>
+<!-- About Us -->
+<section class="bg-gray-900 text-white py-16 px-4 md:px-12">
+<div class="max-w-7xl mx-auto">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-8 text-center">
+    GEM Technology Enhances Shot-Based Wave Equation Technologies
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-10 text-gray-300 text-base leading-relaxed">
+    <div>
+      <p class="mb-4">
+        GEM technology is <span class="text-white font-semibold">complementary</span> to traditional geophysical algorithms:
+      </p
+      <ul class="list-disc list-inside space-y-1 pl-4">
+        <li>Kirchhoff</li>
+        <li>WEM (Wave Equation Migration)</li>
+        <li>RTM (Reverse Time Migration)</li>
+        <li>FWI (Full Waveform Inversion)</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="mb-4 font-semibold text-white">Our Focus:</p>
+      <ul class="list-disc list-inside space-y-2 pl-4">
+        <li>Reducing model uncertainty with QC tools to measure errors in velocity, delta, epsilon, tilt, and structural positioning</li>
+        <li>Utilizing proprietary algorithms to minimize parameter <a href="#gemvm-crosstalk">crosstalk</a></li>
+        <li>Evaluating robustness of existing FWI velocity models</li>
+        <li>Developing geologically conforming anisotropic VMs as input to FWI</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
 <section class="bg-black bg-opacity-70 py-12 px-4">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-center text-white mb-8">
@@ -1289,7 +1320,7 @@ CACA Viewer</div>
 
 <section id="tab-integration-cloud" class="py-16 bg-gray-900 bg-opacity-60">
   <div class="max-w-6xl mx-auto px-4">
-    <h3 class="text-2xl font-semibold text-white mb-8">Data Center and Cloud Deployment</h3>
+    <h3 class="text-2xl font-semibold text-white mb-8">Data Center and Cloud Friendly</h3>
     <div class="flex flex-col md:flex-row items-start gap-8">
       <div class="flex flex-col gap-4 md:w-1/2 text-gray-300">
         <div>
@@ -1299,7 +1330,7 @@ CACA Viewer</div>
           <p>Support internal and cloud storage: <span class="text-white font-medium">AWS, Azure, local</span></p>
         </div>
         <div>
-          <p>Simple APIs: <span class="text-white font-medium">C++, Python, ScaleOut, Swagger</span></p>
+          <p>Simple APIs: <span class="text-white font-medium">C++, Python, Swagger</span></p>
         </div>
         <div>
           <p>Source code: <span class="text-white font-medium">Github, Docker, Ansible, Terraform</span></p>
@@ -1308,7 +1339,7 @@ CACA Viewer</div>
       <div class="md:w-1/2">
         <figure class="text-center bg-white p-4 rounded-md shadow-md">
           <figcaption class="text-sm text-gray-400 mb-2">
-            Cloud & datacenter friendly API for internal developers
+            Cloud & datacenter friendly
           </figcaption>
           <img id="img2" src="resource/img/cloud_deployment.png" class="w-full max-w-md mx-auto rounded-md cursor-pointer" />
         </figure>
@@ -1316,7 +1347,6 @@ CACA Viewer</div>
     </div>
      <div class="flex flex-wrap justify-center items-center gap-4 mt-8">
       <!-- logos here, unchanged -->
-      <img src="resource/img/bluware_logo.png" class="h-10" />
       <img src="resource/img/aws_logo.png" class="h-10" />
       <img src="resource/img/kubernetes_logo.png" class="h-10" />
       <img src="resource/img/elastic_logo.png" class="h-10" />
@@ -1326,15 +1356,38 @@ CACA Viewer</div>
       <img src="resource/img/fastapi_logo.png" class="h-10" />
       <img src="resource/img/nvidia_logo.png" class="h-10" />
       <img src="resource/img/prometheus_logo.png" class="h-10" />
-      <img src="resource/img/consul_logo.jpeg" class="h-10" />
-      <img src="resource/img/grafana_logo.png" class="h-10" />
     </div>
   </div>
 </section>
 
-<!-- Modal container, place once at the bottom of your body -->
 <div id="modal" class="modal" onclick="closeModal()">
   <img id="modalImage" src="" alt="Zoomed image" />
+</div>
+
+
+
+<!-- Contact Us -->
+<section id="tab-contact" class="py-16 bg-gray-900 bg-opacity-90">
+  <div class="container mx-auto py-12 px-4">
+  <h1 class="text-3xl font-semibold mb-10 text-center">Want to know more?</h1>
+  <h2 class="text-2xl font-semibold mb-10 text-center">Requesting case study info on Tiber and Gorgon: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
+</div>
+</section>
+<section id="gallery-widget" class="py-16 bg-black"></section>
+<section class="py-16 bg-black" id="gallery">
+<div class="container-faris">
+  <div class="canvas-faris" id="canvas-faris"></div>
+  <div class="overlay-faris" id="overlay-faris"></div>
+</div>
+
+<div class="project-title-faris">
+  <p></p>
+</div>
+
+<div class="page-vignette-container">
+  <div class="page-vignette"></div>
+  <div class="page-vignette-strong"></div>
+  <div class="page-vignette-extreme"></div>
 </div>
 
 <style>
@@ -1401,30 +1454,6 @@ CACA Viewer</div>
     modal.classList.remove('active');
   }
 </script>
-
-<!-- Contact Us -->
-<section id="tab-contact" class="py-16 bg-gray-900 bg-opacity-90">
-  <div class="container mx-auto py-12 px-4">
-  <h1 class="text-3xl font-semibold mb-10 text-center">Want to know more?</h1>
-  <h2 class="text-2xl font-semibold mb-10 text-center">Requesting case study info on Tiber, North Sea, Gorgon: <a href="mailto:info@geo-ex-machina.com">info@geo-ex-machina.com</a></h2>
-</div>
-</section>
-<section id="gallery-widget" class="py-16 bg-black"></section>
-<section class="py-16 bg-black" id="gallery">
-<div class="container-faris">
-  <div class="canvas-faris" id="canvas-faris"></div>
-  <div class="overlay-faris" id="overlay-faris"></div>
-</div>
-
-<div class="project-title-faris">
-  <p></p>
-</div>
-
-<div class="page-vignette-container">
-  <div class="page-vignette"></div>
-  <div class="page-vignette-strong"></div>
-  <div class="page-vignette-extreme"></div>
-</div>
 <script type="module"> 
 import { Pane } from "https://cdn.skypack.dev/tweakpane@4.0.4";
 
