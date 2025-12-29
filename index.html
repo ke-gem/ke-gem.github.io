@@ -6,11 +6,9 @@
 <title>Geo Ex Machina 2.0</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 <link rel="apple-touch-icon" sizes="180x180" href="resource/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="resource/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="resource/img/favicon-16x16.png">
-<link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
 <link rel="manifest" href="/site.webmanifest">
 <style>
 .container-faris {
@@ -75,7 +73,6 @@
   z-index: 2;
 }
 
-/* Project title needs to be above everything */
 .project-title-faris {
   position: absolute;
   top: 50%;
@@ -85,7 +82,6 @@
   text-align: center;
   pointer-events: none;
   z-index: 10002;
-  /* Increased to be above expanded-item */
 }
 
 .project-title-faris p {
@@ -143,11 +139,9 @@
   will-change: transform;
 }
 
-/* Expanded item should be above overlay but below titles and captions */
 .expanded-item {
   position: fixed;
   z-index: 10000;
-  /* Lower than project-title and caption-clone */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -175,14 +169,12 @@
   pointer-events: none;
   opacity: 0;
   z-index: 9999;
-  /* Below expanded-item but above other content */
 }
 
 .overlay-faris.active {
   pointer-events: auto;
 }
 
-/* Page vignette effect */
 .page-vignette-container {
   position: fixed;
   top: 0;
@@ -191,7 +183,6 @@
   height: 100%;
   pointer-events: none;
   z-index: 9998;
-  /* Below overlay */
 }
 
 .page-vignette {
@@ -224,12 +215,10 @@
     var(--page-vignette-extreme-color, rgba(0, 0, 0, 1));
 }
 
-/* Tweakpane styles */
 .tp-dfwv {
   z-index: 10000 !important;
 }
 
-/* Make sure the Tweakpane tab is visible when collapsed */
 .tp-rotv {
   opacity: 0.5 !important;
 }
@@ -242,17 +231,9 @@
   opacity: 0.7 !important;
 }
 
-/* Caption clone needs to be above expanded item */
 .caption-clone {
   position: fixed;
   z-index: 10002;
-  /* Same as project-title to be above expanded-item */
-}
-
-/* Clone styles for animation */
-.caption-clone {
-  position: fixed;
-  z-index: 10001;
 }
 
 .caption-clone .item-name,
@@ -294,7 +275,7 @@ a:hover {
   z-index: 99999;
   position: relative;
 }
- #top-section nav {
+#top-section nav {
   display: flex;
   height: 100px;
   justify-content: center;
@@ -365,12 +346,6 @@ a:hover {
   margin: 10px auto;
 }
 
-#top-section.sticky #logo {
-  top: 0;
-  transform: scale(0.8);
-  opacity: 0;
-  transition-delay: 0.5s;
-}
 #top-section.sticky nav {
   top: 20px;
   padding: 0;
@@ -404,19 +379,19 @@ a:hover {
     z-index: -1;
     pointer-events: none;
 }
-  :root {
-    --main-color: #03dac6;
-  }
-  .timeline-container {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-      max-width: 1400px;
-      margin: 0 auto;
-      height: 350px;
-  }
- .timeline-line {
+:root {
+  --main-color: #03dac6;
+}
+.timeline-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 350px;
+}
+.timeline-line {
   position: absolute;
   top: 50%;
   left: 0;
@@ -436,10 +411,10 @@ a:hover {
   align-items: center;
   text-align: center;
   padding: 0 10px;
-  justify-content: flex-end; /* bottom by default */
+  justify-content: flex-end;
 }
 .timeline-item.top {
-  justify-content: flex-start; /* top for top items */
+  justify-content: flex-start;
 }
 .timeline-pin {
   width: 2px;
@@ -493,9 +468,6 @@ a:hover {
   border: 4px solid var(--main-color);
   border-radius:50%;
 }
-.timeline-arrow:hover {
-  opacity: 1;
-}
 @keyframes pulse-glow {
   0% {
     box-shadow: 0 0 4px #03dac6, 0 0 8px #03dac6;
@@ -506,31 +478,6 @@ a:hover {
   100% {
     box-shadow: 0 0 4px #03dac6, 0 0 8px #03dac6;
   }
-}
-.toggle-content {
-  padding: 20px;
-}
-.glow-border {
-  border: 2px solid #03dac6;
-  animation: pulse-glow 2s ease-in-out infinite;
-  transition: box-shadow 0.3s ease-in-out;
-}
-#gem-slider button {
-  /* Push nav buttons further to the sides */
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-#gem-slider button:first-of-type {
-  left: -2.5rem; /* Move left button outside container */
-}
-
-#gem-slider button:last-of-type {
-  right: -2.5rem; /* Move right button outside container */
-}
-section.newslider-section {
-max-width: 1200px;
-margin: auto;
 }
 
 section.newslider-section {
@@ -587,7 +534,7 @@ section.newslider-section {
 .slide {
   flex: 0 0 100%;
   position: relative;
-  height: auto; /* Adjust if needed */
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -630,10 +577,9 @@ section.newslider-section {
   right: 0;
 }
 
-/* Optional hover effect */
 .left-half:hover,
 .right-half:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* slight white overlay */
+  background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
 
@@ -714,57 +660,55 @@ section.newslider-section {
     font-size:10px;
     padding: 0px 10px;
   }
-
 }
 
-  .clip-path-triangle {
-      clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 30% 100%);
-  }
+.clip-path-triangle {
+    clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 30% 100%);
+}
 
-  .perspective {
-      perspective: 1000px;
-  }
+.perspective {
+    perspective: 1000px;
+}
 
-  .ball {
-      padding: 30px 20px;
-      border-radius: 50%;
-      font-size: 12px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      z-index: 1;
-      animation: drop 1.8s forwards;
-  }
+.ball {
+    padding: 30px 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    animation: drop 1.8s forwards;
+}
 
-  /* 3D oval top */
-  .cup-top {
-      position: absolute;
-      top: -15px;
-      left: 0;
-      width: 100%;
-      height: 30px;
-      background: radial-gradient(ellipse at center, #4b5563 0%, #1f2937 100%);
-      border-radius: 50%;
-      box-shadow: 
-          0 3px 8px rgba(0,0,0,0.2),
-          inset 0 -2px 5px rgba(0,0,0,0.1);
-      z-index: 2;
-  }
+.cup-top {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: radial-gradient(ellipse at center, #4b5563 0%, #1f2937 100%);
+    border-radius: 50%;
+    box-shadow: 
+        0 3px 8px rgba(0,0,0,0.2),
+        inset 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+}
 
-  .cup-top::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%;
-      height: 70%;
-      background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%);
-      border-radius: 50%;
-  }
+.cup-top::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
 
 .smallball {
-    width: 60px;
-    height: 44px;
+    width: 80px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -775,7 +719,7 @@ section.newslider-section {
     margin: 5px 0;
     animation: drop 1.8s forwards;
 }
-/* 3D oval bottom */
+
 .cup-bottom {
     position: absolute;
     bottom: -12px;
@@ -803,18 +747,11 @@ section.newslider-section {
     background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, transparent 70%);
     border-radius: 50%;
 }
-/* Sequential animation for balls */
+
 .ball:nth-child(1) { animation-delay: 0.2s; }
 .ball:nth-child(2) { animation-delay: 0.4s; }
 .ball:nth-child(3) { animation-delay: 0.6s; }
 
-/* Arrow animation */
-.arrow {
-  animation: fadeIn 0.6s forwards;
-  animation-delay: 1.0s;
-}
-
-/* Velocity Update text animation */
 .velocity-update {
   animation: fadeIn 0.6s forwards;
   animation-delay: 1.7s;
@@ -830,6 +767,46 @@ section.newslider-section {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: #ffffff99;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.modal.active {
+  display: flex;
+  animation-name: modalFadeInScale;
+  animation-timing-function: ease-out;
+}
+
+.modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  transform-origin: center center;
+  background: #fff;
+}
+
+@keyframes modalFadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 </style>
 </head>
 <body class="text-white bg-black">
@@ -847,7 +824,6 @@ section.newslider-section {
   </nav>
   </div>
 <div id="content">
-<!-- Video Background -->
 <video class="video-bg" autoplay muted playsinline id="backgroundVideo">
   <source id="videoSource" src="resource/video/v_0.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -861,7 +837,6 @@ section.newslider-section {
   </div>
 </section>
 
-<!-- Team Slider Section -->
 <section id="tab-team" class="py-16 bg-gray-900 bg-opacity-90">
 <div class="container mx-auto px-4">
   <h2 class="text-3xl font-semibold mb-10 text-center">Industry Recognized Innovators</h2>
@@ -898,7 +873,6 @@ section.newslider-section {
 </div>
 </section>
 
-<!-- History Timeline -->
 <section id="history" class="py-16 bg-black bg-opacity-90 overflow-x-auto">
 <div class="timeline-container">
   <div class="timeline-line"></div>
@@ -989,10 +963,8 @@ Full Azimuth Raytracing System</div>
 </section>
 
 <section class="max-w-7xl mx-auto my-20 space-y-16">
-  <!-- Industry Approach Card -->
   <div class="bg-gray-900 bg-opacity-90 overflow-hidden flex flex-col md:flex-row text-white p-10 items-center">
     
-    <!-- Text on the left -->
     <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
       <h2 class="text-3xl font-bold mb-6">Industry Approach to VMB</h2>
       <p class="mb-6">Starting model for FWI</p>
@@ -1006,26 +978,19 @@ Full Azimuth Raytracing System</div>
       </ul>
     </div>
 
-    <!-- Funnel image on the right -->
     <div class="md:w-1/2 relative w-full max-w-sm perspective">
       <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
       <div class="cup-top"></div>
       <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
       <div class="cup-bottom"></div>
-        <!-- Error balls -->
         <div class="ball bg-red-500 text-white absolute top-12">Anisotropy Error</div>
         <div class="ball bg-yellow-500 text-white absolute left-1/2 top-32">Velocity Error</div>
         <div class="ball bg-green-500 text-white absolute right-1/2 top-36">Tilt Error</div>
-
-
       </div>
-
-      <!-- Velocity Update Text -->
       <div class="velocity-update mt-4 opacity-0 font-bold text-lg text-center">Velocity Update</div>
     </div>
   </div>
 
-  <!-- Our Approach Card -->
   <div class="bg-gray-900 bg-opacity-90 overflow-hidden flex flex-col md:flex-row text-white p-10 items-center">
     <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
     <h2 class="text-3xl font-bold mb-6 text-white">GEM Approach to VMB</h2>
@@ -1038,184 +1003,138 @@ Full Azimuth Raytracing System</div>
       <li>QCs are 5D COCA/CACA gathers which are sensitive to both vertical and horizontal velocity errors</li>
     </ul>
     </div>
-    <!-- Funnel image on the right -->
     <div class="md:w-1/2 relative w-full max-w-sm perspective">
       <div class="funnel relative mx-auto mt-10 w-88 h-64 flex flex-col items-center justify-start">
       <div class="cup-top"></div>
       <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 clip-path-triangle shadow-inner"></div>
       <div class="cup-bottom"></div>
-        <!-- Error balls -->
         <div class="smallball bg-red-500 text-white absolute top-12">Anisotropy Error</div>
         <div class="ball bg-yellow-500 text-white absolute left-1/2 top-32">Velocity Error</div>
         <div class="smallball bg-green-500 text-white absolute right-1/2 top-48">Tilt Error</div>
-
-
       </div>
-
-      <!-- Velocity Update Text -->
       <div class="velocity-update mt-4 opacity-0 font-bold text-lg text-center">Velocity Update</div>
     </div>
   </div>
 </section>
 
+<section id="key-technologies" class="bg-gray-900 bg-opacity-90 overflow-hidden py-16 px-4 md:px-12">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-12 text-center">
+        Key Technologies
+      </h2>
 
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold text-[#03dac6] mb-6">GEM VM</h3>
+        
+        <div class="space-y-4">
+          <div class="border border-gray-700 rounded-lg">
+            <button onclick="toggleAnswer('q1')" class="question w-full text-left px-6 py-4 font-medium text-lg">
+              What is GEM VM?
+            </button>
+            <div id="q1" class="answer px-6 pb-4 text-gray-300" style="display:none;">
+              <p class="mb-3">GEM VM creates delta, epsilon, and tilt parameters that conform to regional geology.</p>
+              <p class="mb-3">It flattens COCA/CACA gathers in Z, X, and Y dimensions and maximizes illumination in azimuth, angle, and offset.</p>
+              <p>The system minimizes parameter crosstalk prior to Full Waveform Inversion (FWI).</p>
+            </div>
+          </div>
 
+          <div class="border border-gray-700 rounded-lg">
+            <button onclick="toggleAnswer('q2')" class="question w-full text-left px-6 py-4 font-medium text-lg">
+              How does GEM VM work?
+            </button>
+            <div id="q2" class="answer px-6 pb-4 text-gray-300" style="display:none;">
+              <p class="mb-3"><strong>Generate:</strong> Creates beam forming for data analysis</p>
+              <p class="mb-3"><strong>Align:</strong> Calculates 6D residuals for each beam (inline, crossline, depth, offset X, offset Y, and reflector azimuth)</p>
+              <p><strong>Tomography:</strong> Performs joint inversion for velocity, delta, and epsilon parameters simultaneously</p>
+            </div>
+          </div>
 
-<section id="key-technologies" class="bg-gray-900 bg-opacity-90 text-white py-16 px-4 md:px-12"  data-aos="fade-up" data-aos-delay="100">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-10 text-center">
-      Key Technologies
-    </h2>
+          <div class="border border-gray-700 rounded-lg">
+            <button onclick="toggleAnswer('q3')" class="question w-full text-left px-6 py-4 font-medium text-lg">
+              What is parameter crosstalk and how does GEM address it?
+            </button>
+            <div id="q3" class="answer px-6 pb-4 text-gray-300" style="display:none;">
+              <p class="mb-3">Accurate estimation of velocity, delta, and epsilon requires a rich set of P-wave propagation angles in each tomography cell.</p>
+              <p class="mb-3">In FWI, direct arrivals have a limited range of propagation angles, which limits resolution between anisotropic parameters.</p>
+              <p class="mb-3">GEM takes advantage of full azimuth (FAZ) data to:</p>
+              <ul class="list-disc list-inside pl-4 space-y-2">
+                <li>Generate 6D picks for every beam, creating a rich set of propagation angles</li>
+                <li>Simultaneously invert for velocity, delta, and epsilon</li>
+                <li>QC with COCA/CACA gathers to validate the earth model</li>
+              </ul>
+            </div>
+          </div>
 
-    <div class="grid md:grid-cols-2 gap-12 text-gray-300 text-base leading-relaxed">
-      <!-- GEM VM -->
-      <div>
-        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM VM</h3>
-        <ul class="list-disc list-inside space-y-2 pl-4">
-          <li><span class="font-medium text-white">Generate:</span> Beam forming</li>
-          <li><span class="font-medium text-white">Align:</span> 6D residuals for each beam</li>
-          <li><span class="font-medium text-white">Tomography:</span> Joint Inversion for Velocity, Delta, and Epsilon</li>
-        </ul>
-      </div>
-
-      <!-- QC -->
-      <div>
-        <h3 class="text-xl font-semibold text-white mb-4 glow-border rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">QC</h3>
-        <ul class="list-disc list-inside space-y-2 pl-4">
-          <li>COCA / CACA Gathers</li>
-          <li>FARIS Illumination</li>
-          <li>Selective Demigration</li>
-        </ul>
-      </div>
-    </div>
-
-<!-- Hidden expanded description -->
-<div id="gemvm-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
-
-  <!-- What is GEM VM? -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-what')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">What is GEM VM?</h3>
-    <div id="gemvm-what" class="toggle-content hidden">
-      <p class="mb-4">Delta, epsilon, and tilt that conform to regional geology</p>
-      <p class="mb-4">Flattens COCA/CACA gathers in Z, X, and Y</p>
-      <p class="mb-4">Maximizes illumination in Azimuth, Angle, and Offset</p>
-      <p class="mb-4">Every effort to minimize parameter crosstalk prior to FWI</p>
-      <div id="newslider-section" class="newslider-section"></div>    
-    </div>
-  </section>
-
-  <!-- Parameter Crosstalk -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-crosstalk')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">Parameter Crosstalk</h3>
-    <div id="gemvm-crosstalk" class="toggle-content hidden">
-      <p class="mb-4">To estimate velocity/delta/epsilon accurately, inversion requires a rich set of P wave propagation angles in each tomography cell</p>
-      <p class="mb-4">In FWI, direct arrivals have limited range of propagation angles limiting resolution between anisotropic parameters</p>
-      <p class="mb-4">GEM takes advantage of FAZ data to:</p>
-      <ul class="list-disc list-inside pl-6 space-y-1">
-        <li>Generate 6D picks for every beam creating a rich set of propagation angles</li>
-        <li>Simultaneously invert for Velocity/Delta/Epsilon</li>
-        <li>QC with COCA/CACA gathers to validate earth model</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- GEM Tomography Overview -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-tomography')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">GEM Tomography Overview</h3>
-    <div id="gemvm-tomography" class="toggle-content hidden">
-      <div class="md:flex md:space-x-8 mb-6">
-        <div class="md:w-1/2">
-          <p class="mb-4 font-semibold">1. Align Residual Estimation</p>
-          <p class="mb-4">Estimates the 6D spatial/temporal shift of a Beam along its shot/receiver ray path</p>
-          <p class="mb-4">6D picks minimize cycle skipping (IL, XL, Z, OffX, OffY, Reflector azimuth)</p>
-          <p class="mb-4">One shift per Beam, not per location</p>
-          <p class="mb-4">No dip limitation</p>
-          <p class="mb-4">Apply shifts for QC</p>
-        </div>
-        <div class="md:w-1/2">
-          <p class="mb-4 font-semibold">2. Inversion</p>
-          <p class="mb-4">One linearized equation per Beam</p>
-          <p class="mb-4">VM updated along the migrated ray path of each aligned residual</p>
-          <p class="mb-4">Iterative conjugate gradient method gives LSE solution</p>
-          <p class="mb-4">Quality due to:</p>
-          <ul class="list-disc list-inside pl-6 space-y-1">
-            <li>6D residual alignments</li>
-            <li>Rich angles and azimuths</li>
-          </ul>
+          <div class="border border-gray-700 rounded-lg">
+            <button onclick="toggleAnswer('q4')" class="question w-full text-left px-6 py-4 font-medium text-lg">
+              How does the GEM tomography process work?
+            </button>
+            <div id="q4" class="answer px-6 pb-4 text-gray-300" style="display:none;">
+              <p class="mb-3"><strong>Step 1: Align Residual Estimation</strong></p>
+              <ul class="list-disc list-inside pl-4 space-y-2 mb-4">
+                <li>Estimates 6D spatial and temporal shifts of a beam along its shot/receiver ray path</li>
+                <li>6D picks minimize cycle skipping</li>
+                <li>One shift per beam (not per location) with no dip limitation</li>
+              </ul>
+              <p class="mb-3"><strong>Step 2: Inversion</strong></p>
+              <ul class="list-disc list-inside pl-4 space-y-2">
+                <li>One linearized equation per beam</li>
+                <li>Velocity model updated along the migrated ray path of each aligned residual</li>
+                <li>Iterative conjugate gradient method provides least squares solution</li>
+                <li>High quality results from 6D residual alignments and rich angles/azimuths</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="mt-4">
-        <img src="resource/img/gem_slides/gem_slide_0.png" alt="GEM Slide 0" class="w-full rounded-lg object-cover" />
-      </div>
-    </div>
-  </section>
-</div>
 
-<div id="gemqc-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
-  <!-- 5D COCA/CACA Generation and Viewer -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-coca')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">5D COCA/CACA Generation and Viewer</h3>
-    <div id="gemvm-coca" class="toggle-content hidden">
-      <div class="mb-4">
-        <p class="mb-2 font-semibold">COCA/CACA Z</p>
-        <ul class="list-disc list-inside pl-6 space-y-1 mb-4">
-          <li>Sensitive to vertical velocity and azimuthal variations</li>
-          <li>X, Y are constant, Z varies</li>
-          <li>Horizontal: offset or angle, azimuth</li>
-          <li>QC RNMO, S/R offsets, AZI on low dip reflectors</li>
-        </ul>
-      </div>
-      <div class="mb-4">
-        <p class="mb-2 font-semibold">COCA/CACA X & Y</p>
-        <ul class="list-disc list-inside pl-6 space-y-1">
-          <li>Sensitive to horizontal velocity error</li>
-          <li>Z constant, X or Y varies</li>
-          <li>Horizontal: offset or angle, azimuth</li>
-          <li>QC RNMO, S/R offsets, AZI on steep dip reflectors</li>
-        </ul>
-      </div>
-      <div class="flex gap-6 mt-4">
-        <img src="resource/img/gem_slides/gem_slide_6.png" alt="GEM CACA Gathers" class="w-1/2 rounded-lg object-cover" />
-      </div>
-    </div>
-  </section>
+      <div>
+        <h3 class="text-2xl font-semibold text-[#03dac6] mb-6">Quality Control (QC)</h3>
+        
+        <div class="space-y-4">
+          <div class="border border-gray-700 rounded-lg">
+            <button onclick="toggleAnswer('q5')" class="question w-full text-left px-6 py-4 font-medium text-lg">
+              What are COCA/CACA gathers?
+            </button>
+            <div id="q5" class="answer px-6 pb-4 text-gray-300" style="display:none;">
+              <p class="mb-3">COCA/CACA gathers are 5D quality control tools for velocity model validation.</p>
+              <p class="mb-3"><strong>COCA/CACA Z:</strong></p>
+              <ul class="list-disc list-inside pl-4 space-y-2 mb-4">
+                <li>Sensitive to vertical velocity and azimuthal variations</li>
+                <li>X and Y positions are constant while Z varies</li>
+                <li>Used to QC residual moveout, source/receiver offsets, and azimuth on low-dip reflectors</li>
+              </ul>
+              <p class="mb-3"><strong>COCA/CACA X & Y:</strong></p>
+              <ul class="list-disc list-inside pl-4 space-y-2">
+                <li>Sensitive to horizontal velocity errors</li>
+                <li>Z is constant while X or Y varies</li>
+                <li>Used to QC residual moveout, source/receiver offsets, and azimuth on steep-dip reflectors</li>
+              </ul>
+            </div>
+          </div>
 
-</div>
-<div id="gemqc-expanded" class="mt-4 text-gray-300 hidden pl-4 border-l-2 border-[#03dac6]">
+          <div class="border border-gray-700 rounded-lg">
+            <button onclick="toggleAnswer('q6')" class="question w-full text-left px-6 py-4 font-medium text-lg">
+              What is FARIS Illumination?
+            </button>
+            <div id="q6" class="answer px-6 pb-4 text-gray-300" style="display:none;">
+              <p>FARIS (Full Azimuth Ray Illumination System) provides detailed analysis of seismic illumination patterns across different azimuths, angles, and offsets to optimize data quality and imaging.</p>
+            </div>
+          </div>
 
-  <!-- 5D COCA Generation and Viewer -->
-  <section class="mb-6">
-    <h3 onclick="toggleSection('gemvm-coca')" class="toggle-header rounded-lg px-4 py-2 text-[#03dac6] border border-[#03dac6] cursor-pointer">5D COCA/CACA Generation and Viewer</h3>
-    <div id="gemvm-coca" class="toggle-content hidden">
-      <div class="mb-4">
-        <p class="mb-2 font-semibold">COCA/CACA Z</p>
-        <ul class="list-disc list-inside pl-6 space-y-1 mb-4">
-          <li>Sensitive to vertical velocity and azimuthal variations</li>
-          <li>X, Y are constant, Z varies</li>
-          <li>Horizontal: offset or angle, azimuth</li>
-          <li>QC RNMO, S/R offsets, AZI on low dip reflectors</li>
-        </ul>
-      </div>
-      <div class="mb-4">
-        <p class="mb-2 font-semibold">COCA/CACA X & Y</p>
-        <ul class="list-disc list-inside pl-6 space-y-1">
-          <li>Sensitive to horizontal velocity error</li>
-          <li>Z constant, X or Y varies</li>
-          <li>Horizontal: offset or angle, azimuth</li>
-          <li>QC RNMO, S/R offsets, AZI on steep dip reflectors</li>
-        </ul>
-      </div>
-      <div class="flex gap-6 mt-4">
-        <img src="resource/img/gem_slides/gem_slide_6.png" alt="GEM CACA Gathers" class="w-1/2 rounded-lg object-cover" />
+          <div class="border border-gray-700 rounded-lg">
+            <button onclick="toggleAnswer('q7')" class="question w-full text-left px-6 py-4 font-medium text-lg">
+              What is Selective Demigration?
+            </button>
+            <div id="q7" class="answer px-6 pb-4 text-gray-300" style="display:none;">
+              <p>Selective Demigration is a QC technique that reverses the migration process on specific portions of the data, allowing geophysicists to validate velocity models and troubleshoot imaging issues.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-</div>
-
-</div>
-</section>
-<!-- About Us -->
 <section class="bg-gray-900 text-white py-16 px-4 md:px-12">
 <div class="max-w-7xl mx-auto">
   <h2 class="text-3xl md:text-4xl font-bold text-[#03dac6] mb-8 text-center">
@@ -1226,7 +1145,7 @@ Full Azimuth Raytracing System</div>
     <div>
       <p class="mb-4">
         GEM technology is <span class="text-white font-semibold">complementary</span> to traditional geophysical algorithms:
-      </p
+      </p>
       <ul class="list-disc list-inside space-y-1 pl-4">
         <li>Kirchhoff</li>
         <li>WEM (Wave Equation Migration)</li>
@@ -1239,7 +1158,7 @@ Full Azimuth Raytracing System</div>
       <p class="mb-4 font-semibold text-white">Our Focus:</p>
       <ul class="list-disc list-inside space-y-2 pl-4">
         <li>Reducing model uncertainty with QC tools to measure errors in velocity, delta, epsilon, tilt, and structural positioning</li>
-        <li>Utilizing proprietary algorithms to minimize parameter <a href="#gemvm-crosstalk">crosstalk</a></li>
+        <li>Utilizing proprietary algorithms to minimize parameter crosstalk</li>
         <li>Evaluating robustness of existing FWI velocity models</li>
         <li>Developing geologically conforming anisotropic VMs as input to FWI</li>
       </ul>
@@ -1346,7 +1265,6 @@ Full Azimuth Raytracing System</div>
       </div>
     </div>
      <div class="flex flex-wrap justify-center items-center gap-4 mt-8">
-      <!-- logos here, unchanged -->
       <img src="resource/img/aws_logo.png" class="h-10" />
       <img src="resource/img/kubernetes_logo.png" class="h-10" />
       <img src="resource/img/elastic_logo.png" class="h-10" />
@@ -1364,9 +1282,6 @@ Full Azimuth Raytracing System</div>
   <img id="modalImage" src="" alt="Zoomed image" />
 </div>
 
-
-
-<!-- Contact Us -->
 <section id="tab-contact" class="py-16 bg-gray-900 bg-opacity-90">
   <div class="container mx-auto py-12 px-4">
   <h1 class="text-3xl font-semibold mb-10 text-center">Want to know more?</h1>
@@ -1390,77 +1305,39 @@ Full Azimuth Raytracing System</div>
   <div class="page-vignette-extreme"></div>
 </div>
 
-<style>
-  .cursor-pointer {
-    cursor: pointer;
-  }
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0; top: 0; right: 0; bottom: 0;
-  background: #ffffff99;
-  justify-content: center;
-  align-items: center;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-}
-
-.modal.active {
-  display: flex;
-  animation-name: modalFadeInScale;
-  animation-timing-function: ease-out;
-}
-
-.modal img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.8);
-  transform-origin: center center;
-  background: #fff;
-}
-
-/* keyframes for fade + scale */
-@keyframes modalFadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-</style>
-
 <script>
-  // Get elements
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modalImage');
-
-  // All images that trigger modal
-  const images = [document.getElementById('img1'), document.getElementById('img2')];
+  const images = [document.getElementById('img2')];
 
   images.forEach(img => {
-    img.addEventListener('click', () => {
-      modalImg.src = img.src;
-      modal.classList.add('active');
-    });
+    if(img) {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('active');
+      });
+    }
   });
 
   function closeModal() {
     modal.classList.remove('active');
   }
+
+  function toggleAnswer(id) {
+    const answer = document.getElementById(id);
+    if (answer.style.display === 'none' || answer.style.display === '') {
+      answer.style.display = 'block';
+    } else {
+      answer.style.display = 'none';
+    }
+  }
 </script>
 <script type="module"> 
 import { Pane } from "https://cdn.skypack.dev/tweakpane@4.0.4";
 
-// Register GSAP plugins
 gsap.registerPlugin(CustomEase);
 CustomEase.create("hop", "0.9, 0, 0.1, 1");
-// Project titles
+
 const items = [
   "Data 2D",
   "Data 3D",
@@ -1484,30 +1361,26 @@ const container = document.querySelector(".container-faris");
 const canvas = document.getElementById("canvas-faris");
 const overlay = document.getElementById("overlay-faris");
 const projectTitleElement = document.querySelector(".project-title-faris p");
-// Settings object for Tweakpane
+
 const settings = {
-  // Item sizes
   baseWidth: 400,
   smallHeight: 330,
   largeHeight: 500,
   itemGap: 65,
   hoverScale: 1.05,
-  expandedScale: 0.4, // Percentage of viewport width
+  expandedScale: 0.4,
   dragEase: 0.075,
   momentumFactor: 200,
   bufferZone: 3,
   borderRadius: 0,
   vignetteSize: 0,
-  // Page vignette settings - simplified to two main controls
-  vignetteStrength: 0.7, // Controls opacity of all layers
-  vignetteSize: 200, // Controls size of all layers
-  // Overlay settings
+  vignetteStrength: 0.7,
+  vignetteSize: 200,
   overlayOpacity: 0.9,
   overlayEaseDuration: 0.8,
-  // Animation durations
-  zoomDuration: 0.6 // Reduced from 1.0 to 0.6 for faster zoom
+  zoomDuration: 0.6
 };
-// Define item sizes based on settings
+
 let itemSizes = [
   {
     width: settings.baseWidth,
@@ -1521,7 +1394,7 @@ let itemSizes = [
 let itemGap = settings.itemGap;
 let columns = 4;
 const itemCount = items.length;
-// Calculate grid cell size based on the largest possible item
+
 let cellWidth = settings.baseWidth + settings.itemGap;
 let cellHeight =
   Math.max(settings.smallHeight, settings.largeHeight) + settings.itemGap;
@@ -1551,27 +1424,25 @@ let activeCaptionNameSplit = null;
 let activeCaptionNumberSplit = null;
 let paneInstance = null;
 const pane = Pane;
-// Initialize Tweakpane
+
 function initTweakpane() {
-  // Wait for Pane to be available (imported via ES module)
   if (!pane) {
     setTimeout(initTweakpane, 100);
     return;
   }
   const gallery = document.getElementById('gallery-widget');
-  // Create the pane with a title and make it visible even when collapsed
   paneInstance = new Pane({
     container: gallery,
     title: "Gallery Settings",
     expanded: false
   });
-  // Make sure the pane is visible by styling its container
+
   const paneElement = paneInstance.element;
   paneElement.style.position = "absolute";
   paneElement.style.width = "250px";
   paneElement.style.right = "10px";
   paneElement.style.zIndex = "10000";
-  // Item size settings
+
   const sizeFolder = paneInstance.addFolder({
     title: "Item Sizes",
     expanded: false
@@ -1597,7 +1468,7 @@ function initTweakpane() {
       step: 10
     })
     .on("change", updateSettings);
-  // Layout settings
+
   const layoutFolder = paneInstance.addFolder({
     title: "Layout",
     expanded: false
@@ -1616,7 +1487,7 @@ function initTweakpane() {
       step: 0.5
     })
     .on("change", updateSettings);
-  // Style settings
+
   const styleFolder = paneInstance.addFolder({
     title: "Style",
     expanded: false
@@ -1628,7 +1499,7 @@ function initTweakpane() {
       step: 1
     })
     .on("change", updateBorderRadius);
-  // Item vignette settings
+
   const itemVignetteFolder = paneInstance.addFolder({
     title: "Item Vignette",
     expanded: false
@@ -1640,7 +1511,7 @@ function initTweakpane() {
       step: 1
     })
     .on("change", updateVignetteSize);
-  // Page vignette settings - simplified to two controls
+
   const pageVignetteFolder = paneInstance.addFolder({
     title: "Page Vignette",
     expanded: false
@@ -1659,7 +1530,7 @@ function initTweakpane() {
       step: 10
     })
     .on("change", updatePageVignette);
-  // Overlay settings
+
   const overlayFolder = paneInstance.addFolder({
     title: "Overlay Animation",
     expanded: false
@@ -1674,7 +1545,7 @@ function initTweakpane() {
     max: 2,
     step: 0.1
   });
-  // Animation settings
+
   const animationFolder = paneInstance.addFolder({
     title: "Animation",
     expanded: false
@@ -1706,7 +1577,7 @@ function initTweakpane() {
     max: 1.5,
     step: 0.1
   });
-  // Add a button to reset the view
+
   paneInstance
     .addButton({
       title: "Reset View"
@@ -1715,15 +1586,14 @@ function initTweakpane() {
       targetX = 0;
       targetY = 0;
     });
-  // Add keyboard shortcut for toggling the panel
+
   window.addEventListener("keydown", (e) => {
-    // Toggle panel visibility with the 'h' key
     if (e.key === "h" || e.key === "H") {
       togglePaneVisibility();
     }
   });
 }
-// Function to toggle the panel visibility
+
 function togglePaneVisibility() {
   if (!paneInstance) return;
   const element = paneInstance.element;
@@ -1733,25 +1603,25 @@ function togglePaneVisibility() {
     element.style.display = "none";
   }
 }
-// Update CSS variable for border radius
+
 function updateBorderRadius() {
   document.documentElement.style.setProperty(
     "--border-radius",
     `${settings.borderRadius}px`
   );
 }
-// Update CSS variable for item vignette
+
 function updateVignetteSize() {
   document.documentElement.style.setProperty(
     "--vignette-size",
     `${settings.vignetteSize}px`
   );
 }
-// Update CSS variable for page vignette - now using the simplified controls
+
 function updatePageVignette() {
   const strength = settings.vignetteStrength;
   const size = settings.vignetteSize;
-  // Regular vignette (outer layer)
+  
   const regularOpacity = strength * 0.7;
   const regularSize = size * 1.5;
   document.documentElement.style.setProperty(
@@ -1762,7 +1632,7 @@ function updatePageVignette() {
     "--page-vignette-color",
     `rgba(0,0,0,${regularOpacity})`
   );
-  // Strong vignette (middle layer)
+
   const strongOpacity = strength * 0.85;
   const strongSize = size * 0.75;
   document.documentElement.style.setProperty(
@@ -1773,7 +1643,7 @@ function updatePageVignette() {
     "--page-vignette-strong-color",
     `rgba(0,0,0,${strongOpacity})`
   );
-  // Extreme vignette (inner layer)
+
   const extremeOpacity = strength;
   const extremeSize = size * 0.4;
   document.documentElement.style.setProperty(
@@ -1785,14 +1655,12 @@ function updatePageVignette() {
     `rgba(0,0,0,${extremeOpacity})`
   );
 }
-// Update CSS variable for hover scale
+
 function updateHoverScale() {
-  // Use CSS variables instead of directly modifying CSS rules
   document.documentElement.style.setProperty(
     "--hover-scale",
     settings.hoverScale
   );
-  // Update all existing items with the new hover scale
   document.querySelectorAll(".item").forEach((item) => {
     const img = item.querySelector("img");
     if (img) {
@@ -1800,9 +1668,8 @@ function updateHoverScale() {
     }
   });
 }
-// Update settings and rebuild the grid
+
 function updateSettings() {
-  // Update item sizes
   itemSizes = [
     {
       width: settings.baseWidth,
@@ -1814,13 +1681,12 @@ function updateSettings() {
     }
   ];
   itemGap = settings.itemGap;
-  // Remove columns dependency - use a fixed value
   columns = 4;
-  // Recalculate cell dimensions
+
   cellWidth = settings.baseWidth + settings.itemGap;
   cellHeight =
     Math.max(settings.smallHeight, settings.largeHeight) + settings.itemGap;
-  // Clear existing items and rebuild
+
   visibleItems.forEach((itemId) => {
     const item = document.getElementById(itemId);
     if (item && item.parentNode === canvas) {
@@ -1829,7 +1695,7 @@ function updateSettings() {
   });
   visibleItems.clear();
   updateVisibleItems();
-  // Update visual styles
+
   updateBorderRadius();
   updateVignetteSize();
   updateHoverScale();
@@ -1873,10 +1739,9 @@ function animateTitleOut() {
     ease: "power3.out"
   });
 }
-// Animate overlay in
+
 function animateOverlayIn() {
   if (overlayAnimation) overlayAnimation.kill();
-  // Make sure we're using the current setting value
   overlayAnimation = gsap.to(overlay, {
     opacity: settings.overlayOpacity,
     duration: settings.overlayEaseDuration,
@@ -1884,7 +1749,7 @@ function animateOverlayIn() {
     overwrite: true
   });
 }
-// Animate overlay out
+
 function animateOverlayOut() {
   if (overlayAnimation) overlayAnimation.kill();
   overlayAnimation = gsap.to(overlay, {
@@ -1893,18 +1758,16 @@ function animateOverlayOut() {
     ease: "power2.inOut"
   });
 }
-// Determine item size based on position
+
 function getItemSize(row, col) {
-  // Use a consistent pattern for size selection
-  // This ensures the same position always gets the same size
   const sizeIndex = Math.abs((row * columns + col) % itemSizes.length);
   return itemSizes[sizeIndex];
 }
-// Generate a unique ID for each grid position
+
 function getItemId(col, row) {
   return `${col},${row}`;
 }
-// Get the absolute position for an item
+
 function getItemPosition(col, row) {
   const xPos = col * cellWidth;
   const yPos = row * cellHeight;
@@ -1918,23 +1781,24 @@ function updateVisibleItems() {
   const buffer = settings.bufferZone;
   const viewWidth = window.innerWidth * (1 + buffer);
   const viewHeight = window.innerHeight * (1 + buffer);
-  // Calculate visible range based on current position and buffer
+
   const startCol = Math.floor((-currentX - viewWidth / 2) / cellWidth);
   const endCol = Math.ceil((-currentX + viewWidth * 1.5) / cellWidth);
   const startRow = Math.floor((-currentY - viewHeight / 2) / cellHeight);
   const endRow = Math.ceil((-currentY + viewHeight * 1.5) / cellHeight);
+
   const currentItems = new Set();
-  // Create or update visible items
+
   for (let row = startRow; row <= endRow; row++) {
     for (let col = startCol; col <= endCol; col++) {
       const itemId = getItemId(col, row);
       currentItems.add(itemId);
       if (visibleItems.has(itemId)) continue;
       if (activeItemId === itemId && isExpanded) continue;
-      // Get size and position for this item
+
       const itemSize = getItemSize(row, col);
       const position = getItemPosition(col, row);
-      // Create the item element
+
       const item = document.createElement("div");
       item.className = "item";
       item.id = itemId;
@@ -1946,19 +1810,18 @@ function updateVisibleItems() {
       item.dataset.row = row;
       item.dataset.width = itemSize.width;
       item.dataset.height = itemSize.height;
-      // Calculate a consistent item number for this position
-      // This ensures the same position always shows the same content
+
       const itemNum = Math.abs((row * columns + col) % itemCount);
-      // Create image container for overflow control
+
       const imageContainer = document.createElement("div");
       imageContainer.className = "item-image-container";
-      // Create image
+
       const img = document.createElement("img");
       img.src = imageUrls[itemNum % imageUrls.length];
       img.alt = `Image ${itemNum + 1}`;
       imageContainer.appendChild(img);
       item.appendChild(imageContainer);
-      // Add caption inside the image
+
       const captionElement = document.createElement("div");
       captionElement.className = "item-caption";
       const nameElement = document.createElement("div");
@@ -1972,16 +1835,17 @@ function updateVisibleItems() {
         .padStart(5, "0")}`;
       captionElement.appendChild(numberElement);
       item.appendChild(captionElement);
-      // Add click handler
+
       item.addEventListener("click", (e) => {
         if (mouseHasMoved || isDragging) return;
         handleItemClick(item, itemNum);
       });
+
       canvas.appendChild(item);
       visibleItems.add(itemId);
     }
   }
-  // Remove items that are no longer visible
+
   visibleItems.forEach((itemId) => {
     if (!currentItems.has(itemId) || (activeItemId === itemId && isExpanded)) {
       const item = document.getElementById(itemId);
@@ -2007,41 +1871,43 @@ function expandItem(item, itemIndex) {
   activeItemId = item.id;
   canDrag = false;
   container.style.cursor = "auto";
+
   const imgSrc = item.querySelector("img").src;
   const titleIndex = itemIndex % items.length;
   const itemWidth = parseInt(item.dataset.width);
   const itemHeight = parseInt(item.dataset.height);
+
   setAndAnimateTitle(items[titleIndex]);
-  // Get the caption elements
+
   const nameElement = item.querySelector(".item-name");
   const numberElement = item.querySelector(".item-number");
-  // Store original text content for later use
+
   const nameText = nameElement.textContent;
   const numberText = numberElement.textContent;
-  // Create a direct clone of the caption elements for animation
+
   const captionClone = item.querySelector(".item-caption").cloneNode(true);
   captionClone.classList.add("caption-clone");
   const nameClone = captionClone.querySelector(".item-name");
   const numberClone = captionClone.querySelector(".item-number");
-  // Apply SplitType to the cloned elements - use words for both
+
   const nameCloneSplit = new SplitType(nameClone, {
     types: "words"
   });
   const numberCloneSplit = new SplitType(numberClone, {
     types: "words"
   });
-  // Position the clone exactly over the original
+
   const captionRect = item
     .querySelector(".item-caption")
     .getBoundingClientRect();
   captionClone.style.left = `${captionRect.left}px`;
   captionClone.style.bottom = `${window.innerHeight - captionRect.bottom}px`;
   captionClone.style.width = `${captionRect.width}px`;
-  captionClone.style.zIndex = "10002"; // Explicitly set z-index
+  captionClone.style.zIndex = "10002";
   document.body.appendChild(captionClone);
-  // Hide the original caption immediately
+
   item.querySelector(".item-caption").style.opacity = "0";
-  // Animate the clone out with clear text movement
+
   gsap.to(nameCloneSplit.words, {
     y: "100%",
     opacity: 0,
@@ -2062,6 +1928,7 @@ function expandItem(item, itemIndex) {
       }
     }
   });
+
   const rect = item.getBoundingClientRect();
   originalPosition = {
     id: item.id,
@@ -2072,22 +1939,25 @@ function expandItem(item, itemIndex) {
     nameText: nameText,
     numberText: numberText
   };
-  // Add active class to overlay but animate opacity with GSAP
+
   overlay.classList.add("active");
   animateOverlayIn();
+
   expandedItem = document.createElement("div");
   expandedItem.className = "expanded-item";
   expandedItem.style.width = `${itemWidth}px`;
   expandedItem.style.height = `${itemHeight}px`;
-  expandedItem.style.zIndex = "10000"; // Explicitly set z-index
-  // Apply the same border radius as the items
+  expandedItem.style.zIndex = "10000";
   expandedItem.style.borderRadius = `var(--border-radius, 0px)`;
+
   const img = document.createElement("img");
   img.src = imgSrc;
   expandedItem.appendChild(img);
+
   expandedItem.addEventListener("click", closeExpandedItem);
+
   document.body.appendChild(expandedItem);
-  // Fade out other items with GSAP
+
   document.querySelectorAll(".item").forEach((el) => {
     if (el !== activeItem) {
       gsap.to(el, {
@@ -2097,12 +1967,15 @@ function expandItem(item, itemIndex) {
       });
     }
   });
+
   const viewportWidth = window.innerWidth;
   const targetWidth = viewportWidth * settings.expandedScale;
-  // Maintain aspect ratio from original item
+
   const aspectRatio = itemHeight / itemWidth;
   const targetHeight = targetWidth * aspectRatio;
+
   gsap.delayedCall(0.5, animateTitleIn);
+
   gsap.fromTo(
     expandedItem,
     {
@@ -2116,7 +1989,7 @@ function expandItem(item, itemIndex) {
       height: targetHeight,
       x: 0,
       y: 0,
-      duration: settings.zoomDuration, // Use the faster zoom duration
+      duration: settings.zoomDuration,
       ease: "hop"
     }
   );
@@ -2124,9 +1997,10 @@ function expandItem(item, itemIndex) {
 
 function closeExpandedItem() {
   if (!expandedItem || !originalPosition) return;
+
   animateTitleOut();
   animateOverlayOut();
-  // Fade in other items with GSAP
+
   document.querySelectorAll(".item").forEach((el) => {
     if (el.id !== activeItemId) {
       gsap.to(el, {
@@ -2137,37 +2011,38 @@ function closeExpandedItem() {
       });
     }
   });
+
   const originalItem = document.getElementById(activeItemId);
   if (originalItem) {
     const nameElement = originalItem.querySelector(".item-name");
     const numberElement = originalItem.querySelector(".item-number");
-    // Reset the text content to ensure clean animation
+
     nameElement.textContent = originalPosition.nameText;
     numberElement.textContent = originalPosition.numberText;
-    // Keep the caption hidden until animation completes
+
     originalItem.querySelector(".item-caption").style.opacity = "0";
   }
+
   const originalRect = originalPosition.rect;
   const originalWidth = originalPosition.width;
   const originalHeight = originalPosition.height;
+
   gsap.to(expandedItem, {
     width: originalWidth,
     height: originalHeight,
     x: originalRect.left + originalWidth / 2 - window.innerWidth / 2,
     y: originalRect.top + originalHeight / 2 - window.innerHeight / 2,
-    duration: settings.zoomDuration, // Use the faster zoom duration
+    duration: settings.zoomDuration,
     ease: "hop",
     onComplete: () => {
-      // Create the caption animation BEFORE removing the expanded item
       if (originalItem) {
-        // Create a clone for animation
         const captionElement = originalItem.querySelector(".item-caption");
         const captionClone = document.createElement("div");
         captionClone.className = "caption-clone";
         captionClone.innerHTML = captionElement.innerHTML;
-        // Get the position of where the caption should appear
+
         const captionRect = captionElement.getBoundingClientRect();
-        // Position the clone exactly
+
         captionClone.style.position = "fixed";
         captionClone.style.left = `${captionRect.left}px`;
         captionClone.style.bottom = `${
@@ -2175,21 +2050,22 @@ function closeExpandedItem() {
         }px`;
         captionClone.style.width = `${captionRect.width}px`;
         captionClone.style.padding = "10px";
-        captionClone.style.zIndex = "10002"; // Explicitly set z-index
+        captionClone.style.zIndex = "10002";
         document.body.appendChild(captionClone);
-        // Apply SplitType to the cloned elements
+
         const nameClone = captionClone.querySelector(".item-name");
         const numberClone = captionClone.querySelector(".item-number");
-        // Make sure the clone elements have the same styling
+
         nameClone.style.overflow = "hidden";
         numberClone.style.overflow = "hidden";
+
         const nameCloneSplit = new SplitType(nameClone, {
           types: "words"
         });
         const numberCloneSplit = new SplitType(numberClone, {
           types: "words"
         });
-        // Set initial position for animation - start from below
+
         gsap.set(nameCloneSplit.words, {
           y: "100%",
           opacity: 0
@@ -2198,7 +2074,7 @@ function closeExpandedItem() {
           y: "100%",
           opacity: 0
         });
-        // Animate the clone in with clear staggered animation
+
         gsap.to(nameCloneSplit.words, {
           y: "0%",
           opacity: 1,
@@ -2214,15 +2090,14 @@ function closeExpandedItem() {
           delay: 0.05,
           ease: "power3.out",
           onComplete: () => {
-            // Show the original caption
             captionElement.style.opacity = "1";
-            // Remove the clone
             if (captionClone.parentNode) {
               document.body.removeChild(captionClone);
             }
           }
         });
       }
+
       if (expandedItem && expandedItem.parentNode) {
         document.body.removeChild(expandedItem);
       }
@@ -2238,7 +2113,7 @@ function closeExpandedItem() {
       container.style.cursor = "grab";
       dragVelocityX = 0;
       dragVelocityY = 0;
-      // Remove active class from overlay after animation completes
+
       overlay.classList.remove("active");
     }
   });
@@ -2329,7 +2204,6 @@ window.addEventListener("resize", () => {
   if (isExpanded && expandedItem) {
     const viewportWidth = window.innerWidth;
     const targetWidth = viewportWidth * settings.expandedScale;
-    // Maintain aspect ratio
     const originalWidth = originalPosition.width;
     const originalHeight = originalPosition.height;
     const aspectRatio = originalHeight / originalWidth;
@@ -2344,18 +2218,18 @@ window.addEventListener("resize", () => {
     updateVisibleItems();
   }
 });
-// Add this right before the // Initialize comment
+
 function initializeStyles() {
   updateBorderRadius();
   updateVignetteSize();
   updateHoverScale();
   updatePageVignette();
 }
-// Initialize
+
 initializeStyles();
 updateVisibleItems();
 animate();
-// Initialize Tweakpane after a short delay to ensure DOM is ready
+
 setTimeout(initTweakpane, 500);
 </script>
 <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js'></script>
@@ -2366,7 +2240,7 @@ setTimeout(initTweakpane, 500);
 <button id="scrollToTopBtn" title="Back to Top">
   ↑
 </button>
-<!-- Footer -->
+
 <footer class="bg-gray-950 text-gray-400 py-6 px-4 mt-16">
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
   <p>&copy; <span id="year"></span> Geo Ex Machina. All rights reserved.</p>
@@ -2379,868 +2253,15 @@ setTimeout(initTweakpane, 500);
   </div>
 </div>
 </footer>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script type="x-shader/x-fragment">#version 300 es
-precision highp float;
-out vec4 O;
-uniform float time;
-uniform vec2 resolution;
-uniform vec2 move;
-#define FC gl_FragCoord.xy
-#define R resolution
-#define T time
-#define N normalize
-#define S smoothstep
-#define MN min(R.x,R.y)
-#define rot(a) mat2(cos((a)-vec4(0,11,33,0)))
-#define csqr(a) vec2(a.x*a.x-a.y*a.y,2.*a.x*a.y)
-float rnd(vec3 p) {
-  p=fract(p*vec3(12.9898,78.233,156.34));
-  p+=dot(p,p+34.56);
-  return fract(p.x*p.y*p.z);
-}
-float swirls(in vec3 p) {
-  float d=.0;
-  vec3 c=p;
-  for(float i=min(.0,time); i<11.; i++) {
-    p=.7*abs(p)/dot(p,p)-.7;
-    p.yz=csqr(p.yz);
-    p=p.zxy;
-    d+=exp(-19.*abs(dot(p,c)));
-  }
-  return d;
-}
-vec3 march(in vec3 p, vec3 rd) {
-  float d=.2, t=.0, c=.0, k=mix(.9,1.,rnd(rd)),
-  maxd=length(p)-1.;
-  vec3 col=vec3(0);
-  for(float i=min(.0,time); i<120.; i++) {
-    t+=d*exp(-2.*c)*k;
-    c=swirls(p+rd*t);
-    if (t<5e-2 || t>maxd) break;
-    col+=vec3(c*c,c/1.05,c)*8e-3;
-  }
-  return col;
-}
-float rnd(vec2 p) {
-  p=fract(p*vec2(12.9898,78.233));
-  p+=dot(p,p+34.56);
-  return fract(p.x*p.y);
-}
-vec3 ray(vec2 p, bool anim) {
-    float starSpeed = 0.1;
-    vec2 motionOffset = T * starSpeed * vec2(0.4, 0.3); // scroll direction & speed
 
-    // Apply scroll & scale for density
-    p.x -= 0.17 - (anim ? 2e-4 * T : 0.0);
-    p *= 50.0;
-
-    vec2 id = floor(p + motionOffset);
-    vec2 gv = fract(p + motionOffset);
-
-    vec3 col = vec3(0.0);
-
-    for (int j = -1; j <= 1; ++j) {
-        for (int i = -1; i <= 1; ++i) {
-            vec2 neighbor = vec2(i, j);
-            vec2 nid = id + neighbor;
-            vec2 rand = vec2(rnd(nid), rnd(nid + 1.0));
-            vec2 star = neighbor + rand;
-
-            float d = length(gv - star);
-
-            // Per-star twinkle: random freq and phase
-            float freq = 2.0 + 3.0 * rnd(nid + 2.0);     // 2–5 Hz
-            float phase = 6.2831 * rnd(nid + 3.0);       // 0–2π
-            float pulse = 0.5 + 0.5 * sin(T * freq + phase); // 0–1
-
-            col += vec3(S(0.02, 0.005, d)) * pulse;
-
-            for (int jj = -1; jj <= 1; ++jj) {
-                for (int ii = -1; ii <= 1; ++ii) {
-                    vec2 neighbor2 = vec2(ii, jj);
-                    if (neighbor2 == neighbor) continue;
-
-                    vec2 nid2 = id + neighbor2;
-                    vec2 rand2 = vec2(rnd(nid2), rnd(nid2 + 1.0));
-                    vec2 star2 = neighbor2 + rand2;
-
-                    vec2 a = star;
-                    vec2 b = star2;
-                    vec2 ab = b - a;
-
-                    float len2 = dot(ab, ab);
-                    float t = clamp(dot(gv - a, ab) / len2, 0.0, 1.0);
-
-                    // Perpendicular direction for arc
-                    vec2 perp = vec2(-ab.y, ab.x);
-                    float curveAmp = 0.3; // adjust for arc strength
-                    float curve = curveAmp * sin(3.14159 * t);
-                    vec2 point = a + ab * t + perp * curve / length(ab);
-
-                    float dist = length(gv - point);
-
-                    // Elastic profile: thin center, thick ends
-                    float elastic = 0.5 + 0.5 * cos(t * 3.14159); // 1 at ends, 0 at center
-                    float thickness = mix(0.002, 0.01, elastic);
-
-                    col += vec3(S(thickness * 1.5, thickness, dist)) * 0.15 * pulse;
-                }
-            }
-        }
-    }
-
-    return col;
-}
-void cam(inout vec3 p) {
-  p.yz*=rot(move.y*6.3/MN-T*.05);
-  p.xz*=rot(-move.x*6.3/MN+T*.025);
-}
-void main() {
-  vec2 uv=(FC-.5*R)/MN;
-  vec3 col=vec3(0),
-  p=vec3(0,0,-16),
-  rd=N(vec3(uv,1)), rdd=rd;
-  cam(p); cam(rd);
-  col=march(p,rd);
-  col=S(-.2,.9,col);
-  vec2 sn=.5+vec2(atan(rdd.x,rdd.z),atan(length(rdd.xz),rdd.y))/6.28318;
-  col=max(col,vec3(ray(sn,true)+ray(2.+sn*2.,true)));
-  float t=min((time-.5)*.3,1.);
-  uv=FC/R*2.-1.;
-  uv*=.7;
-  float v=pow(dot(uv,uv),1.8);
-  col=mix(col,vec3(0),v);
-  col=mix(vec3(0),col,t);
-  col=max(col,.08);
-  O=vec4(col,1);
-}</script>
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.5,
-    spaceBetween: 20,
-    centeredSlides: true,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: { slidesPerView: 2.5 },
-      1024: { slidesPerView: 3.5 }
-    }
-  });
-document.getElementById("year").textContent = new Date().getFullYear();
-window.addEventListener('load', () => {
-  // Scroll timeline to the far right
-  const timeline = document.querySelector('#history .timeline-container');
-  if (timeline) {
-    timeline.scrollLeft = timeline.scrollWidth;
-  }
-
-// Full list of video files
-const videoFiles = Array.from({ length: 8 }, (_, i) => `resource/video/v_${i}.mp4`);
-
-const video = document.getElementById("backgroundVideo");
-const source = document.getElementById("videoSource");
-
-function getRandomIndex(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function playRandomVideo() {
-  const randomIndex = getRandomIndex(4, 10); // only v_4 to v_10
-  source.src = videoFiles[randomIndex];
-  video.load();
-}
-
-// Play random video when the current one ends
-video.addEventListener("ended", playRandomVideo);
-
-// Ensure video plays when it's ready
-video.addEventListener("canplay", () => {
-  video.play().catch(err => {
-    console.error("Autoplay failed:", err);
-  });
-});
-
-// Optional: start with v_0, then random after that
-video.load();
-
-// Transition on end
-video.addEventListener("ended", playNextVideo);
-
-var header = document.getElementById('top-section');
-var page = document.getElementById('content');
-var openMenuButton = document.getElementById('openmenu');
-
-window.addEventListener('scroll', function() {
-    page.classList.remove('menuopen');
-    if (window.scrollY >= 100) {
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
-});
-
-// Event listener to remove the sticky class when the button is clicked
-openMenuButton.addEventListener('click', function() {
-    header.classList.remove('sticky');
-    page.classList.add('menuopen');
-});
-
-var links = document.querySelectorAll('a[href^="#"]');
-
-  links.forEach(function(link) {
-      link.addEventListener('click', function(event) {
-          // Prevent the default action
-          event.preventDefault();
-
-          // Get the target element
-          var targetId = this.getAttribute('href');
-          var targetElement = document.querySelector(targetId);
-
-          // Smooth scroll to target
-          if (targetElement) {
-              targetElement.scrollIntoView({
-                  behavior: 'smooth'
-              });
-          }
-      });
-  });
-});
-  
-
-let currentSlide = 2;
-const totalSlides = 43;
-const sliderImg = document.getElementById("slider-image");
-const slideNum = document.getElementById("slide-number");
-
-function updateSlide() {
-  sliderImg.src = `resource/img/gem_slides/gem_slide_${currentSlide}.png`;
-  slideNum.textContent = currentSlide;
-}
-
-function prevSlide() {
-  currentSlide = currentSlide > 2 ? currentSlide - 1 : totalSlides;
-  updateSlide();
-}
-
-function nextSlide() {
-  currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 2;
-  updateSlide();
-}
-document.addEventListener('DOMContentLoaded', () => {
-  // Select the two main section headers inside #key-technologies
-  const gemVmHeader = document.querySelector('#key-technologies > div > div > div:nth-child(1) > h3');
-  const gemQcHeader = document.querySelector('#key-technologies > div > div > div:nth-child(2) > h3');
-  
-  const gemVmExpanded = document.getElementById('gemvm-expanded');
-  const gemQcExpanded = document.getElementById('gemqc-expanded');
-
-  // Defensive check and set cursor
-  [gemVmHeader, gemQcHeader].forEach(h => {
-    if (h) h.style.cursor = 'pointer';
-  });
-
-  // Toggle GEM VM expanded section
-  if (gemVmHeader && gemVmExpanded) {
-    gemVmHeader.addEventListener('click', () => {
-      const isVisible = !gemVmExpanded.classList.contains('hidden');
-      if (isVisible) {
-        gemVmExpanded.classList.add('hidden');
-      } else {
-        gemVmExpanded.classList.remove('hidden');
-        gemVmExpanded.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Optionally hide the other section
-        gemQcExpanded?.classList.add('hidden');
-      }
-    });
-  }
-
-  // Toggle QC expanded section
-  if (gemQcHeader && gemQcExpanded) {
-    gemQcHeader.addEventListener('click', () => {
-      const isVisible = !gemQcExpanded.classList.contains('hidden');
-      if (isVisible) {
-        gemQcExpanded.classList.add('hidden');
-      } else {
-        gemQcExpanded.classList.remove('hidden');
-        gemQcExpanded.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Optionally hide the other section
-        gemVmExpanded?.classList.add('hidden');
-      }
-    });
-  }
-});
-
-// Nested toggle function used in inline onclick handlers
-function toggleSection(id) {
-  const el = document.getElementById(id);
-  if (el) {
-    el.classList.toggle('hidden');
-  }
-}
-
-let editMode = false // set to false to hide the code editor on load
-let resolution = 0.5 // set 1 for full resolution or to .5 to start with half resolution on load
-let renderDelay = 1000 // delay in ms before rendering the shader after a change
-let dpr = Math.max(1, resolution * window.devicePixelRatio)
-let frm, bksource, store, renderer, pointers
-const shaderId = 'oggKrGW'
-window.onload = init
-
-function resize() {
-  const { innerWidth: width, innerHeight: height } = window
-
-  canvas.width = width * dpr
-  canvas.height = height * dpr
-
-  if (renderer) {
-    renderer.updateScale(dpr)
-  }
-}
-
-function reset() {
-  let shader = bksource
-  if (shader) {
-    renderer.updateShader(shader.textContent)
-  } else {
-    renderer.updateShader(renderer.defaultSource)
-  }
-}
-
-function toggleResolution() {
-  resolution = 1
-  dpr = Math.max(1, resolution * window.devicePixelRatio)
-  pointers.updateScale(dpr)
-  resize()
-}
-
-function loop(now) {
-  renderer.updateMouse(pointers.first)
-  renderer.updatePointerCount(pointers.count)
-  renderer.updatePointerCoords(pointers.coords)
-  renderer.updateMove(pointers.move)
-  renderer.render(now)
-  frm = requestAnimationFrame(loop)
-}
-
-function renderThis() {
-  const sourceText = bksource ? bksource.textContent : renderer.defaultSource
-
-  const result = renderer.test(sourceText)
-
-  if (result) {
-    console.error(result)
-  } else {
-    renderer.updateShader(sourceText)
-  }
-  cancelAnimationFrame(frm) // Always cancel the previous frame!
-  loop(0)
-}
-
-const debounce = (fn, delay) => {
-  let timerId
-  return (...args) => {
-    clearTimeout(timerId)
-    timerId = setTimeout(() => fn.apply(this, args), delay)
-  }
-}
-const render = debounce(renderThis, renderDelay)
-
-function init() {
-  animateSliders()
-  bksource = document.querySelector("script[type='x-shader/x-fragment']")
-
-  document.title = document.title + " - See Through the Earth Differently"
-
-  renderer = new Renderer(canvas, dpr)
-  pointers = new PointerHandler(canvas, dpr)
-  store    = new Store(window.location)
-  // editor removed
-
-  renderer.setup()
-  renderer.init()
-
-  canvas.addEventListener('shader-error', e => {
-    console.error(e.detail)
-  })
-
-  resize()
-
-  if (renderer.test(bksource.textContent) === null) {
-    renderer.updateShader(bksource.textContent)
-  }
-  loop(0)
-  window.onresize = resize
-  window.addEventListener("keydown", e => {
-    if (e.key === "L" && e.ctrlKey) {
-      e.preventDefault()
-      btnToggleView.checked = !btnToggleView.checked
-    }
-  })
-}
-class Renderer {
-  #vertexSrc = "#version 300 es\nprecision highp float;\nin vec4 position;\nvoid main(){gl_Position=position;}"
-  #fragmtSrc = "#version 300 es\nprecision highp float;\nout vec4 O;\nuniform float time;\nuniform vec2 resolution;\nvoid main() {\n\tvec2 uv=gl_FragCoord.xy/resolution;\n\tO=vec4(uv,sin(time)*.5+.5,1);\n}"
-  #vertices = [-1, 1, -1, -1, 1, 1, 1, -1]
-  constructor(canvas, scale) {
-    this.canvas = canvas
-    this.scale = scale
-    this.gl = canvas.getContext("webgl2")
-    this.gl.viewport(0, 0, canvas.width * scale, canvas.height * scale)
-    this.shaderSource = this.#fragmtSrc
-    this.mouseMove = [0, 0]
-    this.mouseCoords = [0, 0]
-    this.pointerCoords = [0, 0]
-    this.nbrOfPointers = 0
-  }
-  get defaultSource() { return this.#fragmtSrc }
-  updateShader(source) {
-    this.reset()
-    this.shaderSource = source
-    this.setup()
-    this.init()
-  }
-  updateMove(deltas) {
-    this.mouseMove = deltas
-  }
-  updateMouse(coords) {
-    this.mouseCoords = coords
-  }
-  updatePointerCoords(coords) {
-    this.pointerCoords = coords
-  }
-  updatePointerCount(nbr) {
-    this.nbrOfPointers = nbr
-  }
-  updateScale(scale) {
-    this.scale = scale
-    this.gl.viewport(0, 0, this.canvas.width * scale, this.canvas.height * scale)
-  }
-  compile(shader, source) {
-    const gl = this.gl
-    gl.shaderSource(shader, source)
-    gl.compileShader(shader)
-
-    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-      console.error(gl.getShaderInfoLog(shader))
-      this.canvas.dispatchEvent(new CustomEvent('shader-error', { detail: gl.getShaderInfoLog(shader) }))
-    }
-  }
-  test(source) {
-    let result = null
-    const gl = this.gl
-    const shader = gl.createShader(gl.FRAGMENT_SHADER)
-    gl.shaderSource(shader, source)
-    gl.compileShader(shader)
-
-    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-      result = gl.getShaderInfoLog(shader)
-    }
-    if (gl.getShaderParameter(shader, gl.DELETE_STATUS)) {
-      gl.deleteShader(shader)
-    }
-    return result
-  }
-  reset() {
-    const { gl, program, vs, fs } = this
-    if (!program || gl.getProgramParameter(program, gl.DELETE_STATUS)) return
-    if (gl.getShaderParameter(vs, gl.DELETE_STATUS)) {
-      gl.detachShader(program, vs)
-      gl.deleteShader(vs)
-    }
-    if (gl.getShaderParameter(fs, gl.DELETE_STATUS)) {
-      gl.detachShader(program, fs)
-      gl.deleteShader(fs)
-    }
-    gl.deleteProgram(program)
-  }
-  setup() {
-    const gl = this.gl
-    this.vs = gl.createShader(gl.VERTEX_SHADER)
-    this.fs = gl.createShader(gl.FRAGMENT_SHADER)
-    this.compile(this.vs, this.#vertexSrc)
-    this.compile(this.fs, this.shaderSource)
-    this.program = gl.createProgram()
-    gl.attachShader(this.program, this.vs)
-    gl.attachShader(this.program, this.fs)
-    gl.linkProgram(this.program)
-
-    if (!gl.getProgramParameter(this.program, gl.LINK_STATUS)) {
-      console.error(gl.getProgramInfoLog(this.program))
-    }
-  }
-  init() {
-    const { gl, program } = this
-    this.buffer = gl.createBuffer()
-    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffer)
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.#vertices), gl.STATIC_DRAW)
-
-    const position = gl.getAttribLocation(program, "position")
-
-    gl.enableVertexAttribArray(position)
-    gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0)
-
-    program.resolution = gl.getUniformLocation(program, "resolution")
-    program.time = gl.getUniformLocation(program, "time")
-    program.move = gl.getUniformLocation(program, "move")
-    program.touch = gl.getUniformLocation(program, "touch")
-    program.pointerCount = gl.getUniformLocation(program, "pointerCount")
-    program.pointers = gl.getUniformLocation(program, "pointers")
-  }
-  render(now = 0) {
-    const { gl, program, buffer, canvas, mouseMove, mouseCoords, pointerCoords, nbrOfPointers } = this
-    
-    if (!program || gl.getProgramParameter(program, gl.DELETE_STATUS)) return
-
-    gl.clearColor(0, 0, 0, 1)
-    gl.clear(gl.COLOR_BUFFER_BIT)
-    gl.useProgram(program)
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
-    gl.uniform2f(program.resolution, canvas.width, canvas.height)
-    gl.uniform1f(program.time, now * 1e-3)
-    gl.uniform2f(program.move, ...mouseMove)
-    gl.uniform2f(program.touch, ...mouseCoords)
-    gl.uniform1i(program.pointerCount, nbrOfPointers)
-    gl.uniform2fv(program.pointers, pointerCoords)
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
-  }
-}
-
-class PointerHandler {
-  constructor(element, scale) {
-    this.scale = scale
-    this.active = false
-    this.pointers = new Map()
-    this.lastCoords = [0,0]
-    this.moves = [0,0]
-    const map = (element, scale, x, y) => [x * scale, element.height - y * scale]
-    element.addEventListener("pointerdown", (e) => {
-      this.active = true
-      this.pointers.set(e.pointerId, map(element, this.getScale(), e.clientX, e.clientY))
-    })
-    element.addEventListener("pointerup", (e) => {
-      if (this.count === 1) {
-        this.lastCoords = this.first
-      }
-      this.pointers.delete(e.pointerId)
-      this.active = this.pointers.size > 0
-    })
-    element.addEventListener("pointerleave", (e) => {
-      if (this.count === 1) {
-        this.lastCoords = this.first
-      }
-      this.pointers.delete(e.pointerId)
-      this.active = this.pointers.size > 0
-    })
-    element.addEventListener("pointermove", (e) => {
-      if (!this.active) return
-      this.lastCoords = [e.clientX, e.clientY]
-      this.pointers.set(e.pointerId, map(element, this.getScale(), e.clientX, e.clientY))
-      this.moves = [this.moves[0]+e.movementX, this.moves[1]+e.movementY]
-    })
-  }
-  getScale() {
-    return this.scale
-  }
-  updateScale(scale) { this.scale = scale }
-  reset() {
-    this.pointers.clear()
-    this.active = false
-    this.moves = [0,0]
-  }
-  get count() {
-    return this.pointers.size
-  }
-  get move() {
-    return this.moves
-  }
-  get coords() {
-    return this.pointers.size > 0 ? Array.from(this.pointers.values()).map((p) => [...p]).flat() : [0, 0]
-  }
-  get first() {
-    return this.pointers.values().next().value || this.lastCoords
-  }
-}
-class Store {
-  constructor(key) {
-    this.key = key
-    this.store = window.localStorage
-  }
-  #ownShadersKey = 'ownShaders'
-  #StorageType = Object.freeze({
-    shader: 'fragmentSource',
-    config: 'config'
-  })
-  #getKeyPrefix(type) {
-    return `${type}${btoa(this.key)}`
-  }
-  #getKey(type, name) {
-    return `${this.#getKeyPrefix(type)}${btoa(name)}`
-  }
-  putShaderSource(name, source) {
-    const storageType = this.#StorageType.shader
-    this.store.setItem(this.#getKey(storageType, name), source)
-  }
-  getShaderSource(name) {
-    const storageType = this.#StorageType.shader
-    return this.store.getItem(this.#getKey(storageType, name))
-  }
-  deleteShaderSource(name) {
-    const storageType = this.#StorageType.shader
-    this.store.removeItem(this.#getKey(storageType, name))
-  }
-  /** @returns {{title:string, uuid:string}[]} */
-  getOwnShaders() {
-    const storageType = this.#StorageType.config
-    const result = this.store.getItem(this.#getKey(storageType, this.#ownShadersKey))
-    
-    return result ? JSON.parse(result) : []
-  }
-  /** @param {{title:string, uuid:string}[]} shader */
-  putOwnShader(shader) {
-    const ownShaders = this.getOwnShaders()
-    const storageType = this.#StorageType.config
-    const index = ownShaders.findIndex((s) => s.uuid === shader.uuid)
-    if (index === -1) {
-      ownShaders.push(shader)
-    } else {
-      ownShaders[index] = shader
-    }
-    this.store.setItem(this.#getKey(storageType, this.#ownShadersKey), JSON.stringify(ownShaders))
-  }
-  deleteOwnShader(uuid) {
-    const ownShaders = this.getOwnShaders()
-    const storageType = this.#StorageType.config
-    this.store.setItem(this.#getKey(storageType, this.#ownShadersKey), JSON.stringify(ownShaders.filter((s) => s.uuid !== uuid) ))
-    this.deleteShaderSource(uuid)
-  }
-  /** @param {string[]} keep The names of the shaders to keep*/
-  cleanup(keep=[]) {
-    const storageType = this.#StorageType.shader
-    const ownShaders = this.getOwnShaders().map((s) => this.#getKey(storageType, s.uuid))
-    const premadeShaders = keep.map((name) => this.#getKey(storageType, name))
-    const keysToKeep = [...ownShaders, ...premadeShaders]
-    const result = []
-
-    for (let i = 0; i < this.store.length; i++) {
-      const key = this.store.key(i)
-
-      if (key.startsWith(this.#getKeyPrefix(this.#StorageType.shader)) && !keysToKeep.includes(key)) {
-        result.push(key)
-      }
-    }
-
-    result.forEach((key) => this.store.removeItem(key))
-  }
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-document.querySelectorAll('.newslider').forEach((slider, i) => {
-const btns = slider.querySelectorAll('.slider-btn');
-const group = slider.querySelector('.slide-group');
-
-// Set default to the middle slide: index 1
-const defaultIndex = 1;
-if (btns[defaultIndex]) {
-  btns.forEach(b => b.classList.remove('active'));
-  btns[defaultIndex].classList.add('active');
-  group.style.transform = `translateX(-${defaultIndex * 100}%)`;
-}
-
-// Add click handlers
-btns.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    btns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    group.style.transform = `translateX(-${index * 100}%)`;
-  });
-});
-const imgs = slider.querySelectorAll('img');
-console.log(`Found ${imgs.length} images in slider #${i}`);
-slider.querySelectorAll('img').forEach(img => {
-if (!img.complete) {
-  // Not yet loaded: attach onerror now
-  img.onerror = function () {
-    handleImageFallback(this);
-  };
-} else if (img.naturalWidth === 0) {
-  // Already failed to load
-  handleImageFallback(img);
-}
-});
-});
-document.querySelectorAll(".newslider").forEach(slider => {
-const buttons = slider.querySelectorAll(".slider-btn");
-const slideGroup = slider.querySelector(".slide-group");
-
-const setActiveView = (index) => {
-  // Move the slide group
-  slideGroup.style.transform = `translateX(-${index * 100}%)`;
-
-  // Update button states
-  buttons.forEach((btn, i) => {
-    btn.classList.toggle("active", i === index);
-  });
-};
-
-// Button click
-buttons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    setActiveView(index);
-  });
-});
-
-// Click-half jump logic
-const clickHalves = slider.querySelectorAll(".click-half");
-clickHalves.forEach(half => {
-  half.addEventListener("click", () => {
-    const parentSlide = half.closest(".slide");
-    const slides = Array.from(parentSlide.parentElement.children);
-    const currentIndex = slides.indexOf(parentSlide);
-
-    if (half.classList.contains("left-half")) {
-      const newIndex = Math.max(0, currentIndex - 1);
-      setActiveView(newIndex);
-    } else if (half.classList.contains("right-half")) {
-      const newIndex = Math.min(2, currentIndex + 1);
-      setActiveView(newIndex);
-    }
-  });
-});
-
-// Set initial view to middle (1)
-setActiveView(1);
-});
-});
-
-function handleImageFallback(img) {
-const fallback = document.createElement('div');
-fallback.className = 'image-fallback';
-fallback.textContent = img.alt || 'Image not available';
-fallback.style.cssText = `
-background-color: #ccc;
-color: white;
-font-size: 5rem;
-`;
-img.style.display = 'none';
-img.parentNode.appendChild(fallback);
-}
-const sliders = [
-  ["Velocity Comparison", "velocity"],
-  ["Epsilon Comparison", "epsilon"],
-  ["Velocity Update Comparison", "velocity_update"],
-  ["Delta Comparison", "delta"],
-];
-
-const container = document.getElementById("newslider-section");
-
-sliders.forEach(([title, prefix]) => {
-  const html = `
-  <div class="newslider">
-    <div class="slider-header">${title}</div>
-    <div class="slider-controls">
-      <button class="slider-btn" data-view="0">Traditional</button>
-      <button class="slider-btn active" data-view="1">Starting</button>
-      <button class="slider-btn" data-view="2">GEM VM</button>
-    </div>
-    <div class="slider-track">
-      <div class="slide-group">
-        <div class="slide starting-slide">
-          <div class="click-half right-half"></div>
-          <img src="resource/img/${prefix}_traditional.png" alt="Traditional">
-        </div>
-        <div class="slide starting-slide">
-          <div class="click-half left-half"></div>
-          <div class="click-half right-half"></div>
-          <img src="resource/img/${prefix}_starting.png" alt="Starting">
-        </div>
-        <div class="slide starting-slide">
-          <div class="click-half left-half"></div>
-          <img src="resource/img/${prefix}_gemvm.png" alt="GEM VM">
-        </div>
-      </div>
-    </div>
-  </div>`;
-  container.insertAdjacentHTML("beforeend", html);
-});
-
-/*
-Animation sequence:
-Starting (1) → Traditional (0) → Starting (1)
-Starting (1) → GEM VM (2) → Starting (1)
-*/
-
-function animateSliders() {
-  const allSliders = container.querySelectorAll('.newslider');
-
-  allSliders.forEach(slider => {
-    const sequence = [1, 0, 1, 2];
-    let seqIndex = 0;
-
-    const buttons = slider.querySelectorAll('.slider-btn');
-    const slideGroup = slider.querySelector('.slide-group');
-
-    function updateView(viewIndex) {
-      // Move the slide group horizontally
-      slideGroup.style.transform = `translateX(-${viewIndex * 100}%)`;
-
-      // Update active buttons
-      buttons.forEach(btn => {
-        btn.classList.toggle('active', Number(btn.dataset.view) === viewIndex);
-      });
-    }
-
-    updateView(sequence[seqIndex]);
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const view = Number(btn.dataset.view);
-        seqIndex = sequence.indexOf(view);
-        if (seqIndex === -1) seqIndex = 0;
-        updateView(view);
-      });
-    });
-
-    setInterval(() => {
-      seqIndex = (seqIndex + 1) % sequence.length;
-      updateView(sequence[seqIndex]);
-    }, 3000);
-  });
-}
-
-const scrollBtn = document.getElementById("scrollToTopBtn");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.style.display = "block";
-    scrollBtn.style.pointerEvents = "auto";
-  } else {
-    scrollBtn.style.display  = "none";
-    scrollBtn.style.pointerEvents = "none";
-  }
-});
-
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-
-</script>
+<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init();</script>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE84L8LB8T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-GE84L8LB8T');
 </script>
 </body>
